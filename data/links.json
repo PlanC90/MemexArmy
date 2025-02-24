@@ -1,0 +1,94 @@
+{
+  "links": [
+    {
+      "username": "admin",
+      "platform": "Twitter",
+      "timestamp": "2025-02-24T22:29:40.038Z",
+      "url": "5454545454",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10,
+        "support": 5
+      },
+      "reports": [],
+      "expiryDate": "2025-03-11T22:29:40.038Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "admin",
+      "platform": "Facebook",
+      "timestamp": "2025-02-24T22:29:29.679Z",
+      "url": "5445456454",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10,
+        "support": 5
+      },
+      "reports": [],
+      "expiryDate": "2025-03-11T22:29:29.679Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "admin",
+      "platform": "YouTube",
+      "timestamp": "2025-02-24T22:29:17.353Z",
+      "url": "456465464654",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10,
+        "support": 5
+      },
+      "reports": [],
+      "expiryDate": "2025-03-11T22:29:17.353Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "admin",
+      "platform": "Other",
+      "timestamp": "2025-02-24T22:29:00.229Z",
+      "url": "5646546465465465456",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10,
+        "support": 5
+      },
+      "reports": [],
+      "expiryDate": "2025-03-11T22:29:00.229Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "admin",
+      "platform": "TikTok",
+      "timestamp": "2025-02-24T22:28:42.597Z",
+      "url": "5465465465465465456",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10,
+        "support": 5
+      },
+      "reports": [],
+      "expiryDate": "2025-03-11T22:28:42.597Z",
+      "supports": 0,
+      "supportedBy": []
+    }
+  ]
+}

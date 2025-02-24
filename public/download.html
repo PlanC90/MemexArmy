@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeX Data Download</title>
+    <script>
+        async function downloadAllData() {
+            const files = ['users.json', 'links.json', 'admin.json', 'cekim.json'];
+            
+            for (const file of files) {
+                try {
+                    const response = await fetch(`/data/${file}`);
+                    const data = await response.json();
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = file;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                } catch (error) {
+                    console.error(`Error downloading ${file}:`, error);
+                }
+            }
+        }
+
+        // Auto-download when page loads
+        window.onload = downloadAllData;
+    </script>
+</head>
+<body>
+    <div style="text-align: center; padding: 20px;">
+        <h1>MemeX Data Download</h1>
+        <p>Your data files will start downloading automatically.</p>
+        <button onclick="downloadAllData()" style="padding: 10px 20px; margin-top: 20px;">
+            Download Again
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "admins": [
+    {
+      "username": "@johndoe"
+    },
+    {
+      "username": "admin"
+    }
+  ],
+  "settings": {
+    "taskReward": 20000,
+    "supportReward": 5000
+  }
+}

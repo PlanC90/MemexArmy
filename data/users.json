@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "admin-user-001",
+      "username": "admin",
+      "password": "admin",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 5000,
+      "walletAddress": "x2025",
+      "roles": [
+        "admin",
+        "user"
+      ],
+      "createdAt": "2024-03-21T00:00:00.000Z"
+    },
+    {
+      "username": "@johndoe",
+      "tasksAdded": 1,
+      "tasksSupported": 1,
+      "balance": 20000,
+      "walletAddress": "0x0000000000000000000000000000000000000000"
+    }
+  ]
+}

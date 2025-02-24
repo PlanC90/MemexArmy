@@ -1,0 +1,1 @@
+{rssFeed ? rssFeed : 'No RSS feed generated yet.'}
