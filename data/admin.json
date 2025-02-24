@@ -7,8 +7,13 @@
       "username": "admin"
     }
   ],
+  "messageTemplate": {
+    "text": "",
+    "imageUrl": ""
+  },
   "settings": {
-    "taskReward": 20000,
+    "taskReward": 10000,
     "supportReward": 5000
-  }
+  },
+  "telegramApiKey": ""
 }

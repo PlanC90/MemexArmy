@@ -51,7 +51,7 @@ export function Layout({ children }: LayoutProps) {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/" className="text-xl font-bold text-blue-600">
-                MemeX Bot
+                ARMY Bot
               </Link>
             </div>
 
