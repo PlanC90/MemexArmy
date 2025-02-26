@@ -19,6 +19,7 @@ function formatNumber(num: number): string {
 export function Profile() {
   const [user, setUser] = useState<UserType | null>(null);
   const [withdrawAmount, setWithdrawAmount] = useState('');
+  const [loading, setLoading] = useState(true);
   const minimumWithdrawalAmount = 2000000;
   const [tasksAdded, setTasksAdded] = useState(0);
   const [tasksSupported, setTasksSupported] = useState(0);
@@ -26,13 +27,21 @@ export function Profile() {
   useEffect(() => {
     const loadData = async () => {
       try {
+        setLoading(true);
         const userStr = localStorage.getItem('currentUser');
-        if (!userStr) return;
+        if (!userStr) {
+          setLoading(false);
+          return;
+        }
 
         const currentUser = JSON.parse(userStr);
         const usersData = await readJsonFile<{ users: UserType[] }>('users.json');
         const user = usersData?.users.find(u => u.username === currentUser.username);
-        if (!user) return;
+        
+        if (!user) {
+          setLoading(false);
+          return;
+        }
 
         const linksData = await readJsonFile<{ links: LinkType[] }>('links.json');
         const userLinks = linksData?.links.filter(link => link.username === user.username) || [];
@@ -50,9 +59,11 @@ export function Profile() {
         setTasksSupported(supportedCount);
 
         setUser(user);
+        setLoading(false);
       } catch (error) {
         console.error('Error loading data:', error);
         toast.error('Failed to load profile data');
+        setLoading(false);
       }
     };
     loadData();
@@ -105,14 +116,36 @@ export function Profile() {
     const success = await writeJsonFile('users.json', { users: updatedUsers });
     if (success) {
       toast.success('Wallet address saved!');
-      setUser(prev => prev ? ({ ...prev, walletAddress: user.walletAddress }) : null);
+      localStorage.setItem('currentUser', JSON.stringify({...user, walletAddress: user.walletAddress}));
     } else {
       toast.error('Failed to save wallet address.');
     }
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent"></div>
+          <p className="mt-4 text-lg">Loading profile data...</p>
+        </div>
+      </div>
+    );
+  }
+
   if (!user) {
-    return <div>Loading...</div>;
+    return (
+      <div className="text-center py-12">
+        <h2 className="text-xl font-semibold text-red-600">User not found</h2>
+        <p className="mt-2 text-gray-600">Please log in to view your profile</p>
+        <Button 
+          className="mt-4"
+          onClick={() => window.location.href = '/login'}
+        >
+          Go to Login
+        </Button>
+      </div>
+    );
   }
 
   return (

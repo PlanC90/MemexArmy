@@ -1,25 +1,121 @@
 {
   "users": [
     {
-      "id": "admin-user-001",
+      "id": "ca3e5e3e-786c-4aba-87a0-40130c8dee6f",
+      "username": "Bullishme",
+      "password": "Jesuschrist1112@",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 10000,
+      "walletAddress": "xX1DCxgAT5Yyq8otwS7LGH54KFoSrRtYcP",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T11:41:56.640Z"
+    },
+    {
+      "id": "b8644d86-a6a0-44df-a560-fd2122ab482f",
+      "username": "Memexairdrp",
+      "password": "123456",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 15000,
+      "walletAddress": "xDtEcJQPQYfYyby8ugPa5pVCbWHPfxoGBG",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T12:00:56.128Z"
+    },
+    {
+      "id": "d9a364f6-ee1b-4fc1-a9a5-1b2e634836b3",
+      "username": "Morkoinu",
+      "password": "Morkoinu",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 65000,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T12:12:47.215Z"
+    },
+    {
+      "id": "af6f5ca3-98a0-4563-bd9b-ea78cc74e667",
+      "username": "@Piraa86080349",
+      "password": "@Piraa86080349",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 215000,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T12:33:04.694Z"
+    },
+    {
+      "id": "658f23a5-2ddb-485a-a9f5-a3a9ad56473a",
+      "username": "Planc~genji",
+      "password": "632485",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "xLGe1kEmezhTn1MYhH3D2b6ynVXfVJj3AK",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T12:43:30.317Z"
+    },
+    {
+      "id": "c9eab0e4-76c0-4453-9b75-eab8d623c21e",
+      "username": "@MemeXarym",
+      "password": "695847.Yd",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T12:49:22.913Z"
+    },
+    {
+      "id": "68e07154-192c-4d41-bd9d-bbc9fc6e64c0",
+      "username": "Nadir",
+      "password": "417031",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "xL88nCeFNDXH9QtcJ1A7Lm2kG9KuJ4N91W",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T13:05:28.039Z"
+    },
+    {
+      "id": "d274dea3-0c0d-405c-abdf-e9efc53874fe",
+      "username": "LisaNemeX",
+      "password": "*MemeX25*",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "xTkiguuugXNutktcuT8ZcbaSAz7ZRiH2vW",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T13:14:25.312Z"
+    },
+    {
+      "id": "4207f1ad-b7d3-4d6e-a0bc-948a0c75390c",
       "username": "admin",
       "password": "admin",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 10000,
-      "walletAddress": "x2025",
+      "balance": 0,
+      "walletAddress": "",
       "roles": [
-        "admin",
         "user"
       ],
-      "createdAt": "2024-03-21T00:00:00.000Z"
-    },
-    {
-      "username": "@johndoe",
-      "tasksAdded": 1,
-      "tasksSupported": 1,
-      "balance": 20000,
-      "walletAddress": "0x0000000000000000000000000000000000000000"
+      "createdAt": "2025-02-26T20:06:20.010Z"
     }
   ]
 }

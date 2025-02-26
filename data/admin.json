@@ -1,10 +1,10 @@
 {
   "admins": [
     {
-      "username": "@johndoe"
+      "username": "admin"
     },
     {
-      "username": "admin"
+      "username": "oyku"
     }
   ],
   "messageTemplate": {
