@@ -3,10 +3,10 @@
     {
       "id": "admin-user-001",
       "username": "admin",
-      "password": "admin2025memex",
+      "password": "admin",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 5000,
+      "balance": 10000,
       "walletAddress": "x2025",
       "roles": [
         "admin",

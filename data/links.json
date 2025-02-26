@@ -3,8 +3,26 @@
     {
       "username": "admin",
       "platform": "Twitter",
-      "timestamp": "2025-02-24T23:18:36.580Z",
-      "url": "https://x.com/memexairdrop/status/1893723995159277708",
+      "timestamp": "2025-02-26T00:09:50.653Z",
+      "url": "tweet1",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-13T00:09:50.653Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "admin",
+      "platform": "Twitter",
+      "timestamp": "2025-02-25T23:51:05.389Z",
+      "url": "565656565",
       "groupInfo": {
         "name": "MemeX Community",
         "id": "123456789"
@@ -14,11 +32,9 @@
         "support": 5
       },
       "reports": [],
-      "expiryDate": "2025-03-11T23:18:36.580Z",
-      "supports": 1,
-      "supportedBy": [
-        "admin"
-      ]
+      "expiryDate": "2025-03-12T23:51:05.389Z",
+      "supports": 0,
+      "supportedBy": []
     },
     {
       "username": "@johndoe",
@@ -34,7 +50,11 @@
         "support": 5
       },
       "reports": [],
-      "expiryDate": "2025-03-10T12:34:09.778Z"
+      "expiryDate": "2025-03-10T12:34:09.778Z",
+      "supports": 1,
+      "supportedBy": [
+        "admin"
+      ]
     },
     {
       "username": "@johndoe",
@@ -50,7 +70,11 @@
         "support": 5
       },
       "reports": [],
-      "expiryDate": "2025-03-10T12:32:48.631Z"
+      "expiryDate": "2025-03-10T12:32:48.631Z",
+      "supports": 1,
+      "supportedBy": [
+        "admin"
+      ]
     },
     {
       "username": "@johndoe",

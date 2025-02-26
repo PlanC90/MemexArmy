@@ -32,6 +32,8 @@ export function Links() {
   const [supportedLinks, setSupportedLinks] = useState<string[]>([]);
   const [admins, setAdmins] = useState<AdminType[]>([]);
   const [currentUser, setCurrentUser] = React.useState<UserType | null>(null);
+  const [taskReward, setTaskReward] = useState(0);
+  const [supportReward, setSupportReward] = useState(0);
 
   useEffect(() => {
     const loadData = async () => {
@@ -45,9 +47,14 @@ export function Links() {
         setLinks(linksData.links);
       }
 
-       const adminData = await readJsonFile<{ admins: AdminType[] }>('admin.json');
+       const adminData = await readJsonFile<{ 
+        admins: AdminType[]; 
+        settings: { taskReward: number; supportReward: number } 
+      }>('admin.json');
         if (adminData) {
             setAdmins(adminData.admins);
+            setTaskReward(adminData.settings.taskReward);
+            setSupportReward(adminData.settings.supportReward);
         }
     };
     loadData();
@@ -91,8 +98,8 @@ export function Links() {
           id: '123456789'
         },
         rewards: {
-          add: 10,
-          support: 5
+          add: taskReward, // Use the dynamic taskReward value
+          support: supportReward // Use the dynamic supportReward value
         },
         reports: [],
         expiryDate: expiryDate.toISOString(),

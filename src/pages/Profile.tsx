@@ -38,9 +38,16 @@ export function Profile() {
         const userLinks = linksData?.links.filter(link => link.username === user.username) || [];
         setTasksAdded(userLinks.length);
 
-        // Count links the user has reported (supported)
-        const supportedLinksCount = linksData?.links.filter(link => link.reports.includes(user.username)).length || 0;
-        setTasksSupported(supportedLinksCount);
+        // Count links the user has supported
+        let supportedCount = 0;
+        if (linksData?.links) {
+          linksData.links.forEach(link => {
+            if (link.supportedBy && link.supportedBy.includes(currentUser.username)) {
+              supportedCount++;
+            }
+          });
+        }
+        setTasksSupported(supportedCount);
 
         setUser(user);
       } catch (error) {
