@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Users, Link2, Award, Wallet } from 'lucide-react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Label } from 'recharts';
 import { readJsonFile } from '../services/dataService';
 import type { User, Link } from '../types';
 
 function formatNumber(num: number): string {
+  if (num >= 1000000000) {
+    return (num / 1000000000).toFixed(1) + 'B';
+  }
   if (num >= 1000000) {
     return (num / 1000000).toFixed(1) + 'M';
   }
@@ -25,6 +28,7 @@ export function Dashboard() {
 
   const [topUsers, setTopUsers] = useState<{ name: string; links: number }[]>([]);
   const [platformStats, setPlatformStats] = useState<{ name: string; value: number }[]>([]);
+  const [topSupporters, setTopSupporters] = useState<{ name: string; supports: number }[]>([]);
 
   useEffect(() => {
     const loadDashboardData = async () => {
@@ -63,6 +67,24 @@ export function Dashboard() {
         setPlatformStats(
           Object.entries(platformCounts).map(([name, value]) => ({ name, value }))
         );
+
+        // Calculate top supporters, considering link adds as 2 supports
+        const userSupportCounts = linksData.links.reduce((acc, link) => {
+          const adder = link.username;
+          acc[adder] = (acc[adder] || 0) + 2; // Add 2 supports for adding a link
+
+          link.supportedBy?.forEach(supporter => {
+            acc[supporter] = (acc[supporter] || 0) + 1; // Add 1 support for supporting a link
+          });
+          return acc;
+        }, {} as Record<string, number>);
+
+        const sortedSupporters = Object.entries(userSupportCounts)
+          .map(([name, supports]) => ({ name, supports }))
+          .sort((a, b) => b.supports - a.supports)
+          .slice(0, 5);
+
+        setTopSupporters(sortedSupporters);
       }
     };
 
@@ -88,6 +110,14 @@ export function Dashboard() {
       </g>
     );
   };
+
+  const rewardTiers = [
+    { rank: 1, reward: 2000000000 },
+    { rank: 2, reward: 1000000000 },
+    { rank: 3, reward: 500000000 },
+    { rank: 4, reward: 250000000 },
+    { rank: 5, reward: 125000000 },
+  ];
 
   return (
     <div className="space-y-6 pb-8">
@@ -157,7 +187,15 @@ export function Dashboard() {
                   <XAxis dataKey="name" tick={renderXAxisLabel} interval={0} />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="links" fill="#3B82F6" />
+                  <Bar dataKey="links" fill="#3B82F6" >
+                    {
+                      topUsers.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill="#3B82F6" >
+                          <Label value={entry.name} position="top" style={{ textAnchor: 'middle', fontSize: '12px' }} />
+                        </Cell>
+                      ))
+                    }
+                  </Bar>
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -193,6 +231,34 @@ export function Dashboard() {
           </CardContent>
         </Card>
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Top Supporters Rewards</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead>
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rank</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reward</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {topSupporters.map((supporter, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 whitespace-nowrap">{index + 1}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{supporter.name}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{formatNumber(rewardTiers[index]?.reward || 0)} MemeX</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

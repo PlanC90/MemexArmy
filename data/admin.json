@@ -5,15 +5,13 @@
     },
     {
       "username": "oyku"
+    },
+    {
+      "username": "Memexairdrp"
     }
   ],
-  "messageTemplate": {
-    "text": "",
-    "imageUrl": ""
-  },
   "settings": {
-    "taskReward": 10000,
-    "supportReward": 5000
-  },
-  "telegramApiKey": ""
+    "taskReward": 500000,
+    "supportReward": 90000
+  }
 }

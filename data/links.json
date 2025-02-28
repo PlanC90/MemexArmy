@@ -1,6 +1,5377 @@
 {
   "links": [
     {
+      "username": "PlanC Wataru",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:31:25.354Z",
+      "url": "https://x.com/WataruMemex/status/1895349731225993682?t=0CqZ1IenMsmPQuu4FYjFYg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:31:25.354Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:21:37.317Z",
+      "url": "https://x.com/piraa_61/status/1895614803806404707?t=gcDz9Vc9foGYLm1yueNnfA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:21:37.317Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:20:59.997Z",
+      "url": "https://x.com/piraa_61/status/1895614950665830631?t=Qel3NfrKI7IVh22RMXRVbA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:20:59.997Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:20:32.833Z",
+      "url": "https://x.com/piraa_61/status/1895615040923058335?t=Lbvbx1Mkq8ng4Pady0cwJw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:20:32.833Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:17:55.669Z",
+      "url": "https://x.com/piraa_61/status/1895613841058492553?t=vJTSV91mfdGx1Tn8NpFQOQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:17:55.669Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:17:20.094Z",
+      "url": "https://x.com/piraa_61/status/1895613912978161731?t=CPj3kTBc9pbo7U58fgO3nQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:17:20.094Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:16:46.904Z",
+      "url": "https://x.com/piraa_61/status/1895614037733601654?t=9G9GqhFRDM4sYgQgXQcBwQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:16:46.904Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:14:25.135Z",
+      "url": "https://x.com/piraa_61/status/1895613494588030988?t=lIJhN83G34BF-U6yRs33IQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:14:25.135Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:11:46.767Z",
+      "url": "https://x.com/piraa_61/status/1895612829740458423?t=7Teo3qfIWHPzsUpxSbADPQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:11:46.767Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:08:33.245Z",
+      "url": "https://x.com/piraa_61/status/1895611511596597739?t=8zyxlk7CoijcNDEcBw14dg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:08:33.245Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:07:44.543Z",
+      "url": "https://x.com/piraa_61/status/1895611797249675585?t=pVkiLWU0rzZ1VBF-SYwnlw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:07:44.543Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:05:08.986Z",
+      "url": "https://x.com/piraa_61/status/1895610745389531504?t=zWts--ucwXEyqpTfLIUZug&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:05:08.986Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:04:40.064Z",
+      "url": "https://x.com/piraa_61/status/1895610848540049577?t=qqkffaJD2R1NL5ZDWswjxg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:04:40.064Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:04:14.125Z",
+      "url": "https://x.com/piraa_61/status/1895610923219648882?t=3C9MNY5fYEjgxYgIeqERVw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:04:14.125Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T23:01:37.608Z",
+      "url": "https://x.com/piraa_61/status/1895610255654158579?t=6lK8kwBQYJVHVFxpMDNedA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T23:01:37.608Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:59:59.935Z",
+      "url": "https://x.com/piraa_61/status/1895609590924095700?t=lGQ76xOL3jvCh-6L2bdEbQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:59:59.935Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:59:14.257Z",
+      "url": "https://x.com/piraa_61/status/1895609670204829818?t=WDfHEq1PKKUDoU1rDVpORA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:59:14.257Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:54:41.372Z",
+      "url": "https://x.com/piraa_61/status/1895608525994524846?t=I3hc0ZjxotNQ9F99UAm2fw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:54:41.372Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:52:29.874Z",
+      "url": "https://x.com/piraa_61/status/1895607966054936735?t=gxrc4B7JFLBtbHvwnuEEfQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:52:29.874Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:49:58.610Z",
+      "url": "https://x.com/piraa_61/status/1895607337664331862?t=uZavC2tqoJZiM2a10trx_w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:49:58.610Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:47:13.121Z",
+      "url": "https://x.com/piraa_61/status/1895606630374580730?t=1o_sxsL-mhQ7_u_kBiIZYA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:47:13.121Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:41:55.331Z",
+      "url": "https://x.com/piraa_61/status/1895605313153483164?t=QN4mHrihljIGgRDOCCy1cA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:41:55.331Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:37:26.494Z",
+      "url": "https://x.com/piraa_61/status/1895604188790604054?t=pIrU-DQBeG-s4X6NV6adwQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:37:26.494Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:25:57.179Z",
+      "url": "https://x.com/piraa_61/status/1895601280581845007?t=tx3iGPTt8z0XT-XCSuqPEw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:25:57.179Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:22:28.263Z",
+      "url": "https://x.com/piraa_61/status/1895600406379758041?t=X2m17o6vTUU7zebOg0thlA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:22:28.263Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:17:16.577Z",
+      "url": "https://x.com/piraa_61/status/1895595729634378219?t=z3K2792Zopa3JrKXhB-DpA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:17:16.577Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:13:06.102Z",
+      "url": "https://x.com/piraa_61/status/1895598063953297915?t=qYgKoVlOlwJcs-E9eLy9hA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:13:06.102Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:06:54.684Z",
+      "url": "https://x.com/piraa_61/status/1895596498173526251?t=I4JfozBYwpQfDOCWOMrw8w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:06:54.684Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:03:54.134Z",
+      "url": "https://x.com/piraa_61/status/1895595729634378219?t=hob55F6zp4Fmq_q7n2l3Lw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:03:54.134Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T22:00:29.485Z",
+      "url": "https://x.com/piraa_61/status/1895594856858468794?t=HZUkT6JE7CD9lHk6d-ZQ4w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T22:00:29.485Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T21:54:31.031Z",
+      "url": "https://x.com/piraa_61/status/1895593369067520004?t=2dW67VsykRKTfuyNAsCzIw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T21:54:31.031Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T21:51:04.456Z",
+      "url": "https://x.com/piraa_61/status/1895592416134250579?t=x2YK4oLZ4GwrrmHJaWLbPA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T21:51:04.456Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T21:12:02.063Z",
+      "url": "https://x.com/maninblack0002/status/1895582632744010124?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T21:12:02.063Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T21:07:01.246Z",
+      "url": "https://x.com/maninblack0002/status/1895581379393638709?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T21:07:01.246Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T21:02:47.237Z",
+      "url": "https://x.com/maninblack0002/status/1895580171568390583?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T21:02:47.237Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:53:53.168Z",
+      "url": "https://x.com/maninblack0002/status/1895578075846652107?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:53:53.168Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:50:29.754Z",
+      "url": "https://x.com/maninblack0002/status/1895577226600726814?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:50:29.754Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:43:30.356Z",
+      "url": "https://x.com/maninblack0002/status/1895575477081014276?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:43:30.356Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:40:53.320Z",
+      "url": "https://x.com/maninblack0002/status/1895574808295055639?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:40:53.320Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:35:07.034Z",
+      "url": "https://x.com/maninblack0002/status/1895573367023157658?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:35:07.034Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:32:39.470Z",
+      "url": "https://x.com/maninblack0002/status/1895572751534211251?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:32:39.470Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:21:51.112Z",
+      "url": "https://x.com/maninblack0002/status/1895569994261606753?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:21:51.112Z",
+      "supports": 1,
+      "supportedBy": [
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:11:34.740Z",
+      "url": "https://x.com/maninblack0002/status/1895567363334160627?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:11:34.740Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T20:03:08.393Z",
+      "url": "https://x.com/maninblack0002/status/1895565253066510754?s=46",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T20:03:08.393Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "admin",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T17:05:49.865Z",
+      "url": "https://x.com/PlanCSpace/status/1895520661667561968",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T17:05:49.865Z",
+      "supports": 1,
+      "supportedBy": [
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T15:38:13.349Z",
+      "url": "https://www.facebook.com/share/p/18cUDhs1i6/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Planc~genji"
+      ],
+      "expiryDate": "2025-03-07T15:38:13.349Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T15:35:56.153Z",
+      "url": "https://www.facebook.com/share/p/1GHUmE55JT/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T15:35:56.153Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T15:08:30.219Z",
+      "url": "https://www.facebook.com/share/p/1FgbYvvhsH/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T15:08:30.219Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T14:58:21.900Z",
+      "url": "https://www.facebook.com/share/p/1BHTBjfB3U/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Planc~genji",
+        "Planczekau"
+      ],
+      "expiryDate": "2025-03-07T14:58:21.900Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T14:49:22.165Z",
+      "url": "https://www.facebook.com/share/p/18J7Q3SaaE/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T14:49:22.165Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T14:43:54.506Z",
+      "url": "https://www.facebook.com/share/p/18rG49BoDm/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T14:43:54.506Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T14:41:33.773Z",
+      "url": "https://www.facebook.com/share/p/1C4WJJUjuX/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T14:41:33.773Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T14:32:13.885Z",
+      "url": "https://www.facebook.com/share/p/1BEhq9VKr8/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T14:32:13.885Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T14:29:45.459Z",
+      "url": "https://www.facebook.com/share/p/1FZ9LRTCtH/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T14:29:45.459Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T14:19:25.941Z",
+      "url": "https://www.facebook.com/share/p/19yh4sLT4K/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T14:19:25.941Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T14:16:48.257Z",
+      "url": "https://www.facebook.com/share/p/16EmSqhntL/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T14:16:48.257Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:48:42.225Z",
+      "url": "https://www.facebook.com/share/p/161ERyvawu/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:48:42.225Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:46:41.962Z",
+      "url": "https://www.facebook.com/share/p/1Y1894gKqy/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:46:41.962Z",
+      "supports": 0,
+      "supportedBy": []
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:44:03.699Z",
+      "url": "https://www.facebook.com/share/p/14w3U3MbB2/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:44:03.699Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:42:23.075Z",
+      "url": "https://www.facebook.com/share/p/1Mu5HNMhi7/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:42:23.075Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:39:30.287Z",
+      "url": "https://www.facebook.com/share/p/19p9EhzgF2/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:39:30.287Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:38:48.448Z",
+      "url": "https://www.facebook.com/share/p/18KDw2o6tc/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:38:48.448Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:37:29.531Z",
+      "url": "https://www.facebook.com/share/p/15JRXGLpm4/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:37:29.531Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:36:06.011Z",
+      "url": "https://www.facebook.com/share/p/1ExUVWrReK/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:36:06.011Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:35:12.151Z",
+      "url": "https://www.facebook.com/share/p/1BMCUV5EDo/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:35:12.151Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:34:05.931Z",
+      "url": "https://www.facebook.com/share/p/19aAnR9Yi3/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:34:05.931Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:32:34.863Z",
+      "url": "https://www.facebook.com/share/p/167wn6QgZ5/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:32:34.863Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:30:53.597Z",
+      "url": "https://www.facebook.com/share/p/1GsTyS8wFt/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:30:53.597Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:28:08.657Z",
+      "url": "https://www.facebook.com/share/p/1D9yAvwTka/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:28:08.657Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:26:20.140Z",
+      "url": "https://www.facebook.com/share/p/1Ck4DwW18w/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:26:20.140Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:25:22.523Z",
+      "url": "https://www.facebook.com/share/p/1H2tu9DVpr/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:25:22.523Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:25:06.066Z",
+      "url": "https://www.facebook.com/share/p/1H2tu9DVpr/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:25:06.066Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:24:16.428Z",
+      "url": "https://www.facebook.com/share/p/1BGfpiKXvx/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:24:16.428Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:23:38.936Z",
+      "url": "https://www.facebook.com/share/p/1DLAUtph8c/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:23:38.936Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:22:50.634Z",
+      "url": "https://www.facebook.com/share/p/18NSszRt1c/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:22:50.634Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:21:00.503Z",
+      "url": "https://www.facebook.com/share/p/16EG3b8N78/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:21:00.503Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:16:13.038Z",
+      "url": "https://www.facebook.com/share/p/15inyzobhC/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:16:13.038Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:15:34.057Z",
+      "url": "https://www.facebook.com/share/p/1BeVC6vJ8x/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:15:34.057Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:14:55.380Z",
+      "url": "https://www.facebook.com/share/p/19wHUM6Nsd/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "admin"
+      ],
+      "expiryDate": "2025-03-07T13:14:55.380Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:13:50.756Z",
+      "url": "https://www.facebook.com/share/p/16C67iE7UD/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:13:50.756Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:13:04.481Z",
+      "url": "https://www.facebook.com/share/p/19wLPAQNQ6/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:13:04.481Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:12:20.321Z",
+      "url": "https://www.facebook.com/share/p/15YEKkRgue/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:12:20.321Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T13:10:42.775Z",
+      "url": "https://www.facebook.com/share/p/1A4kmQMKMQ/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T13:10:42.775Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T11:56:06.656Z",
+      "url": "https://www.facebook.com/share/p/1FNiosdUEo/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T11:56:06.656Z",
+      "supports": 3,
+      "supportedBy": [
+        "Memexairdrp",
+        "Ejderr",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T11:54:20.071Z",
+      "url": "https://www.facebook.com/share/p/1BwQaU3XSD/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T11:54:20.071Z",
+      "supports": 3,
+      "supportedBy": [
+        "Memexairdrp",
+        "Ejderr",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T11:53:00.318Z",
+      "url": "https://www.facebook.com/share/p/1BwQaU3XSD/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T11:53:00.318Z",
+      "supports": 3,
+      "supportedBy": [
+        "Memexairdrp",
+        "Ejderr",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Memexairdrp",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T11:39:24.561Z",
+      "url": "https://x.com/Memexairdrp/status/1895430548967002285?t=IYpR1CBzLJEe7QpOiJj-Vg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T11:39:24.561Z",
+      "supports": 3,
+      "supportedBy": [
+        "Planczekau",
+        "Ejderr",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T11:27:04.860Z",
+      "url": "https://www.facebook.com/share/p/1HZrFY9b3Z/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T11:27:04.860Z",
+      "supports": 3,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T11:26:17.117Z",
+      "url": "https://www.facebook.com/share/p/1HZrFY9b3Z/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T11:26:17.117Z",
+      "supports": 3,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:48:56.361Z",
+      "url": "https://www.facebook.com/share/p/1Bkrz49ywY/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T07:48:56.361Z",
+      "supports": 3,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "Ejderr",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:47:17.103Z",
+      "url": "https://www.facebook.com/share/p/1DUQmLH6wX/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T07:47:17.103Z",
+      "supports": 3,
+      "supportedBy": [
+        "Ejderr",
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:44:16.130Z",
+      "url": "https://www.facebook.com/share/p/15ghLPqBMJ/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T07:44:16.130Z",
+      "supports": 2,
+      "supportedBy": [
+        "Ejderr",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:42:35.146Z",
+      "url": "https://www.facebook.com/share/p/1AEUrZUTa6/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T07:42:35.146Z",
+      "supports": 3,
+      "supportedBy": [
+        "Ejderr",
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:42:11.036Z",
+      "url": "https://www.facebook.com/share/p/1AEUrZUTa6/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [
+        "Ejderr"
+      ],
+      "expiryDate": "2025-03-07T07:42:11.036Z",
+      "supports": 3,
+      "supportedBy": [
+        "Ejderr",
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:40:13.415Z",
+      "url": "https://www.facebook.com/share/p/15QPUzErTu/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:40:13.415Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:39:00.462Z",
+      "url": "https://www.facebook.com/share/p/15PAfcE15S/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:39:00.462Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:38:21.113Z",
+      "url": "https://www.facebook.com/share/p/15PAfcE15S/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:38:21.113Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:37:02.915Z",
+      "url": "https://www.facebook.com/share/p/1FR3RcqDqj/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:37:02.915Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:36:31.892Z",
+      "url": "https://www.facebook.com/share/p/1FR3RcqDqj/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:36:31.892Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:35:03.954Z",
+      "url": "https://www.facebook.com/share/p/1B5G8B2z65/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:35:03.954Z",
+      "supports": 1,
+      "supportedBy": [
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:34:32.968Z",
+      "url": "https://www.facebook.com/share/p/1B5G8B2z65/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:34:32.968Z",
+      "supports": 1,
+      "supportedBy": [
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:33:29.923Z",
+      "url": "https://www.facebook.com/share/p/19sM7QJusN/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:33:29.923Z",
+      "supports": 1,
+      "supportedBy": [
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T07:30:56.140Z",
+      "url": "https://www.facebook.com/share/p/1DYDE2mU1k/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:30:56.140Z",
+      "supports": 1,
+      "supportedBy": [
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Memexairdrp",
+      "platform": "TikTok",
+      "timestamp": "2025-02-28T07:20:50.146Z",
+      "url": "https://vt.tiktok.com/ZSMPr4q1k/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T07:20:50.146Z",
+      "supports": 1,
+      "supportedBy": [
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T06:13:10.773Z",
+      "url": "https://www.facebook.com/share/p/1BNEfntJn5/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T06:13:10.773Z",
+      "supports": 3,
+      "supportedBy": [
+        "Bullishme",
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T06:11:03.391Z",
+      "url": "https://www.facebook.com/share/p/199DmaH7HB/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T06:11:03.391Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:56:47.036Z",
+      "url": "https://www.facebook.com/share/p/15NecRuiGm/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:56:47.036Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:37:50.330Z",
+      "url": "https://www.facebook.com/share/p/1FH6LMayLx/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:37:50.330Z",
+      "supports": 3,
+      "supportedBy": [
+        "Planc~genji",
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:35:30.408Z",
+      "url": "🚀 Memex ($MemeX) – The MemeToken with the Lowest Transfer Fees! 🚀  Memex is a fully decentralized and community-driven meme token project running on the Electra Protocol ($XEP) main network, with a total supply of 30 trillion. It is currently not listed on centralized (CEX) or decentralized (DEX) exchanges, but it can be earned completely for free through the website, competitions, Telegram bot, or by following the X account.  💰 Advantages of Earning Memex:   ✅ No Wallet Connection – You can earn without sharing your personal information. ✅ No Withdrawal Fees – Withdraw your Memex completely free to your wallet. ✅ Low Transfer Fees – Thanks to the XEP network, it has the lowest transaction costs for a meme token. ✅ Free Transfers – Holders can easily and low-cost transfer Memex tokens among themselves. ✅ Easy Access – Earn MemeX by completing a single task on the Telegram bot or website. ✅ Supply Reduction – After the airdrop ends, a portion of the remaining supply will be burned with each exchange listing.  You can request Memex tokens to your OmniXEP wallet for free and gain advantages by following my X account for future developments!  🚀 To Join Memex: 🔹 Website: memex1.planc.space 🔹 Telegram Bot: t.me/mmx_memex_bot  Become part of the community and discover one of the most innovative meme token projects of the future! 🚀",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:35:30.408Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:35:12.893Z",
+      "url": "🚀 Memex ($MemeX) – The MemeToken with the Lowest Transfer Fees! 🚀  Memex is a fully decentralized and community-driven meme token project running on the Electra Protocol ($XEP) main network, with a total supply of 30 trillion. It is currently not listed on centralized (CEX) or decentralized (DEX) exchanges, but it can be earned completely for free through the website, competitions, Telegram bot, or by following the X account.  💰 Advantages of Earning Memex:   ✅ No Wallet Connection – You can earn without sharing your personal information. ✅ No Withdrawal Fees – Withdraw your Memex completely free to your wallet. ✅ Low Transfer Fees – Thanks to the XEP network, it has the lowest transaction costs for a meme token. ✅ Free Transfers – Holders can easily and low-cost transfer Memex tokens among themselves. ✅ Easy Access – Earn MemeX by completing a single task on the Telegram bot or website. ✅ Supply Reduction – After the airdrop ends, a portion of the remaining supply will be burned with each exchange listing.  You can request Memex tokens to your OmniXEP wallet for free and gain advantages by following my X account for future developments!  🚀 To Join Memex: 🔹 Website: memex1.planc.space 🔹 Telegram Bot: t.me/mmx_memex_bot  Become part of the community and discover one of the most innovative meme token projects of the future! 🚀",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:35:12.893Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:27:46.222Z",
+      "url": "https://www.facebook.com/share/p/14etrLvY9x/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:27:46.222Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planc~genji",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:11:16.833Z",
+      "url": "https://www.facebook.com/share/p/1BUgRPtZxh/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:11:16.833Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:10:26.886Z",
+      "url": "https://www.facebook.com/share/p/1DRdg34tkY/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:10:26.886Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:09:38.313Z",
+      "url": "https://www.facebook.com/share/p/15PQUgUvek/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:09:38.313Z",
+      "supports": 1,
+      "supportedBy": [
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:08:38.210Z",
+      "url": "https://www.facebook.com/share/p/12FUKKVQpRS/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:08:38.210Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planc~genji",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T05:07:28.141Z",
+      "url": "https://www.facebook.com/share/p/1FCATyAdKT/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T05:07:28.141Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "PlanC Wataru",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T04:58:53.680Z",
+      "url": "https://www.facebook.com/share/p/19tk9NCsdL/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:58:53.680Z",
+      "supports": 3,
+      "supportedBy": [
+        "Planczekau",
+        "Planc~genji",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:15:46.587Z",
+      "url": "https://x.com/piraa_61/status/1895326401097765282?t=L9epwcxazyng5Q6T-3iB3g&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:15:46.587Z",
+      "supports": 5,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planc~genji",
+        "Bullishme",
+        "Memexairdrp",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:15:25.536Z",
+      "url": "https://x.com/piraa_61/status/1895326464113025484?t=UDMwDM__pi7xSNP2anwyMA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:15:25.536Z",
+      "supports": 4,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Bullishme",
+        "Memexairdrp",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:15:01.066Z",
+      "url": "https://x.com/piraa_61/status/1895326522933907611?t=EWYR0G7DazqNTsAetLYgMg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:15:01.066Z",
+      "supports": 5,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau",
+        "Bullishme",
+        "Memexairdrp",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:14:25.749Z",
+      "url": "https://x.com/piraa_61/status/1895326592332870052?t=ONwtRFHQ_14_l011zS9S0w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:14:25.749Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Memexairdrp",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:11:47.788Z",
+      "url": "https://x.com/piraa_61/status/1895325936838680615?t=r3hh_s0UUZdHC7iojC3MKg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:11:47.788Z",
+      "supports": 4,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau",
+        "Memexairdrp",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:08:49.621Z",
+      "url": "https://x.com/piraa_61/status/1895325193704456502?t=e-ntTMkIrYwgDllRCLT_aA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:08:49.621Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Memexairdrp",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:06:31.224Z",
+      "url": "https://x.com/piraa_61/status/1895324607336587765?t=JdasSoTcTHzzgF6xG1Yz6w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:06:31.224Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:04:06.081Z",
+      "url": "https://x.com/piraa_61/status/1895323552972501221?t=x2P4M8tV8cdsONsW6xAwNA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:04:06.081Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:03:41.094Z",
+      "url": "https://x.com/piraa_61/status/1895323668471021839?t=Q4B8ZDGyViGi9VxwlyQ5EA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:03:41.094Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:03:10.116Z",
+      "url": "https://x.com/piraa_61/status/1895323771193733497?t=6x44eb-WBiae90sQH9ZvmQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:03:10.116Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T04:00:36.579Z",
+      "url": "https://x.com/piraa_61/status/1895323104114810995?t=f8Oag0s2-1eF242m_cyAKw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T04:00:36.579Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:57:25.333Z",
+      "url": "https://x.com/piraa_61/status/1895322323277996356?t=9IA2kkk5GwDGta0X_eDDQQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:57:25.333Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:55:34.996Z",
+      "url": "https://x.com/piraa_61/status/1895321417035718757?t=q4BeZgVv2Yz0w1BDAbA0JQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:55:34.996Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:55:06.005Z",
+      "url": "https://x.com/piraa_61/status/1895321524229603506?t=4rWre0Jb7sFkN9GaaWcrMQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:55:06.005Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:54:41.163Z",
+      "url": "https://x.com/piraa_61/status/1895321608618942469?t=aMacTwRAm2panax8WclvBg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:54:41.163Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:49:22.220Z",
+      "url": "https://x.com/piraa_61/status/1895320299945763111?t=LCn2vTrjJe5uL_343OUs-w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:49:22.220Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:47:34.252Z",
+      "url": "https://x.com/piraa_61/status/1895319829198115326?t=zj8Mr9noexI5hi5DPFQ4Xw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:47:34.252Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:41:24.216Z",
+      "url": "https://x.com/piraa_61/status/1895318303993929891?t=nK6j_EAfkU7UOrrIgCOSOQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:41:24.216Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:39:29.832Z",
+      "url": "https://x.com/piraa_61/status/1895317664702308370?t=OhLjdZ3KrcokquXk8qouCA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:39:29.832Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:35:49.116Z",
+      "url": "https://x.com/piraa_61/status/1895316881193738809?t=6hM9unB5fLweiSUvUu3_1A&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:35:49.116Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau",
+        "Ejderr"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:32:35.293Z",
+      "url": "https://x.com/piraa_61/status/1895315766926590200?t=1q3q0JSVGaD-3weiz1I_IA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:32:35.293Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T03:32:07.286Z",
+      "url": "https://x.com/piraa_61/status/1895315855824810082?t=LPn4oETLS9ETXSrI4ETdgA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T03:32:07.286Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-28T02:08:04.619Z",
+      "url": "https://www.facebook.com/share/p/15iuqciMQm/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T02:08:04.619Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-28T00:59:26.819Z",
+      "url": "https://x.com/piraa_61/status/1895276491103182867?t=wbYg7GYVTUZ0lVHU8Nxmnw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-07T00:59:26.819Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "Lena",
+      "platform": "TikTok",
+      "timestamp": "2025-02-27T23:51:02.341Z",
+      "url": "https://vt.tiktok.com/ZSMf7kREt/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:51:02.341Z",
+      "supports": 3,
+      "supportedBy": [
+        "Lena",
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "Lena",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:38:15.591Z",
+      "url": "https://x.com/Lena2023_CMT/status/1893746082682638343?t=HSdeeFFmiKKcZ7gPTy5VtA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:38:15.591Z",
+      "supports": 4,
+      "supportedBy": [
+        "Lena",
+        "@Piraa86080349",
+        "Planczekau",
+        "Memexairdrp"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:29:22.724Z",
+      "url": "https://x.com/piraa_61/status/1895254875363254694?t=Vo7nh9sLW9I1UrSWJQX4nQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:29:22.724Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:27:34.644Z",
+      "url": "https://x.com/piraa_61/status/1895253889425027347?t=iE86BG8YKQPmD0kAZfyqvA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:27:34.644Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:27:04.911Z",
+      "url": "https://x.com/piraa_61/status/1895253813831049388?t=BZY4xEixhyVnEP4WYFjlow&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:27:04.911Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:26:43.357Z",
+      "url": "https://x.com/piraa_61/status/1895253502986944842?t=rMmRBD_FDjUE-tHlqAfZew&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:26:43.357Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:26:19.074Z",
+      "url": "https://x.com/piraa_61/status/1895254101115707462?t=hRT0Vr7de_NRwlLTsvidgw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:26:19.074Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:24:00.583Z",
+      "url": "https://x.com/piraa_61/status/1895253502986944842?t=rvOERxuXCAbRcS-iUQRUng&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:24:00.583Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:21:45.271Z",
+      "url": "https://x.com/piraa_61/status/1895252944683180364?t=0OOVUey-6j1dX93JsT531g&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:21:45.271Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:18:42.498Z",
+      "url": "https://x.com/piraa_61/status/1895252193634328603?t=vBsTQHDcHYSYHZlAyFM7Vg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:18:42.498Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:16:23.816Z",
+      "url": "https://x.com/piraa_61/status/1895251599280480350?t=1hU80mIaNQdLrPz2FBbRSg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:16:23.816Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:13:30.592Z",
+      "url": "https://x.com/piraa_61/status/1895250814819770559?t=95auAfIaeNRLSNyS3s4Axg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:13:30.592Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:06:23.905Z",
+      "url": "https://x.com/piraa_61/status/1895248851323494894?t=BzV1H1lyjDDKdGkFuLQpRA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:06:23.905Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:05:59.290Z",
+      "url": "https://x.com/piraa_61/status/1895248950984413567?t=5syKEfrBSPCOl8YAF9z9mQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:05:59.290Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:01:24.945Z",
+      "url": "https://x.com/piraa_61/status/1895247844602454091?t=GUbAJNl1tLG60J0g99Z30A&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:01:24.945Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T23:00:04.026Z",
+      "url": "https://x.com/piraa_61/status/1895247503978831940?t=MpTFTujahK09KVPJTn9EBA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T23:00:04.026Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:58:25.800Z",
+      "url": "https://x.com/piraa_61/status/1895247068891169134?t=1-UOyI9ReoWsainrGzSCQQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:58:25.800Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:55:07.828Z",
+      "url": "https://x.com/piraa_61/status/1895245596124225734?t=R-hRrF1lPkHLpM3_3LDCMg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:55:07.828Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:54:39.810Z",
+      "url": "https://x.com/piraa_61/status/1895245832745820187?t=Llrwp3hwNkBeD_3rj8rgOA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:54:39.810Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:54:08.903Z",
+      "url": "https://x.com/piraa_61/status/1895245998815092743?t=GhcBQ7tcEfb-7Yvyc1bkhw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:54:08.903Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:41:13.256Z",
+      "url": "https://x.com/piraa_61/status/1895242708958224685?t=qgJdzRxiPOcygnGyNL_q7Q&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:41:13.256Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:38:44.420Z",
+      "url": "https://x.com/piraa_61/status/1895242110221328509?t=gRcQurTEA2VdbC8iUjcEuw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:38:44.420Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:36:30.877Z",
+      "url": "https://x.com/piraa_61/status/1895241570355761164?t=V4ZLnSI4DbBPK88wcyf-FA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:36:30.877Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:35:23.757Z",
+      "url": "https://x.com/piraa_61/status/1895241298522812883?t=RCcNaMXwMFSyiRvASbIKZQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:35:23.757Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:33:49.265Z",
+      "url": "https://x.com/piraa_61/status/1895240463126589927?t=WZNaNVurVVMMC0A1o0vEPg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:33:49.265Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:33:25.803Z",
+      "url": "https://x.com/piraa_61/status/1895240552461017581?t=6U-xVNXwmF0xQpX7HK4R-w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:33:25.803Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:32:56.095Z",
+      "url": "https://x.com/piraa_61/status/1895240641791365422?t=6vaWCM01GCD3mkFAc7Ctwg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:32:56.095Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:18:59.135Z",
+      "url": "https://x.com/piraa_61/status/1895237154684707230?t=vqOeEseJ49TBltWJt4oDOw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:18:59.135Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:17:15.648Z",
+      "url": "https://x.com/piraa_61/status/1895236722038055371?t=ZZzBgcLXCK5WizJXn2N2jQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:17:15.648Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:15:16.781Z",
+      "url": "https://x.com/piraa_61/status/1895236226174865629?t=SKXvG8jL6R15lQJWu7dfqw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:15:16.781Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:12:29.845Z",
+      "url": "https://x.com/piraa_61/status/1895235517794656693?t=0yM9MKucOxHhhYq_cqGv7A&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:12:29.845Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:09:47.018Z",
+      "url": "https://x.com/piraa_61/status/1895234837214306715?t=ZVzhrye_uLHl9v8XhAvUPg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:09:47.018Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:06:14.664Z",
+      "url": "https://x.com/piraa_61/status/1895233946310582375?t=4CeH4U4SM8wNP5eZ5mniYQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:06:14.664Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T22:04:17.060Z",
+      "url": "https://x.com/piraa_61/status/1895233455426077181?t=btbhq08pCfuLitBHRnQnCw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T22:04:17.060Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PlanC Wataru",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T21:57:51.606Z",
+      "url": "https://www.facebook.com/share/p/18moXrmiuZ/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:57:51.606Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T21:53:25.194Z",
+      "url": "https://www.facebook.com/share/p/15rd4h9uxE/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:53:25.194Z",
+      "supports": 2,
+      "supportedBy": [
+        "Planczekau",
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:50:22.329Z",
+      "url": "https://x.com/supremejayx/status/1895229727587344817?t=J4oCTzd2Dw36joNWVwM2gg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:50:22.329Z",
+      "supports": 2,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:48:54.390Z",
+      "url": "https://x.com/maniac_015/status/1895226889381564417?t=dHUNHh53kL0rVeCKMPCrKg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:48:54.390Z",
+      "supports": 3,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:48:00.958Z",
+      "url": "https://x.com/Allenn_alt/status/1895226255798346057?t=pfdenTRcCYLQJrrkO3mikw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:48:00.958Z",
+      "supports": 2,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:47:40.092Z",
+      "url": "https://x.com/SunnicNFT24/status/1895226066685566993?t=8_avuC2Crmn5iF1ifPbtGg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:47:40.092Z",
+      "supports": 3,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:46:48.515Z",
+      "url": "https://x.com/Web3xVenom/status/1895226353827619235?t=UAeGNLCm3KfONWiCvv9Dsw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:46:48.515Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:44:13.406Z",
+      "url": "https://x.com/callmipanda/status/1895227200556933461?t=FNC0xyWyjLHEHKWcoNBaKg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:44:13.406Z",
+      "supports": 3,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:40:57.542Z",
+      "url": "https://x.com/eddy_crypt409/status/1895224967958274410?t=zU9LLwc-C3LU1PIyPOI12Q&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:40:57.542Z",
+      "supports": 3,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:39:54.266Z",
+      "url": "https://x.com/eddy_crypt409/status/1895224967958274410?t=0z4-rRbfoW4WHl91yEHdrw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:39:54.266Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:39:01.605Z",
+      "url": "https://x.com/cryptochiq_/status/1895224585844555884?t=Dz9MqIhlvSWpyZu8zVGrxQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:39:01.605Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:38:29.466Z",
+      "url": "https://x.com/Timi_Cryptt/status/1895224362455965934?t=2_H09K3BtgN5uiW9VYjhVw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:38:29.466Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "PlanC Joseph ",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:36:53.929Z",
+      "url": "https://x.com/DavdBanks/status/1895224441346666941?t=QtJzNaEM2p-xMDSm2WrHtA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:36:53.929Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "PlanC Joseph ",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Ozan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:33:00.524Z",
+      "url": "https://x.com/thequeenofmm/status/1895223243541487684?t=g87Vmyp-3M-fsCTzrvd9Ew&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:33:00.524Z",
+      "supports": 3,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Ozan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:32:39.499Z",
+      "url": "https://x.com/thequeenofmm/status/1895223243541487684?t=g87Vmyp-3M-fsCTzrvd9Ew&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:32:39.499Z",
+      "supports": 3,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T21:31:56.575Z",
+      "url": "https://www.facebook.com/share/p/168HMYBAhP/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:31:56.575Z",
+      "supports": 2,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:31:11.387Z",
+      "url": "https://x.com/piraa_61/status/1895225128432345570?t=6VBt2W0DJkRGj7Y4OtHqNg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:31:11.387Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:28:14.997Z",
+      "url": "https://x.com/piraa_61/status/1895224349432652076?t=2femLBoboldeRMxP5EFkEw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:28:14.997Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:24:36.795Z",
+      "url": "https://x.com/piraa_61/status/1895223473271955583?t=Awm7gNVL7JpfWCMc3iundQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:24:36.795Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T21:22:22.191Z",
+      "url": "https://x.com/piraa_61/status/1895222848819732973?t=CGI8Qce-CVJYgnHujskc8g&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 500000,
+        "support": 90000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T21:22:22.191Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T19:55:53.747Z",
+      "url": "https://www.facebook.com/share/p/1BWQAXkyBB/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T19:55:53.747Z",
+      "supports": 3,
+      "supportedBy": [
+        "Planc~genji",
+        "admin",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T19:48:08.792Z",
+      "url": "https://www.facebook.com/share/p/18oxUjay2U/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T19:48:08.792Z",
+      "supports": 3,
+      "supportedBy": [
+        "Planczekau",
+        "admin",
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T19:37:49.067Z",
+      "url": "https://www.facebook.com/share/p/16CGGtnSgk/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T19:37:49.067Z",
+      "supports": 5,
+      "supportedBy": [
+        "PlanC Joseph ",
+        "Morkoinu",
+        "Planczekau",
+        "admin",
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T19:06:31.509Z",
+      "url": "https://x.com/zeus_61_54/status/1895187873550475423?t=JkEnpbHrieIZp84LF6f1-A&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T19:06:31.509Z",
+      "supports": 6,
+      "supportedBy": [
+        "@Piraa86080349",
+        "PlanC Joseph ",
+        "Morkoinu",
+        "Planczekau",
+        "admin",
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T19:06:03.500Z",
+      "url": "https://x.com/zeus_61_54/status/1895187971265187963?t=ou8JyLR1pODJxFXcBCsLGA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T19:06:03.500Z",
+      "supports": 4,
+      "supportedBy": [
+        "@Piraa86080349",
+        "PlanC Joseph ",
+        "Planczekau",
+        "admin"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T19:05:42.075Z",
+      "url": "https://x.com/zeus_61_54/status/1895188057068052971?t=9fsyBksbBrOdMmUxg0PrUQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T19:05:42.075Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "PlanC Joseph ",
+        "admin"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T19:05:19.842Z",
+      "url": "https://x.com/zeus_61_54/status/1895188149493703155?t=8e0fs3pk9SMR81OQTAI9Ag&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T19:05:19.842Z",
+      "supports": 4,
+      "supportedBy": [
+        "@Piraa86080349",
+        "PlanC Joseph ",
+        "Planczekau",
+        "admin"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T19:04:52.637Z",
+      "url": "https://x.com/zeus_61_54/status/1895188222809948401?t=VuaO66Ddkis7ADP_KM63nA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T19:04:52.637Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "PlanC Joseph ",
+        "admin"
+      ]
+    },
+    {
+      "username": "admin",
+      "platform": "Other",
+      "timestamp": "2025-02-27T18:55:19.033Z",
+      "url": "https://t.me/gcthh5x/9294",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:55:19.033Z",
+      "supports": 4,
+      "supportedBy": [
+        "@Piraa86080349",
+        "PlanC Joseph ",
+        "Planczekau",
+        "Planc~genji"
+      ]
+    },
+    {
+      "username": "Ozan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T18:46:27.523Z",
+      "url": "https://x.com/Ken_marque/status/1895176049333543075?t=hHEz1mOQ6RhDmO0bZkPeAg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:46:27.523Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "admin"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T18:36:25.683Z",
+      "url": "https://www.facebook.com/share/p/1A52k7t5Qx/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:36:25.683Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T18:34:06.697Z",
+      "url": "https://www.facebook.com/share/p/1Ba7HjAfKt/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:34:06.697Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PLanC007",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T18:33:27.864Z",
+      "url": "https://x.com/CryptoOHungry/status/1895160845648437636?t=y8GhVzxdf7xNdOdqub35Sg&s=35",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:33:27.864Z",
+      "supports": 3,
+      "supportedBy": [
+        "PLanC007",
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "PLanC007",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T18:32:35.267Z",
+      "url": "https://x.com/Ken_marque/status/1895176049333543075?t=xRSUgHiQrTKgdrL_Vl2kcA&s=35",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:32:35.267Z",
+      "supports": 3,
+      "supportedBy": [
+        "PLanC007",
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T18:31:25.230Z",
+      "url": "https://www.facebook.com/share/p/1Ba7HjAfKt/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:31:25.230Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T18:25:15.005Z",
+      "url": "https://www.facebook.com/share/p/15v35D2kEp/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:25:15.005Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Okan",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T18:21:04.759Z",
+      "url": "https://www.facebook.com/share/p/192TBKRvUJ/?mibextid=wwXIfr",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:21:04.759Z",
+      "supports": 1,
+      "supportedBy": [
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T18:13:02.214Z",
+      "url": "https://www.facebook.com/share/p/1F3xaa3o4K/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:13:02.214Z",
+      "supports": 2,
+      "supportedBy": [
+        "Okan",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T18:10:07.539Z",
+      "url": "https://www.facebook.com/share/p/1558YjLbsq/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T18:10:07.539Z",
+      "supports": 2,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T17:49:53.449Z",
+      "url": "https://www.facebook.com/share/p/1L1W3n2DPV/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:49:53.449Z",
+      "supports": 2,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T17:46:39.366Z",
+      "url": "https://www.facebook.com/share/p/15pVfM2G6o/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:46:39.366Z",
+      "supports": 2,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T17:45:24.756Z",
+      "url": "https://www.facebook.com/share/p/1B9aFViY7n/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:45:24.756Z",
+      "supports": 2,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T17:43:36.155Z",
+      "url": "https://www.facebook.com/share/p/1A1aRYcPzH/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:43:36.155Z",
+      "supports": 2,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T17:41:48.651Z",
+      "url": "https://www.facebook.com/share/p/195jSyKhMj/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:41:48.651Z",
+      "supports": 2,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T17:35:59.414Z",
+      "url": "https://www.facebook.com/share/p/18s3hLfkmp/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:35:59.414Z",
+      "supports": 2,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Ozan",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T17:34:58.930Z",
+      "url": "https://x.com/CryptoOHungry/status/1895160845648437636?t=8iK8aP5_H2w3M0HQFMuvxQ&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:34:58.930Z",
+      "supports": 3,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planczekau",
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T17:32:10.049Z",
+      "url": "https://x.com/zeus_61_54/status/1895164786163191850?t=0U3ZBDBG_ZVmmyUdumO4mA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:32:10.049Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T17:31:46.765Z",
+      "url": "https://x.com/zeus_61_54/status/1895164880359145632?t=lftqYbtGafBK7apsDG4jfg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T17:31:46.765Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:42:47.067Z",
+      "url": "https://x.com/zeus_61_54/status/1895152516276289919?t=GWO3LCcVHiaPKDF3oucr3w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:42:47.067Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:40:57.005Z",
+      "url": "https://x.com/zeus_61_54/status/1895151888716157297?t=yYFrH1zL4iN8rK3zqvkvEA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:40:57.005Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:40:34.127Z",
+      "url": "https://x.com/zeus_61_54/status/1895151993666093199?t=zYLRAE7wzpXkjZuj6aYG-g&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:40:34.127Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:35:48.927Z",
+      "url": "https://x.com/zeus_61_54/status/1895150804908351819?t=3hIEzOjoQBC79HwbQQ9nsg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:35:48.927Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:34:18.209Z",
+      "url": "https://x.com/piraa_61/status/1895150417106858478?t=onyboiMuknj22ztBcPlVAg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:34:18.209Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:32:57.213Z",
+      "url": "https://x.com/piraa_61/status/1895149774682063218?t=an61mL_UYCH3UWejomgFcg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:32:57.213Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:32:11.290Z",
+      "url": "https://x.com/piraa_61/status/1895149888981156157?t=kUoKmvLuVCuoclyYAMasEg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:32:11.290Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:30:03.821Z",
+      "url": "https://x.com/piraa_61/status/1895148741952446885?t=mXj__cB9xiVOD7c4jhn4QA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:30:03.821Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:29:41.475Z",
+      "url": "https://x.com/piraa_61/status/1895148819882401813?t=x7J1SVSDKJGo78Qr_a5aag&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:29:41.475Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:29:16.775Z",
+      "url": "https://x.com/piraa_61/status/1895148949205316066?t=lkpdzTm_ajGu5dsgSTPsBg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:29:16.775Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:28:50.349Z",
+      "url": "https://x.com/piraa_61/status/1895149047599538295?t=bvtZ8YMdwrQ_kSVtwALUKA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:28:50.349Z",
+      "supports": 3,
+      "supportedBy": [
+        "@Piraa86080349",
+        "@MemeXarym",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:26:24.742Z",
+      "url": "https://x.com/piraa_61/status/1895148038739390676?t=jyl5FExDnFRokqyGr8TBvA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:26:24.742Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:26:04.327Z",
+      "url": "https://x.com/piraa_61/status/1895148144729411680?t=SWp6Y0_5tM9PnWaDz_Gt3w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:26:04.327Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:25:41.795Z",
+      "url": "https://x.com/piraa_61/status/1895148255559741830?t=ZL0Y_ESYKZ3DmwhNddgWIw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:25:41.795Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:22:45.716Z",
+      "url": "https://x.com/piraa_61/status/1895147495120081101?t=hWEnghpyQEQeVNXqRg1Fog&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:22:45.716Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:21:05.478Z",
+      "url": "https://x.com/piraa_61/status/1895147068169093375?t=AvpYi3PsklO_IEzT67AGxA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:21:05.478Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:19:33.366Z",
+      "url": "https://x.com/piraa_61/status/1895146710264914365?t=qGXkKX9S3sIoi6fqQJTKCw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:19:33.366Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:18:14.267Z",
+      "url": "https://x.com/piraa_61/status/1895146355909144736?t=BVKwW6JIxOC0GkMnvt4IWg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:18:14.267Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:13:57.038Z",
+      "url": "https://x.com/piraa_61/status/1895145283564023933?t=blyJIh50K8oWQKxHsaQbEg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:13:57.038Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:10:39.997Z",
+      "url": "https://x.com/zeus_61_54/status/1895144439783325715?t=2MPuUfC7nG8Tsf3KTxq_9Q&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:10:39.997Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:08:31.102Z",
+      "url": "https://x.com/zeus_61_54/status/1895143931496607915?t=ZEYF8oq-dT_iLAA1CTbriw&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:08:31.102Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:06:02.151Z",
+      "url": "https://x.com/zeus_61_54/status/1895142896082526631?t=23FKMYBVNigVlX1GTd7imA&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:06:02.151Z",
+      "supports": 2,
+      "supportedBy": [
+        "@Piraa86080349",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@Piraa86080349",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T16:04:58.486Z",
+      "url": "https://x.com/zeus_61_54/status/1895141147347202192?t=GGt_q6HrSWV3fcgsMe82Fg&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 100000,
+        "support": 50000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T16:04:58.486Z",
+      "supports": 1,
+      "supportedBy": [
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T15:25:08.880Z",
+      "url": "https://www.facebook.com/share/p/16DUsVyrTd/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T15:25:08.880Z",
+      "supports": 5,
+      "supportedBy": [
+        "@MemeXarym",
+        "Planc~genji",
+        "Nadir",
+        "admin",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Planc~genji",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T15:02:26.735Z",
+      "url": "https://www.facebook.com/share/p/1A4fbbG41J/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T15:02:26.735Z",
+      "supports": 4,
+      "supportedBy": [
+        "Planc~genji",
+        "admin",
+        "@MemeXarym",
+        "Nadir"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T14:00:06.348Z",
+      "url": "https://www.facebook.com/share/p/1DGsBUHoVx/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T14:00:06.348Z",
+      "supports": 6,
+      "supportedBy": [
+        "@MemeXarym",
+        "Okan",
+        "Planc~genji",
+        "admin",
+        "Nadir",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T13:59:39.610Z",
+      "url": "https://www.facebook.com/share/p/1KeRKSLg5k/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T13:59:39.610Z",
+      "supports": 4,
+      "supportedBy": [
+        "@MemeXarym",
+        "Okan",
+        "admin",
+        "Nadir"
+      ]
+    },
+    {
+      "username": "@MemeXarym",
+      "platform": "Facebook",
+      "timestamp": "2025-02-27T13:59:14.405Z",
+      "url": "https://www.facebook.com/share/p/1JNCt4NT5j/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T13:59:14.405Z",
+      "supports": 5,
+      "supportedBy": [
+        "@MemeXarym",
+        "Okan",
+        "admin",
+        "Nadir",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Memexairdrp",
+      "platform": "TikTok",
+      "timestamp": "2025-02-27T12:37:58.314Z",
+      "url": "https://vt.tiktok.com/ZSMfkqg7U/",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T12:37:58.314Z",
+      "supports": 4,
+      "supportedBy": [
+        "Planc~genji",
+        "Okan",
+        "Nadir",
+        "Planczekau"
+      ]
+    },
+    {
+      "username": "Planczekau",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T12:20:46.392Z",
+      "url": "https://x.com/sutdoken1453/status/1895086144859316546?t=caFjM8pgEtdnjYmLzHPf_Q&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T12:20:46.392Z",
+      "supports": 7,
+      "supportedBy": [
+        "Planczekau",
+        "admin",
+        "@MemeXarym",
+        "Memexairdrp",
+        "Okan",
+        "Nadir",
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "admin",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T12:08:21.484Z",
+      "url": "https://x.com/Erica__Hazel/status/1895081789904867630?s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T12:08:21.484Z",
+      "supports": 4,
+      "supportedBy": [
+        "Planczekau",
+        "admin",
+        "Okan",
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "PLanC007",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T11:59:01.767Z",
+      "url": "https://x.com/azurite_nft/status/1895080627545817458",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T11:59:01.767Z",
+      "supports": 4,
+      "supportedBy": [
+        "Planczekau",
+        "admin",
+        "Okan",
+        "@Piraa86080349"
+      ]
+    },
+    {
+      "username": "MemeX",
+      "platform": "Twitter",
+      "timestamp": "2025-02-27T11:20:02.635Z",
+      "url": "https://x.com/memexairdrop/status/1895070257754071465?t=aUueZtpyU8Krj0LrYlmU6w&s=19",
+      "groupInfo": {
+        "name": "MemeX Community",
+        "id": "123456789"
+      },
+      "rewards": {
+        "add": 10000,
+        "support": 5000
+      },
+      "reports": [],
+      "expiryDate": "2025-03-06T11:20:02.635Z",
+      "supports": 6,
+      "supportedBy": [
+        "Nadir",
+        "Planczekau",
+        "admin",
+        "Memexairdrp",
+        "Okan",
+        "@Piraa86080349"
+      ]
+    },
+    {
       "username": "Planc~genji",
       "platform": "Facebook",
       "timestamp": "2025-02-26T21:35:00.072Z",
@@ -14,9 +5385,14 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T21:35:00.072Z",
-      "supports": 0,
-      "supportedBy": []
+      "expiryDate": "2025-03-05T21:35:00.072Z",
+      "supports": 4,
+      "supportedBy": [
+        "Nadir",
+        "Planczekau",
+        "admin",
+        "Okan"
+      ]
     },
     {
       "username": "@Piraa86080349",
@@ -32,10 +5408,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T20:13:59.907Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T20:13:59.907Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -52,10 +5431,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T20:10:22.570Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T20:10:22.570Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -72,10 +5454,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T20:08:13.189Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T20:08:13.189Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -92,10 +5477,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T20:05:30.937Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T20:05:30.937Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -112,10 +5500,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T19:35:31.049Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T19:35:31.049Z",
+      "supports": 3,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "Okan"
       ]
     },
     {
@@ -132,10 +5522,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T19:31:42.670Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T19:31:42.670Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -152,10 +5545,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T19:27:32.130Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T19:27:32.130Z",
+      "supports": 3,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "Okan"
       ]
     },
     {
@@ -172,10 +5567,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T19:24:31.681Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T19:24:31.681Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -192,10 +5590,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T19:20:01.052Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T19:20:01.052Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -212,10 +5613,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T19:17:44.862Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T19:17:44.862Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -232,10 +5636,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T19:00:33.026Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T19:00:33.026Z",
+      "supports": 4,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin",
+        "Okan"
       ]
     },
     {
@@ -252,11 +5659,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T17:15:53.623Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T17:15:53.623Z",
+      "supports": 4,
       "supportedBy": [
         "Memexairdrp",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin"
       ]
     },
     {
@@ -273,10 +5682,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T15:36:11.693Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T15:36:11.693Z",
+      "supports": 3,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin"
       ]
     },
     {
@@ -293,10 +5704,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T15:33:46.171Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T15:33:46.171Z",
+      "supports": 3,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin"
       ]
     },
     {
@@ -313,10 +5726,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T15:16:41.724Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T15:16:41.724Z",
+      "supports": 3,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "Planczekau",
+        "admin"
       ]
     },
     {
@@ -333,10 +5748,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T14:08:07.304Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T14:08:07.304Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -353,10 +5769,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T13:54:00.984Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T13:54:00.984Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -373,11 +5790,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T13:19:56.796Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T13:19:56.796Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -394,11 +5812,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T13:08:27.788Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T13:08:27.788Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -415,11 +5834,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T12:42:12.271Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T12:42:12.271Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -436,11 +5856,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T12:38:02.232Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T12:38:02.232Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -457,10 +5878,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T12:31:09.676Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T12:31:09.676Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -477,10 +5899,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T12:27:54.713Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T12:27:54.713Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -497,10 +5920,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T12:14:30.123Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T12:14:30.123Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -517,12 +5941,13 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T12:02:43.703Z",
-      "supports": 3,
+      "expiryDate": "2025-03-05T12:02:43.703Z",
+      "supports": 4,
       "supportedBy": [
         "Memexairdrp",
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -539,10 +5964,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T11:53:10.672Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T11:53:10.672Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -559,10 +5985,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T11:25:34.188Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T11:25:34.188Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -579,11 +6006,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T11:20:48.804Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T11:20:48.804Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -600,10 +6028,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T11:18:57.767Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T11:18:57.767Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -620,10 +6049,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T11:16:15.123Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T11:16:15.123Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -640,10 +6070,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T11:15:49.868Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T11:15:49.868Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -660,10 +6091,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T11:14:50.657Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T11:14:50.657Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -680,11 +6112,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T11:13:49.187Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T11:13:49.187Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -701,7 +6134,7 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:57:34.922Z",
+      "expiryDate": "2025-03-05T10:57:34.922Z",
       "supports": 1,
       "supportedBy": [
         "@Piraa86080349"
@@ -721,10 +6154,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:57:20.718Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:57:20.718Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -741,10 +6175,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:55:19.867Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:55:19.867Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -761,10 +6196,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:48:27.386Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:48:27.386Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -781,10 +6217,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:47:26.181Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:47:26.181Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -801,10 +6238,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:43:47.776Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:43:47.776Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -821,10 +6259,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:37:35.767Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:37:35.767Z",
+      "supports": 3,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin",
+        "Planc~genji"
       ]
     },
     {
@@ -841,10 +6281,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:21:43.735Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:21:43.735Z",
+      "supports": 3,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin",
+        "Planc~genji"
       ]
     },
     {
@@ -861,11 +6303,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:20:28.852Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T10:20:28.852Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -882,10 +6325,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:19:28.048Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:19:28.048Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -902,10 +6346,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T10:17:17.980Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T10:17:17.980Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -922,10 +6367,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T09:55:17.236Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T09:55:17.236Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -942,10 +6388,11 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T09:53:58.152Z",
-      "supports": 1,
+      "expiryDate": "2025-03-05T09:53:58.152Z",
+      "supports": 2,
       "supportedBy": [
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -962,11 +6409,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T09:53:19.675Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T09:53:19.675Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -983,11 +6431,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T09:51:10.358Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T09:51:10.358Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -1004,11 +6453,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T09:33:04.311Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T09:33:04.311Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -1025,11 +6475,12 @@
         "support": 5000
       },
       "reports": [],
-      "expiryDate": "2025-03-13T00:09:50.653Z",
-      "supports": 2,
+      "expiryDate": "2025-03-05T00:09:50.653Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -1046,11 +6497,12 @@
         "support": 5
       },
       "reports": [],
-      "expiryDate": "2025-03-12T23:51:05.389Z",
-      "supports": 2,
+      "expiryDate": "2025-03-04T23:51:05.389Z",
+      "supports": 3,
       "supportedBy": [
         "Morkoinu",
-        "@Piraa86080349"
+        "@Piraa86080349",
+        "admin"
       ]
     },
     {
@@ -1067,7 +6519,7 @@
         "support": 5
       },
       "reports": [],
-      "expiryDate": "2025-03-10T12:34:09.778Z",
+      "expiryDate": "2025-03-02T12:34:09.778Z",
       "supports": 3,
       "supportedBy": [
         "admin",
@@ -1089,7 +6541,7 @@
         "support": 5
       },
       "reports": [],
-      "expiryDate": "2025-03-10T12:32:48.631Z",
+      "expiryDate": "2025-03-02T12:32:48.631Z",
       "supports": 3,
       "supportedBy": [
         "admin",

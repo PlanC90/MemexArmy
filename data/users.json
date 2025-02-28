@@ -6,7 +6,7 @@
       "password": "Jesuschrist1112@",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 10000,
+      "balance": 385000,
       "walletAddress": "xX1DCxgAT5Yyq8otwS7LGH54KFoSrRtYcP",
       "roles": [
         "user"
@@ -19,7 +19,7 @@
       "password": "123456",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 15000,
+      "balance": 3230000,
       "walletAddress": "xDtEcJQPQYfYyby8ugPa5pVCbWHPfxoGBG",
       "roles": [
         "user"
@@ -32,7 +32,7 @@
       "password": "Morkoinu",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 65000,
+      "balance": 165000,
       "walletAddress": "",
       "roles": [
         "user"
@@ -45,7 +45,7 @@
       "password": "@Piraa86080349",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 215000,
+      "balance": 13195000,
       "walletAddress": "",
       "roles": [
         "user"
@@ -55,10 +55,10 @@
     {
       "id": "658f23a5-2ddb-485a-a9f5-a3a9ad56473a",
       "username": "Planc~genji",
-      "password": "632485",
+      "password": "",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 0,
+      "balance": 3130000,
       "walletAddress": "xLGe1kEmezhTn1MYhH3D2b6ynVXfVJj3AK",
       "roles": [
         "user"
@@ -71,7 +71,7 @@
       "password": "695847.Yd",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 0,
+      "balance": 1180000,
       "walletAddress": "",
       "roles": [
         "user"
@@ -84,7 +84,7 @@
       "password": "417031",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 0,
+      "balance": 1855000,
       "walletAddress": "xL88nCeFNDXH9QtcJ1A7Lm2kG9KuJ4N91W",
       "roles": [
         "user"
@@ -110,12 +110,155 @@
       "password": "admin",
       "tasksAdded": 0,
       "tasksSupported": 0,
+      "balance": 3240000,
+      "walletAddress": "xSGYEAoaB4p2C95Eg96wDZhe7kDGciCvS9",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-26T20:06:20.010Z"
+    },
+    {
+      "id": "f6a02e0f-179c-4ce9-ba07-04640867ad1d",
+      "username": "MemeX",
+      "password": "2025Memex+",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
       "balance": 0,
       "walletAddress": "",
       "roles": [
         "user"
       ],
-      "createdAt": "2025-02-26T20:06:20.010Z"
+      "createdAt": "2025-02-27T11:19:28.151Z"
+    },
+    {
+      "id": "ef34b170-4b91-44ee-b921-d2674b068a68",
+      "username": "Yuzarsifinizzz",
+      "password": "Yusuf4532@#.*?&Y_k",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T11:26:11.238Z"
+    },
+    {
+      "id": "4aa02552-e2c1-4971-b20e-203d17222023",
+      "username": "PLanC007",
+      "password": "318318",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 100000,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T11:26:43.832Z"
+    },
+    {
+      "id": "471b21c4-b05b-4862-9d93-9b51f389eee1",
+      "username": "Planczekau",
+      "password": "14531453",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 17305000,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T12:10:23.821Z"
+    },
+    {
+      "id": "adcfe3fd-9c2c-47c8-895d-e668f5c1e298",
+      "username": "Okan",
+      "password": "Ok304378",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 800000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T13:59:42.366Z"
+    },
+    {
+      "id": "21075f39-8a9d-444c-891b-db22a09769c6",
+      "username": "LisaMemeX",
+      "password": "*MemeX25*",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 600000,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T19:18:17.539Z"
+    },
+    {
+      "id": "64d5e5c1-cadd-407e-9544-a81bcdfbcc43",
+      "username": "PlanC Joseph ",
+      "password": "695847.Yd",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 3880000,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T19:37:54.179Z"
+    },
+    {
+      "id": "b03214bd-a11e-4c2e-b468-e76033d36109",
+      "username": "PlanC Wataru",
+      "password": "998877",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "xCdTbyjzRAedsXiMtKfZeSHrsXhrMbBpWz",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T21:45:11.351Z"
+    },
+    {
+      "id": "78ead5d6-8961-47b4-930e-f1a3972a7c56",
+      "username": "Dragonn",
+      "password": "NEWtsunamy2025",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T22:47:37.249Z"
+    },
+    {
+      "id": "acb8e088-2a5d-4837-90bb-2ae75bec78bd",
+      "username": "Lena",
+      "password": "zxcvbnm1@",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 270000,
+      "walletAddress": "xLazbLhAx9ohbPuQFHLWu8bBG5oRkzRdbW",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-27T23:31:46.077Z"
+    },
+    {
+      "id": "94c723dc-7495-4988-bb0e-207cfa25ff0f",
+      "username": "Ejderr",
+      "password": "123456",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 2520000,
+      "walletAddress": "xCESE4rgvLPfMt4S8jWHosEGrzNPvRdumg",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-02-28T09:41:39.436Z"
     }
   ]
 }

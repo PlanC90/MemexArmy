@@ -44,7 +44,8 @@ export function Register() {
         balance: 0,
         walletAddress: '',
         roles: ['user'],
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
+        canAddLinks: true // Enable link adding by default
       };
 
       const success = await writeJsonFile('users.json', {

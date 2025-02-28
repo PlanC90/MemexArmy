@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Link2, Flag, ThumbsUp, Plus, Clock, Trash2 } from 'lucide-react';
+import { Link2, Flag, ThumbsUp, Plus, Clock, Trash2, Search } from 'lucide-react';
 import type { Link as LinkType, Admin as AdminType, User as UserType } from '../types';
 import { readJsonFile, writeJsonFile } from '../services/dataService';
 import toast from 'react-hot-toast';
@@ -34,6 +34,21 @@ export function Links() {
   const [currentUser, setCurrentUser] = React.useState<UserType | null>(null);
   const [taskReward, setTaskReward] = useState(0);
   const [supportReward, setSupportReward] = useState(0);
+  const [platformFilter, setPlatformFilter] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+    const [userFilter, setUserFilter] = useState('All');
+    const [supportFilter, setSupportFilter] = useState('All');
+    const [reportFilter, setReportFilter] = useState('All');
+
+    const updateExpiryDates = async (currentLinks: LinkType[]) => {
+        const updatedLinks = currentLinks.map(link => {
+            const timestamp = new Date(link.timestamp).getTime();
+            const expiryDate = new Date(timestamp + 7 * 24 * 60 * 60 * 1000).toISOString();
+            return { ...link, expiryDate };
+        });
+        await writeJsonFile('links.json', { links: updatedLinks });
+        return updatedLinks;
+    };
 
   useEffect(() => {
     const loadData = async () => {
@@ -44,7 +59,8 @@ export function Links() {
 
       const linksData = await readJsonFile<{ links: LinkType[] }>('links.json');
       if (linksData) {
-        setLinks(linksData.links);
+          const updated = await updateExpiryDates(linksData.links);
+          setLinks(updated);
       }
 
        const adminData = await readJsonFile<{ 
@@ -86,7 +102,7 @@ export function Links() {
   const handleAddLink = async () => {
     if (newLink.url && currentUser) {
       const now = new Date();
-      const expiryDate = new Date(now.getTime() + 15 * 24 * 60 * 60 * 1000); // 15 days from now
+      const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days from now
 
       const link: LinkType = {
         username: currentUser.username, // Use the current user's username
@@ -216,8 +232,22 @@ export function Links() {
     return link.reports.includes(currentUser?.username || '');
   };
 
-  const isAdmin = () => {
+  const isAdminCheck = () => {
         return admins.some(admin => admin.username === currentUser?.username);
+    };
+
+    const filteredLinks = links.filter(link => {
+        const platformMatch = platformFilter === 'All' || link.platform === platformFilter;
+        const searchMatch = link.url.toLowerCase().includes(searchQuery.toLowerCase());
+        const userMatch = userFilter === 'All' || link.username.toLowerCase().includes(userFilter.toLowerCase());
+        const supportMatch = supportFilter === 'All' || (supportFilter === 'Supported' && link.supportedBy.includes(currentUser?.username || '')) || (supportFilter === 'Not Supported' && !link.supportedBy.includes(currentUser?.username || ''));
+        const reportMatch = reportFilter === 'All' || (reportFilter === 'Reported' && link.reports.length > 0) || (reportFilter === 'Not Reported' && link.reports.length === 0);
+
+        return platformMatch && searchMatch && userMatch && supportMatch && reportMatch;
+    });
+
+    const canDeleteLink = (link: LinkType): boolean => {
+        return isAdminCheck() || (currentUser && link.username === currentUser.username);
     };
 
   return (
@@ -269,12 +299,79 @@ export function Links() {
         </Card>
       )}
 
+      <div className="flex flex-wrap items-center gap-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Platform:</label>
+          <select
+            value={platformFilter}
+            onChange={(e) => setPlatformFilter(e.target.value)}
+            className="mt-1 block rounded-md border border-gray-300 px-3 py-2 text-sm"
+          >
+            <option value="All">All</option>
+            <option value="Twitter">Twitter</option>
+            <option value="Reddit">Reddit</option>
+            <option value="Facebook">Facebook</option>
+            <option value="TikTok">TikTok</option>
+            <option value="YouTube">YouTube</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+            <label className="block text-sm font-medium text-gray-700">User:</label>
+            <input
+                type="text"
+                placeholder="Filter by user..."
+                value={userFilter}
+                onChange={(e) => setUserFilter(e.target.value)}
+                className="mt-1 block rounded-md border border-gray-300 px-3 py-2 text-sm"
+            />
+        </div>
+        <div>
+            <label className="block text-sm font-medium text-gray-700">Support:</label>
+            <select
+                value={supportFilter}
+                onChange={(e) => setSupportFilter(e.target.value)}
+                className="mt-1 block rounded-md border border-gray-300 px-3 py-2 text-sm"
+            >
+                <option value="All">All</option>
+                <option value="Supported">Supported</option>
+                <option value="Not Supported">Not Supported</option>
+            </select>
+        </div>
+        <div>
+            <label className="block text-sm font-medium text-gray-700">Report:</label>
+            <select
+                value={reportFilter}
+                onChange={(e) => setReportFilter(e.target.value)}
+                className="mt-1 block rounded-md border border-gray-300 px-3 py-2 text-sm"
+            >
+                <option value="All">All</option>
+                <option value="Reported">Reported</option>
+                <option value="Not Reported">Not Reported</option>
+            </select>
+        </div>
+        <div className="w-full sm:w-auto">
+          <label className="block text-sm font-medium text-gray-700">Search Links:</label>
+          <div className="relative mt-1">
+            <input
+              type="text"
+              placeholder="Search links..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="space-y-4">
-        {links.map((link, index) => {
+        {filteredLinks.map((link, index) => {
           const expiryDate = new Date(link.expiryDate);
           const timeRemaining = getTimeRemaining(expiryDate);
           const isSupported = link.supportedBy?.includes(currentUser?.username || '');
           const isReported = isReportedByCurrentUser(link);
+          const isAdmin = isAdminCheck();
+          const canCurrentUserDelete = canDeleteLink(link);
 
           return (
             <Card key={index}>
@@ -303,7 +400,7 @@ export function Links() {
                     <Flag className="h-4 w-4" />
                     {isReported ? 'Unreport' : 'Report'} {link.reports.length > 0 && `(${link.reports.length})`}
                   </Button>
-                  {isAdmin() && (
+                  {canCurrentUserDelete && (
                     <Button
                       variant="ghost"
                       size="sm"

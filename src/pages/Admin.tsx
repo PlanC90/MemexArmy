@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Shield, Users, Coins, Flag, X, Trash2 } from 'lucide-react';
-import type { Admin as AdminType, Link as LinkType } from '../types';
+import { Shield, Users, Coins, Flag, X, Trash2, Search } from 'lucide-react';
+import type { Admin as AdminType, Link as LinkType, User as UserType } from '../types';
 import { readJsonFile, writeJsonFile } from '../services/dataService';
 import toast from 'react-hot-toast';
 
@@ -13,6 +13,9 @@ export function Admin() {
   const [supportReward, setSupportReward] = useState(0);
   const [reportedLinks, setReportedLinks] = useState<LinkType[]>([]);
   const [allLinks, setAllLinks] = useState<LinkType[]>([]);
+  const [searchUser, setSearchUser] = useState('');
+  const [selectedUser, setSelectedUser] = useState<UserType | null>(null);
+  const [allUsers, setAllUsers] = useState<UserType[]>([]);
 
   useEffect(() => {
     const loadAdminData = async () => {
@@ -35,9 +38,24 @@ export function Admin() {
       }
     };
 
+    const loadUsers = async () => {
+      const usersData = await readJsonFile<{ users: UserType[] }>('users.json');
+      setAllUsers(usersData?.users || []);
+    };
+
     loadAdminData();
     loadLinks();
+    loadUsers();
   }, []);
+
+  useEffect(() => {
+    if (searchUser) {
+      const foundUser = allUsers.find(user => user.username.toLowerCase().includes(searchUser.toLowerCase()));
+      setSelectedUser(foundUser || null);
+    } else {
+      setSelectedUser(null);
+    }
+  }, [searchUser, allUsers]);
 
   const handleAddAdmin = async () => {
     if (newAdmin) {
@@ -106,6 +124,60 @@ export function Admin() {
       toast.success('Link deleted successfully!');
     } else {
       toast.error('Failed to delete link.');
+    }
+  };
+
+  const handleChangePassword = async (newPassword: string) => {
+    if (!selectedUser) return;
+
+    const updatedUsers = allUsers.map(user => {
+      if (user.id === selectedUser.id) {
+        return { ...user, password: newPassword };
+      }
+      return user;
+    });
+
+    const success = await writeJsonFile('users.json', { users: updatedUsers });
+    if (success) {
+      setAllUsers(updatedUsers);
+      setSelectedUser(prev => prev ? ({ ...prev, password: newPassword }) : null);
+      toast.success('Password changed successfully!');
+    } else {
+      toast.error('Failed to change password.');
+    }
+  };
+
+  const handleDeleteUser = async () => {
+    if (!selectedUser) return;
+
+    const updatedUsers = allUsers.filter(user => user.id !== selectedUser.id);
+    const success = await writeJsonFile('users.json', { users: updatedUsers });
+    if (success) {
+      setAllUsers(updatedUsers);
+      setSelectedUser(null);
+      toast.success('User deleted successfully!');
+    } else {
+      toast.error('Failed to delete user.');
+    }
+  };
+
+  const handleToggleLinkRestriction = async () => {
+    if (!selectedUser) return;
+
+    const updatedUsers = allUsers.map(user => {
+      if (user.id === selectedUser.id) {
+        return { ...user, canAddLinks: !user.canAddLinks };
+      }
+      return user;
+    });
+
+    const success = await writeJsonFile('users.json', { users: updatedUsers });
+    if (success) {
+      setAllUsers(updatedUsers);
+      setSelectedUser(prev => prev ? ({ ...prev, canAddLinks: !prev.canAddLinks }) : null);
+      toast.success(`Link adding ${selectedUser.canAddLinks ? 'enabled' : 'disabled'} for user.`);
+    } else {
+      toast.error('Failed to toggle link restriction.');
     }
   };
 
@@ -229,6 +301,54 @@ export function Admin() {
                 </li>
               ))}
             </ul>
+          )}
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Users className="h-5 w-5" />
+            User Management
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              value={searchUser}
+              onChange={(e) => setSearchUser(e.target.value)}
+              className="flex-1 rounded-md border border-gray-300 px-3 py-2 text-sm"
+              placeholder="Search for a user"
+            />
+            <Button variant="outline">
+              <Search className="h-4 w-4" />
+              Search
+            </Button>
+          </div>
+          {selectedUser && (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <p className="text-lg font-medium">Selected User: {selectedUser.username}</p>
+                <Button variant="ghost" size="sm" className="text-red-600" onClick={handleDeleteUser}>
+                  Delete User
+                </Button>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Change Password</label>
+                <input
+                  type="password"
+                  placeholder="New Password"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
+                  onBlur={(e) => handleChangePassword(e.target.value)}
+                />
+              </div>
+              <div>
+                <Button onClick={handleToggleLinkRestriction}>
+                  {selectedUser.canAddLinks ? 'Restrict Link Adding' : 'Allow Link Adding'}
+                </Button>
+              </div>
+            </div>
           )}
         </CardContent>
       </Card>
