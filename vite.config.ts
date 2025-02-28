@@ -42,5 +42,8 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 1600 // Increase chunk size limit to 1600 KB
+  },
+  server: {
+    allowedHosts: ["test3-of9y.onrender.com"]
   }
 });
