@@ -22,6 +22,22 @@ function getTimeRemaining(expiryDate: Date): string {
   return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
+function getRemainingTime(lastReset: Date): { timeRemaining: string; isExpired: boolean } {
+    const resetTime = new Date(lastReset.getTime() + 24 * 60 * 60 * 1000);
+    const now = new Date();
+    const diff = resetTime.getTime() - now.getTime();
+
+    if (diff <= 0) {
+        return { timeRemaining: "Ready to add links!", isExpired: true };
+    }
+
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    return { timeRemaining: `Resets in ${hours}h ${minutes}m ${seconds}s`, isExpired: false };
+}
+
 export function Links() {
   const [links, setLinks] = useState<LinkType[]>([]);
   const [showAddForm, setShowAddForm] = useState(false);
@@ -39,12 +55,32 @@ export function Links() {
     const [userFilter, setUserFilter] = useState('All');
     const [supportFilter, setSupportFilter] = useState('All');
     const [reportFilter, setReportFilter] = useState('All');
+    const [linksAddedToday, setLinksAddedToday] = useState(0);
+    const [lastResetTime, setLastResetTime] = useState(new Date());
+    const [remainingTime, setRemainingTime] = useState({ timeRemaining: "Ready to add links!", isExpired: true });
 
     const updateExpiryDates = async (currentLinks: LinkType[]) => {
         const updatedLinks = currentLinks.map(link => {
             const timestamp = new Date(link.timestamp).getTime();
             const expiryDate = new Date(timestamp + 7 * 24 * 60 * 60 * 1000).toISOString();
             return { ...link, expiryDate };
+        });
+        return updatedLinks;
+    };
+
+    const deleteExpiredLinks = async (currentLinks: LinkType[]) => {
+        const now = new Date();
+        const updatedLinks = currentLinks.map(link => {
+            if (new Date(link.expiryDate) <= now) {
+                // Clear URL, groupInfo, and platform
+                return {
+                    ...link,
+                    url: '',
+                    groupInfo: { name: '', id: '' },
+                    platform: ''
+                };
+            }
+            return link;
         });
         await writeJsonFile('links.json', { links: updatedLinks });
         return updatedLinks;
@@ -60,7 +96,8 @@ export function Links() {
       const linksData = await readJsonFile<{ links: LinkType[] }>('links.json');
       if (linksData) {
           const updated = await updateExpiryDates(linksData.links);
-          setLinks(updated);
+          const validLinks = await deleteExpiredLinks(updated);
+          setLinks(validLinks);
       }
 
        const adminData = await readJsonFile<{ 
@@ -72,9 +109,67 @@ export function Links() {
             setTaskReward(adminData.settings.taskReward);
             setSupportReward(adminData.settings.supportReward);
         }
+
+        const storedLinksAdded = localStorage.getItem(`linksAddedToday_${currentUser?.username || 'default'}`);
+        const storedLastResetTime = localStorage.getItem(`lastResetTime_${currentUser?.username || 'default'}`);
+
+        const today = new Date().toLocaleDateString();
+        const storedDate = storedLastResetTime ? new Date(storedLastResetTime).toLocaleDateString() : null;
+
+        let parsedLinksAdded = 0;
+        let parsedLastResetTime = new Date();
+
+        if (storedLinksAdded) {
+            parsedLinksAdded = parseInt(storedLinksAdded, 10);
+        }
+
+        if (storedLastResetTime) {
+            parsedLastResetTime = new Date(storedLastResetTime);
+        }
+
+        if (storedDate === today) {
+            setLinksAddedToday(parsedLinksAdded);
+            setLastResetTime(parsedLastResetTime);
+        } else {
+            setLinksAddedToday(0);
+            setLastResetTime(new Date());
+            localStorage.setItem(`lastResetTime_${currentUser?.username || 'default'}`, new Date().toISOString());
+            localStorage.setItem(`linksAddedToday_${currentUser?.username || 'default'}`, '0');
+        }
     };
     loadData();
   }, []);
+
+    useEffect(() => {
+        if (currentUser) {
+            const storedLinksAdded = localStorage.getItem(`linksAddedToday_${currentUser?.username || 'default'}`);
+            const storedLastResetTime = localStorage.getItem(`lastResetTime_${currentUser?.username || 'default'}`);
+
+            const today = new Date().toLocaleDateString();
+            const storedDate = storedLastResetTime ? new Date(storedLastResetTime).toLocaleDateString() : null;
+
+            let parsedLinksAdded = 0;
+            let parsedLastResetTime = new Date();
+
+            if (storedLinksAdded) {
+                parsedLinksAdded = parseInt(storedLinksAdded, 10);
+            }
+
+            if (storedLastResetTime) {
+                parsedLastResetTime = new Date(storedLastResetTime);
+            }
+
+            if (storedDate === today) {
+                setLinksAddedToday(parsedLinksAdded);
+                setLastResetTime(parsedLastResetTime);
+            } else {
+                setLinksAddedToday(0);
+                setLastResetTime(new Date());
+                localStorage.setItem(`lastResetTime_${currentUser?.username || 'default'}`, new Date().toISOString());
+                localStorage.setItem(`linksAddedToday_${currentUser?.username || 'default'}`, '0');
+            }
+        }
+    }, [currentUser]);
 
   useEffect(() => {
     if (currentUser) {
@@ -99,38 +194,57 @@ export function Links() {
     return () => clearInterval(timer);
   }, []);
 
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setRemainingTime(getRemainingTime(lastResetTime));
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [lastResetTime]);
+
   const handleAddLink = async () => {
     if (newLink.url && currentUser) {
-      const now = new Date();
-      const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days from now
+        if (linksAddedToday >= 2) {
+            toast.error('You have reached your limit of 2 links per day.');
+            return;
+        }
 
-      const link: LinkType = {
-        username: currentUser.username, // Use the current user's username
-        platform: newLink.platform,
-        timestamp: now.toISOString(),
-        url: newLink.url,
-        groupInfo: {
-          name: 'MemeX Community',
-          id: '123456789'
-        },
-        rewards: {
-          add: taskReward, // Use the dynamic taskReward value
-          support: supportReward // Use the dynamic supportReward value
-        },
-        reports: [],
-        expiryDate: expiryDate.toISOString(),
-        supports: 0, // Initialize supports count
-        supportedBy: [] // Initialize supportedBy array
-      };
+        const now = new Date();
+        const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days from now
 
-      const updatedLinks = [link, ...links];
-      const success = await writeJsonFile('links.json', { links: updatedLinks });
+        const link: LinkType = {
+            username: currentUser.username, // Use the current user's username
+            platform: newLink.platform,
+            timestamp: now.toISOString(),
+            url: newLink.url,
+            groupInfo: {
+                name: 'MemeX Community',
+                id: '123456789'
+            },
+            rewards: {
+                add: taskReward, // Use the dynamic taskReward value
+                support: supportReward // Use the dynamic supportReward value
+            },
+            reports: [],
+            expiryDate: expiryDate.toISOString(),
+            supports: 0, // Initialize supports count
+            supportedBy: [] // Initialize supportedBy array
+        };
 
-      if (success) {
-        setLinks(updatedLinks);
-        setNewLink({ url: '', platform: 'Twitter' });
-        setShowAddForm(false);
-      }
+        const updatedLinks = [link, ...links];
+        const validLinks = await deleteExpiredLinks(updatedLinks);
+
+        const success = await writeJsonFile('links.json', { links: validLinks });
+
+        if (success) {
+            setLinks(validLinks);
+            setNewLink({ url: '', platform: 'Twitter' });
+            setShowAddForm(false);
+
+            const newLinksAdded = linksAddedToday + 1;
+            setLinksAddedToday(newLinksAdded);
+            localStorage.setItem(`linksAddedToday_${currentUser?.username || 'default'}`, newLinksAdded.toString());
+        }
     }
   };
 
@@ -152,9 +266,10 @@ export function Links() {
       return link;
     });
 
-    const success = await writeJsonFile('links.json', { links: updatedLinks });
+    const validLinks = await deleteExpiredLinks(updatedLinks);
+    const success = await writeJsonFile('links.json', { links: validLinks });
     if (success) {
-      setLinks(updatedLinks);
+      setLinks(validLinks);
     }
   };
 
@@ -190,7 +305,8 @@ export function Links() {
         return link;
       });
 
-      const linksSuccess = await writeJsonFile('links.json', { links: updatedLinks });
+      const validLinks = await deleteExpiredLinks(updatedLinks);
+      const linksSuccess = await writeJsonFile('links.json', { links: validLinks });
 
       if (!linksSuccess) {
         toast.error('Failed to update link supports.');
@@ -201,7 +317,7 @@ export function Links() {
 
       if (success) {
         setSupportedLinks(prev => [...prev, linkUrl]);
-        setLinks(updatedLinks); // Update the links state with the new supports count
+        setLinks(validLinks); // Update the links state with the new supports count
         toast.success('Link supported successfully!');
         setSupportedLinks(prev => [...prev, linkUrl]);
       } else {
@@ -215,9 +331,10 @@ export function Links() {
 
   const handleAdminDelete = async (linkUrl: string) => {
     const updatedLinks = links.filter(link => link.url !== linkUrl);
-    const success = await writeJsonFile('links.json', { links: updatedLinks });
+    const validLinks = await deleteExpiredLinks(updatedLinks);
+    const success = await writeJsonFile('links.json', { links: validLinks });
     if (success) {
-      setLinks(updatedLinks);
+      setLinks(validLinks);
       toast.success('Link deleted successfully!');
     } else {
       toast.error('Failed to delete link.');
@@ -250,14 +367,34 @@ export function Links() {
         return isAdminCheck() || (currentUser && link.username === currentUser.username);
     };
 
+    const supportedCount = filteredLinks.filter(link => link.supportedBy.includes(currentUser?.username || '')).length;
+    const unsupportedCount = filteredLinks.filter(link => !link.supportedBy.includes(currentUser?.username || '')).length;
+
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold text-gray-900">Links</h1>
-        <Button onClick={() => setShowAddForm(true)} className="flex items-center gap-2">
-          <Plus className="h-4 w-4" />
-          Add New Link
-        </Button>
+        <h1 className="text-2xl font-semibold text-gray-900">
+          Links
+          <span className="ml-4 text-sm text-gray-500">
+            Supported: {supportedCount} | Not Supported: {unsupportedCount}
+          </span>
+        </h1>
+          <div className="flex items-center space-x-4">
+              <div className="text-sm text-gray-600">
+                  Links Added: {linksAddedToday} / 2
+              </div>
+              <div className="text-sm text-gray-600">
+                  {remainingTime.timeRemaining}
+              </div>
+              <Button
+                  onClick={() => setShowAddForm(true)}
+                  className="flex items-center gap-2"
+                  disabled={linksAddedToday >= 2 && !remainingTime.isExpired}
+              >
+                  <Plus className="h-4 w-4" />
+                  Add New Link
+              </Button>
+          </div>
       </div>
 
       {showAddForm && (
@@ -368,7 +505,7 @@ export function Links() {
         {filteredLinks.map((link, index) => {
           const expiryDate = new Date(link.expiryDate);
           const timeRemaining = getTimeRemaining(expiryDate);
-          const isSupported = link.supportedBy?.includes(currentUser?.username || '');
+          const isSupported = isLinkSupported(link.url);
           const isReported = isReportedByCurrentUser(link);
           const isAdmin = isAdminCheck();
           const canCurrentUserDelete = canDeleteLink(link);

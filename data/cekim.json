@@ -1,3 +1,136 @@
 {
-  "withdrawals": []
+  "withdrawals": [
+    {
+      "username": "Okan",
+      "amount": 2000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-03T19:23:10.861Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 2000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-03T19:23:11.890Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 2000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-03T19:25:04.232Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 14000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-03T21:21:12.234Z"
+    },
+    {
+      "username": "PlanC Wataru",
+      "amount": 22400000,
+      "walletAddress": "xCdTbyjzRAedsXiMtKfZeSHrsXhrMbBpWz",
+      "timestamp": "2025-03-04T14:25:15.950Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 2000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-04T16:23:46.195Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 2000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-04T16:23:47.112Z"
+    },
+    {
+      "username": "Fb68",
+      "amount": 35000000,
+      "walletAddress": "x8texrQtkY9FADQiMhLSzznzDzP1ozW8pg",
+      "timestamp": "2025-03-04T18:12:15.797Z"
+    },
+    {
+      "username": "Fb11",
+      "amount": 3000000,
+      "walletAddress": "xP1GqeqmqF5YxntNLAsmu9xxCW4a8VRNPc",
+      "timestamp": "2025-03-04T18:18:15.209Z"
+    },
+    {
+      "username": "Kal10",
+      "amount": 3000000,
+      "walletAddress": "xNWZAmea3TFpZiabooXDvX6EKKnqXpEZwL",
+      "timestamp": "2025-03-04T18:26:44.259Z"
+    },
+    {
+      "username": "Saka9",
+      "amount": 3000000,
+      "walletAddress": "xBxdwokmNeK2HbDCbx1uXwNhq2KkU3Xzqd",
+      "timestamp": "2025-03-04T18:36:18.539Z"
+    },
+    {
+      "username": "Pirates08",
+      "amount": 2700000,
+      "walletAddress": "xSpEFnLFJq6oYQDes3oKPEEtr2rJ9WePeQ",
+      "timestamp": "2025-03-04T18:42:23.479Z"
+    },
+    {
+      "username": "Pirates08",
+      "amount": 3400000,
+      "walletAddress": "xSpEFnLFJq6oYQDes3oKPEEtr2rJ9WePeQ",
+      "timestamp": "2025-03-04T18:44:54.883Z"
+    },
+    {
+      "username": "Spb07",
+      "amount": 2750000,
+      "walletAddress": "xXBp2Xzv6GktYk7Ludrf3CAqt8tzhUMkBb",
+      "timestamp": "2025-03-04T18:57:19.226Z"
+    },
+    {
+      "username": "Spb07",
+      "amount": 10000000,
+      "walletAddress": "xXBp2Xzv6GktYk7Ludrf3CAqt8tzhUMkBb",
+      "timestamp": "2025-03-04T20:20:28.166Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 2000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-04T21:40:53.447Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 2000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-04T21:40:54.591Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 9000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-05T00:13:53.566Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 9000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-05T17:47:53.807Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 9000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-05T17:47:54.942Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 3500000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-05T17:50:24.073Z"
+    },
+    {
+      "username": "Okan",
+      "amount": 7000000,
+      "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
+      "timestamp": "2025-03-05T20:17:03.635Z"
+    }
+  ]
 }

@@ -45,7 +45,7 @@
       "password": "@Piraa86080349",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 13195000,
+      "balance": 24175000,
       "walletAddress": "",
       "roles": [
         "user"
@@ -84,7 +84,7 @@
       "password": "417031",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 1855000,
+      "balance": 2215000,
       "walletAddress": "xL88nCeFNDXH9QtcJ1A7Lm2kG9KuJ4N91W",
       "roles": [
         "user"
@@ -110,7 +110,7 @@
       "password": "admin",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 3240000,
+      "balance": 9720000,
       "walletAddress": "xSGYEAoaB4p2C95Eg96wDZhe7kDGciCvS9",
       "roles": [
         "user"
@@ -123,7 +123,7 @@
       "password": "2025Memex+",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 0,
+      "balance": 630000,
       "walletAddress": "",
       "roles": [
         "user"
@@ -149,7 +149,7 @@
       "password": "318318",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 100000,
+      "balance": 190000,
       "walletAddress": "",
       "roles": [
         "user"
@@ -162,7 +162,7 @@
       "password": "14531453",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 17305000,
+      "balance": 17935000,
       "walletAddress": "",
       "roles": [
         "user"
@@ -175,7 +175,7 @@
       "password": "Ok304378",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 800000,
+      "balance": 880000,
       "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
       "roles": [
         "user"
@@ -201,7 +201,7 @@
       "password": "695847.Yd",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 3880000,
+      "balance": 11530000,
       "walletAddress": "",
       "roles": [
         "user"
@@ -214,7 +214,7 @@
       "password": "998877",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 0,
+      "balance": 31330000,
       "walletAddress": "xCdTbyjzRAedsXiMtKfZeSHrsXhrMbBpWz",
       "roles": [
         "user"
@@ -253,12 +253,124 @@
       "password": "123456",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 2520000,
+      "balance": 4950000,
       "walletAddress": "xCESE4rgvLPfMt4S8jWHosEGrzNPvRdumg",
       "roles": [
         "user"
       ],
       "createdAt": "2025-02-28T09:41:39.436Z"
+    },
+    {
+      "id": "1e83128d-b0fa-4292-be8c-23aa1b5992d1",
+      "username": "Atombuloglu",
+      "password": "235711",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-03-03T17:45:14.203Z",
+      "canAddLinks": true
+    },
+    {
+      "id": "92dd592b-4d2d-4ccb-b185-73330283955d",
+      "username": "Fb68",
+      "password": "190700",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 370000,
+      "walletAddress": "x8texrQtkY9FADQiMhLSzznzDzP1ozW8pg",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-03-04T07:48:28.514Z",
+      "canAddLinks": true
+    },
+    {
+      "id": "04ca8725-b04f-4eda-80ad-c48d9cf4ad71",
+      "username": "Planc~genji🙂",
+      "password": "632485",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 180000,
+      "walletAddress": "",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-03-04T13:11:17.417Z",
+      "canAddLinks": true
+    },
+    {
+      "id": "0ca50c4c-f429-4c93-a68b-f38ec5a1512b",
+      "username": "Fb11",
+      "password": "190711",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 60000,
+      "walletAddress": "xP1GqeqmqF5YxntNLAsmu9xxCW4a8VRNPc",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-03-04T18:13:52.398Z",
+      "canAddLinks": true
+    },
+    {
+      "id": "1edbb69b-ce71-479b-a35e-bda3bcdebdee",
+      "username": "Kal10",
+      "password": "190710",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 60000,
+      "walletAddress": "xNWZAmea3TFpZiabooXDvX6EKKnqXpEZwL",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-03-04T18:23:09.532Z",
+      "canAddLinks": true
+    },
+    {
+      "id": "b0a33ea1-12d1-4bc3-be87-686e2c1708b6",
+      "username": "Saka9",
+      "password": "190709",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 60000,
+      "walletAddress": "xBxdwokmNeK2HbDCbx1uXwNhq2KkU3Xzqd",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-03-04T18:29:39.464Z",
+      "canAddLinks": true
+    },
+    {
+      "id": "2117aacd-89ce-431e-96f8-246dea2a8565",
+      "username": "Pirates08",
+      "password": "190708",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 830000,
+      "walletAddress": "xSpEFnLFJq6oYQDes3oKPEEtr2rJ9WePeQ",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-03-04T18:37:39.902Z",
+      "canAddLinks": true
+    },
+    {
+      "id": "bb22ebd1-641a-477e-83f1-6f076e0ede11",
+      "username": "Spb07",
+      "password": "190707",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 350000,
+      "walletAddress": "xXBp2Xzv6GktYk7Ludrf3CAqt8tzhUMkBb",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2025-03-04T18:48:16.032Z",
+      "canAddLinks": true
     }
   ]
 }
