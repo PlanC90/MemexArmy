@@ -9,7 +9,8 @@
       "balance": 385000,
       "walletAddress": "xX1DCxgAT5Yyq8otwS7LGH54KFoSrRtYcP",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T11:41:56.640Z"
     },
@@ -22,7 +23,8 @@
       "balance": 3230000,
       "walletAddress": "xDtEcJQPQYfYyby8ugPa5pVCbWHPfxoGBG",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T12:00:56.128Z"
     },
@@ -35,7 +37,8 @@
       "balance": 165000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T12:12:47.215Z"
     },
@@ -45,10 +48,11 @@
       "password": "@Piraa86080349",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 24175000,
+      "balance": 29215000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T12:33:04.694Z"
     },
@@ -61,7 +65,8 @@
       "balance": 3130000,
       "walletAddress": "xLGe1kEmezhTn1MYhH3D2b6ynVXfVJj3AK",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T12:43:30.317Z"
     },
@@ -74,7 +79,8 @@
       "balance": 1180000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T12:49:22.913Z"
     },
@@ -87,7 +93,8 @@
       "balance": 2215000,
       "walletAddress": "xL88nCeFNDXH9QtcJ1A7Lm2kG9KuJ4N91W",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T13:05:28.039Z"
     },
@@ -100,7 +107,8 @@
       "balance": 0,
       "walletAddress": "xTkiguuugXNutktcuT8ZcbaSAz7ZRiH2vW",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T13:14:25.312Z"
     },
@@ -110,10 +118,11 @@
       "password": "admin",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 9720000,
+      "balance": 10800000,
       "walletAddress": "xSGYEAoaB4p2C95Eg96wDZhe7kDGciCvS9",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-26T20:06:20.010Z"
     },
@@ -126,7 +135,8 @@
       "balance": 630000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T11:19:28.151Z"
     },
@@ -139,7 +149,8 @@
       "balance": 0,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T11:26:11.238Z"
     },
@@ -152,7 +163,8 @@
       "balance": 190000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T11:26:43.832Z"
     },
@@ -162,10 +174,11 @@
       "password": "14531453",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 17935000,
+      "balance": 20905000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T12:10:23.821Z"
     },
@@ -174,13 +187,14 @@
       "username": "Okan",
       "password": "Ok304378",
       "tasksAdded": 0,
-      "tasksSupported": 0,
-      "balance": 880000,
       "walletAddress": "xQbXENqtkKTnLuibkQfLnTyyGXpCpWH9r2",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
-      "createdAt": "2025-02-27T13:59:42.366Z"
+      "createdAt": "2025-02-27T13:59:42.366Z",
+      "tasksSupported": 0,
+      "balance": 880000
     },
     {
       "id": "21075f39-8a9d-444c-891b-db22a09769c6",
@@ -191,7 +205,8 @@
       "balance": 600000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T19:18:17.539Z"
     },
@@ -201,10 +216,11 @@
       "password": "695847.Yd",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 11530000,
+      "balance": 14770000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T19:37:54.179Z"
     },
@@ -214,10 +230,11 @@
       "password": "998877",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 31330000,
+      "balance": 32230000,
       "walletAddress": "xCdTbyjzRAedsXiMtKfZeSHrsXhrMbBpWz",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T21:45:11.351Z"
     },
@@ -230,7 +247,8 @@
       "balance": 0,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T22:47:37.249Z"
     },
@@ -243,7 +261,8 @@
       "balance": 270000,
       "walletAddress": "xLazbLhAx9ohbPuQFHLWu8bBG5oRkzRdbW",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-27T23:31:46.077Z"
     },
@@ -253,10 +272,11 @@
       "password": "123456",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 4950000,
+      "balance": 5220000,
       "walletAddress": "xCESE4rgvLPfMt4S8jWHosEGrzNPvRdumg",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-02-28T09:41:39.436Z"
     },
@@ -269,7 +289,8 @@
       "balance": 0,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-03-03T17:45:14.203Z",
       "canAddLinks": true
@@ -283,7 +304,8 @@
       "balance": 370000,
       "walletAddress": "x8texrQtkY9FADQiMhLSzznzDzP1ozW8pg",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-03-04T07:48:28.514Z",
       "canAddLinks": true
@@ -297,7 +319,8 @@
       "balance": 180000,
       "walletAddress": "",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-03-04T13:11:17.417Z",
       "canAddLinks": true
@@ -311,7 +334,8 @@
       "balance": 60000,
       "walletAddress": "xP1GqeqmqF5YxntNLAsmu9xxCW4a8VRNPc",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-03-04T18:13:52.398Z",
       "canAddLinks": true
@@ -325,7 +349,8 @@
       "balance": 60000,
       "walletAddress": "xNWZAmea3TFpZiabooXDvX6EKKnqXpEZwL",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-03-04T18:23:09.532Z",
       "canAddLinks": true
@@ -339,7 +364,8 @@
       "balance": 60000,
       "walletAddress": "xBxdwokmNeK2HbDCbx1uXwNhq2KkU3Xzqd",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-03-04T18:29:39.464Z",
       "canAddLinks": true
@@ -353,7 +379,8 @@
       "balance": 830000,
       "walletAddress": "xSpEFnLFJq6oYQDes3oKPEEtr2rJ9WePeQ",
       "roles": [
-        "user"
+        "user",
+        "admin"
       ],
       "createdAt": "2025-03-04T18:37:39.902Z",
       "canAddLinks": true
@@ -364,12 +391,27 @@
       "password": "190707",
       "tasksAdded": 0,
       "tasksSupported": 0,
-      "balance": 350000,
+      "balance": 2150000,
       "walletAddress": "xXBp2Xzv6GktYk7Ludrf3CAqt8tzhUMkBb",
+      "roles": [
+        "user",
+        "admin"
+      ],
+      "createdAt": "2025-03-04T18:48:16.032Z",
+      "canAddLinks": true
+    },
+    {
+      "id": "63935883-7f4f-4c6c-868d-726bd877bc8f",
+      "username": "nur",
+      "password": "nur123456",
+      "tasksAdded": 0,
+      "tasksSupported": 0,
+      "balance": 0,
+      "walletAddress": "",
       "roles": [
         "user"
       ],
-      "createdAt": "2025-03-04T18:48:16.032Z",
+      "createdAt": "2025-03-06T18:39:41.904Z",
       "canAddLinks": true
     }
   ]

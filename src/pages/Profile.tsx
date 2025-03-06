@@ -21,6 +21,7 @@ export function Profile() {
   const [withdrawAmount, setWithdrawAmount] = useState('');
   const [loading, setLoading] = useState(true);
   const minimumWithdrawalAmount = 2000000;
+  const maximumWithdrawalAmount = 2000000;
   const [tasksAdded, setTasksAdded] = useState(0);
   const [tasksSupported, setTasksSupported] = useState(0);
 
@@ -73,7 +74,7 @@ export function Profile() {
     if (!user) return;
 
     const amount = Number(withdrawAmount);
-    if (amount >= minimumWithdrawalAmount && amount <= user.balance) {
+    if (amount >= minimumWithdrawalAmount && amount <= user.balance && amount <= maximumWithdrawalAmount) {
       const withdrawal = {
         username: user.username,
         amount,
@@ -101,7 +102,7 @@ export function Profile() {
         toast.error('Withdrawal failed.');
       }
     } else {
-      toast.error(`Invalid withdrawal amount. Minimum withdrawal amount is ${minimumWithdrawalAmount} MemeX.`);
+      toast.error(`Invalid withdrawal amount. Minimum withdrawal amount is ${minimumWithdrawalAmount} MemeX and maximum withdrawal amount is ${maximumWithdrawalAmount} MemeX.`);
     }
   };
 
@@ -233,7 +234,7 @@ export function Profile() {
             <label className="block text-sm font-medium text-gray-700">
               Amount to Withdraw (Available: {formatNumber(user.balance)} MemeX)
             </label>
-            <p className="text-sm text-gray-500">Minimum withdrawal amount: 2,000,000 MemeX</p>
+            <p className="text-sm text-gray-500">Minimum withdrawal amount: 2,000,000 MemeX ve maksimum withdrawal amount: 2,000,000</p>
             <div className="mt-1 flex items-center gap-2">
               <input
                 type="number"

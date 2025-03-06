@@ -58,6 +58,7 @@ export function Links() {
     const [linksAddedToday, setLinksAddedToday] = useState(0);
     const [lastResetTime, setLastResetTime] = useState(new Date());
     const [remainingTime, setRemainingTime] = useState({ timeRemaining: "Ready to add links!", isExpired: true });
+    const [lastLinkAdded, setLastLinkAdded] = useState<Date | null>(null);
 
     const updateExpiryDates = async (currentLinks: LinkType[]) => {
         const updatedLinks = currentLinks.map(link => {
@@ -70,7 +71,8 @@ export function Links() {
 
     const deleteExpiredLinks = async (currentLinks: LinkType[]) => {
         const now = new Date();
-        const updatedLinks = currentLinks.map(link => {
+        let updatedLinks: LinkType[] = []; // Initialize updatedLinks here
+        updatedLinks = currentLinks.map(link => {
             if (new Date(link.expiryDate) <= now) {
                 // Clear URL, groupInfo, and platform
                 return {
@@ -112,12 +114,14 @@ export function Links() {
 
         const storedLinksAdded = localStorage.getItem(`linksAddedToday_${currentUser?.username || 'default'}`);
         const storedLastResetTime = localStorage.getItem(`lastResetTime_${currentUser?.username || 'default'}`);
+        const storedLastLinkAdded = localStorage.getItem(`lastLinkAdded_${currentUser?.username || 'default'}`);
 
         const today = new Date().toLocaleDateString();
         const storedDate = storedLastResetTime ? new Date(storedLastResetTime).toLocaleDateString() : null;
 
         let parsedLinksAdded = 0;
         let parsedLastResetTime = new Date();
+        let parsedLastLinkAdded: Date | null = null;
 
         if (storedLinksAdded) {
             parsedLinksAdded = parseInt(storedLinksAdded, 10);
@@ -125,6 +129,10 @@ export function Links() {
 
         if (storedLastResetTime) {
             parsedLastResetTime = new Date(storedLastResetTime);
+        }
+
+        if (storedLastLinkAdded) {
+            parsedLastLinkAdded = new Date(storedLastLinkAdded);
         }
 
         if (storedDate === today) {
@@ -136,6 +144,8 @@ export function Links() {
             localStorage.setItem(`lastResetTime_${currentUser?.username || 'default'}`, new Date().toISOString());
             localStorage.setItem(`linksAddedToday_${currentUser?.username || 'default'}`, '0');
         }
+
+        setLastLinkAdded(parsedLastLinkAdded);
     };
     loadData();
   }, []);
@@ -144,12 +154,14 @@ export function Links() {
         if (currentUser) {
             const storedLinksAdded = localStorage.getItem(`linksAddedToday_${currentUser?.username || 'default'}`);
             const storedLastResetTime = localStorage.getItem(`lastResetTime_${currentUser?.username || 'default'}`);
+            const storedLastLinkAdded = localStorage.getItem(`lastLinkAdded_${currentUser?.username || 'default'}`);
 
             const today = new Date().toLocaleDateString();
             const storedDate = storedLastResetTime ? new Date(storedLastResetTime).toLocaleDateString() : null;
 
             let parsedLinksAdded = 0;
             let parsedLastResetTime = new Date();
+            let parsedLastLinkAdded: Date | null = null;
 
             if (storedLinksAdded) {
                 parsedLinksAdded = parseInt(storedLinksAdded, 10);
@@ -157,6 +169,10 @@ export function Links() {
 
             if (storedLastResetTime) {
                 parsedLastResetTime = new Date(storedLastResetTime);
+            }
+
+             if (storedLastLinkAdded) {
+                parsedLastLinkAdded = new Date(storedLastLinkAdded);
             }
 
             if (storedDate === today) {
@@ -168,6 +184,8 @@ export function Links() {
                 localStorage.setItem(`lastResetTime_${currentUser?.username || 'default'}`, new Date().toISOString());
                 localStorage.setItem(`linksAddedToday_${currentUser?.username || 'default'}`, '0');
             }
+
+            setLastLinkAdded(parsedLastLinkAdded);
         }
     }, [currentUser]);
 
@@ -202,14 +220,40 @@ export function Links() {
         return () => clearInterval(timer);
     }, [lastResetTime]);
 
+    const isValidUrl = (url: string): boolean => {
+        try {
+            new URL(url);
+            return true;
+        } catch (_) {
+            return false;
+        }
+    };
+
   const handleAddLink = async () => {
     if (newLink.url && currentUser) {
-        if (linksAddedToday >= 2) {
-            toast.error('You have reached your limit of 2 links per day.');
+        if (!isValidUrl(newLink.url)) {
+            toast.error('Please enter a valid URL.');
             return;
         }
 
         const now = new Date();
+        const lastLinkAddedKey = `lastLinkAdded_${currentUser.username}`;
+        const storedLastLinkAdded = localStorage.getItem(lastLinkAddedKey);
+
+        if (storedLastLinkAdded) {
+            const lastLinkAddedDate = new Date(storedLastLinkAdded);
+            const timeDiff = now.getTime() - lastLinkAddedDate.getTime();
+
+            if (timeDiff < 24 * 60 * 60 * 1000) {
+                const timeLeft = 24 * 60 * 60 * 1000 - timeDiff;
+                const hours = Math.floor(timeLeft / (60 * 60 * 1000));
+                const minutes = Math.floor((timeLeft % (60 * 60 * 1000)) / (60 * 1000));
+                const seconds = Math.floor((timeLeft % (60 * 1000)) / 1000);
+                toast.error(`You can add another link in ${hours}h ${minutes}m ${seconds}s.`);
+                return;
+            }
+        }
+
         const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days from now
 
         const link: LinkType = {
@@ -241,9 +285,10 @@ export function Links() {
             setNewLink({ url: '', platform: 'Twitter' });
             setShowAddForm(false);
 
-            const newLinksAdded = linksAddedToday + 1;
-            setLinksAddedToday(newLinksAdded);
-            localStorage.setItem(`linksAddedToday_${currentUser?.username || 'default'}`, newLinksAdded.toString());
+            localStorage.setItem(lastLinkAddedKey, now.toISOString());
+            setLastLinkAdded(now);
+            setLinksAddedToday(1);
+            localStorage.setItem(`linksAddedToday_${currentUser?.username || 'default'}`, '1');
         }
     }
   };
@@ -381,7 +426,7 @@ export function Links() {
         </h1>
           <div className="flex items-center space-x-4">
               <div className="text-sm text-gray-600">
-                  Links Added: {linksAddedToday} / 2
+                  Links Added: {linksAddedToday} / 1
               </div>
               <div className="text-sm text-gray-600">
                   {remainingTime.timeRemaining}
@@ -389,7 +434,7 @@ export function Links() {
               <Button
                   onClick={() => setShowAddForm(true)}
                   className="flex items-center gap-2"
-                  disabled={linksAddedToday >= 2 && !remainingTime.isExpired}
+                  disabled={!isAdminCheck() || linksAddedToday >= 1}
               >
                   <Plus className="h-4 w-4" />
                   Add New Link
@@ -430,7 +475,17 @@ export function Links() {
             </div>
             <div className="flex justify-end gap-2">
               <Button variant="outline" onClick={() => setShowAddForm(false)}>Cancel</Button>
-              <Button onClick={handleAddLink}>Add Link</Button>
+              <Button onClick={handleAddLink} disabled={(() => {
+                  if (!currentUser) return true;
+                  const lastLinkAddedKey = `lastLinkAdded_${currentUser.username}`;
+                  const storedLastLinkAdded = localStorage.getItem(lastLinkAddedKey);
+                  if (storedLastLinkAdded) {
+                      const lastLinkAddedDate = new Date(storedLastLinkAdded);
+                      const timeDiff = new Date().getTime() - lastLinkAddedDate.getTime();
+                      return timeDiff < 24 * 60 * 60 * 1000;
+                  }
+                  return false;
+              })()}>Add Link</Button>
             </div>
           </CardContent>
         </Card>

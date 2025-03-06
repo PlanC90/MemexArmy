@@ -1,17 +1,92 @@
 {
   "admins": [
     {
-      "username": "admin"
-    },
-    {
-      "username": "oyku"
+      "username": "Bullishme"
     },
     {
       "username": "Memexairdrp"
+    },
+    {
+      "username": "Morkoinu"
+    },
+    {
+      "username": "@Piraa86080349"
+    },
+    {
+      "username": "Planc~genji"
+    },
+    {
+      "username": "@MemeXarym"
+    },
+    {
+      "username": "Nadir"
+    },
+    {
+      "username": "LisaNemeX"
+    },
+    {
+      "username": "admin"
+    },
+    {
+      "username": "MemeX"
+    },
+    {
+      "username": "Yuzarsifinizzz"
+    },
+    {
+      "username": "PLanC007"
+    },
+    {
+      "username": "Planczekau"
+    },
+    {
+      "username": "Okan"
+    },
+    {
+      "username": "LisaMemeX"
+    },
+    {
+      "username": "PlanC Joseph "
+    },
+    {
+      "username": "PlanC Wataru"
+    },
+    {
+      "username": "Dragonn"
+    },
+    {
+      "username": "Lena"
+    },
+    {
+      "username": "Ejderr"
+    },
+    {
+      "username": "Atombuloglu"
+    },
+    {
+      "username": "Fb68"
+    },
+    {
+      "username": "Planc~genji🙂"
+    },
+    {
+      "username": "Fb11"
+    },
+    {
+      "username": "Kal10"
+    },
+    {
+      "username": "Saka9"
+    },
+    {
+      "username": "Pirates08"
+    },
+    {
+      "username": "Spb07"
     }
   ],
   "settings": {
-    "taskReward": 500000,
+    "taskReward": 50000,
     "supportReward": 90000
   }
 }

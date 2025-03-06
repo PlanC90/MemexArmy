@@ -28,7 +28,6 @@ export function Dashboard() {
 
   const [topUsers, setTopUsers] = useState<{ name: string; links: number }[]>([]);
   const [platformStats, setPlatformStats] = useState<{ name: string; value: number }[]>([]);
-  const [topSupporters, setTopSupporters] = useState<{ name: string; supports: number }[]>([]);
 
   useEffect(() => {
     const loadDashboardData = async () => {
@@ -67,24 +66,6 @@ export function Dashboard() {
         setPlatformStats(
           Object.entries(platformCounts).map(([name, value]) => ({ name, value }))
         );
-
-        // Calculate top supporters, considering link adds as 2 supports
-        const userSupportCounts = linksData.links.reduce((acc, link) => {
-          const adder = link.username;
-          acc[adder] = (acc[adder] || 0) + 2; // Add 2 supports for adding a link
-
-          link.supportedBy?.forEach(supporter => {
-            acc[supporter] = (acc[supporter] || 0) + 1; // Add 1 support for supporting a link
-          });
-          return acc;
-        }, {} as Record<string, number>);
-
-        const sortedSupporters = Object.entries(userSupportCounts)
-          .map(([name, supports]) => ({ name, supports }))
-          .sort((a, b) => b.supports - a.supports)
-          .slice(0, 5);
-
-        setTopSupporters(sortedSupporters);
       }
     };
 
@@ -110,14 +91,6 @@ export function Dashboard() {
       </g>
     );
   };
-
-  const rewardTiers = [
-    { rank: 1, reward: 2000000000 },
-    { rank: 2, reward: 1000000000 },
-    { rank: 3, reward: 500000000 },
-    { rank: 4, reward: 250000000 },
-    { rank: 5, reward: 125000000 },
-  ];
 
   return (
     <div className="space-y-6 pb-8">
@@ -174,7 +147,7 @@ export function Dashboard() {
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle>Top Users by Links</CardTitle>
+            <CardTitle>Top Supporters Rewards</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="h-80 w-full">
@@ -231,34 +204,6 @@ export function Dashboard() {
           </CardContent>
         </Card>
       </div>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Top Supporters Rewards</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead>
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rank</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reward</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {topSupporters.map((supporter, index) => (
-                  <tr key={index}>
-                    <td className="px-6 py-4 whitespace-nowrap">{index + 1}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">{supporter.name}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">{formatNumber(rewardTiers[index]?.reward || 0)} MemeX</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 }
