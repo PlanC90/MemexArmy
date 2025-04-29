@@ -13,6 +13,7 @@ export function Admin() {
   const [newAdmin, setNewAdmin] = useState('');
   const [taskReward, setTaskReward] = useState(0);
   const [supportReward, setSupportReward] = useState(0);
+    const [settingsId, setSettingsId] = useState('');
   const [reportedLinks, setReportedLinks] = useState<LinkType[]>([]);
   const [allLinks, setAllLinks] = useState<LinkType[]>([]);
   const [searchUser, setSearchUser] = useState('');
@@ -20,29 +21,30 @@ export function Admin() {
   const [allUsers, setAllUsers] = useState<UserType[]>([]);
 
   useEffect(() => {
-    const loadData = async () => {
-      const adminsData = await fetchFromSupabase<AdminType>('admin');
-      const settingsData = await fetchFromSupabase<any>('settings');
-  
-      setAdmins(adminsData || []);
-      if (settingsData && settingsData[0]) {
-        setTaskReward(settingsData[0].taskReward);
-        setSupportReward(settingsData[0].supportReward);
-      }
-  
-      const linksData = await fetchFromSupabase<LinkType>('links');
-      if (linksData) {
-        setAllLinks(linksData);
-        const reported = linksData.filter(link => link.reports.length > 0);
-        setReportedLinks(reported);
-      }
-  
-      const usersData = await fetchFromSupabase<UserType>('users');
-      setAllUsers(usersData || []);
-    };
-  
-    loadData();
-  }, []);
+  const loadData = async () => {
+    const adminsData = await fetchFromSupabase<AdminType>('admin');
+    const settingsData = await fetchFromSupabase<any>('settings');
+
+    setAdmins(adminsData || []);
+    if (settingsData && settingsData[0]) {
+      setTaskReward(settingsData[0].taskReward);
+      setSupportReward(settingsData[0].supportReward);
+      setSettingsId(settingsData[0].id); 
+    }
+
+    const linksData = await fetchFromSupabase<LinkType>('links');
+    if (linksData) {
+      setAllLinks(linksData);
+      const reported = linksData.filter(link => link.reports.length > 0);
+      setReportedLinks(reported);
+    }
+
+    const usersData = await fetchFromSupabase<UserType>('users');
+    setAllUsers(usersData || []);
+  };
+
+  loadData();
+}, []);
   
 
   useEffect(() => {
@@ -81,18 +83,18 @@ export function Admin() {
   };
   
 
-  const handleSaveSettings = async () => {
-    const { error } = await supabase
-      .from('settings')
-      .update({ taskReward, supportReward })
-      .eq('id', 1); // ID sabitse bu şekilde, değilse farklı yöntemle alınmalı
-  
-    if (error) {
-      toast.error('Failed to save settings.');
-    } else {
-      toast.success('Settings saved successfully!');
-    }
-  };  
+ const handleSaveSettings = async () => {
+  const { error } = await supabase
+    .from('settings')
+    .update({ taskReward, supportReward })
+    .eq('id', settingsId); 
+
+  if (error) {
+    toast.error('Failed to save settings.');
+  } else {
+    toast.success('Settings saved successfully!');
+  }
+};
   
 
 
