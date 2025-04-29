@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { UserPlus, Eye, EyeOff } from 'lucide-react';
-import { readJsonFile, writeJsonFile } from '../services/dataService';
+import { fetchFromSupabase } from '../services/dataService';
+import { supabase } from '../supabaseClient';
 import toast from 'react-hot-toast';
 import type { User } from '../types';
 import { v4 as uuidv4 } from 'uuid';
@@ -20,21 +21,21 @@ export function Register() {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+  
     if (formData.password !== formData.confirmPassword) {
       toast.error('Passwords do not match');
       return;
     }
-
+  
     try {
-      const data = await readJsonFile<{ users: User[] }>('users.json');
-      const users = data?.users || [];
-
-      if (users.some(u => u.username === formData.username)) {
+      const existingUsers = await fetchFromSupabase<User>('users');
+      const usernameExists = existingUsers?.some(u => u.username === formData.username);
+  
+      if (usernameExists) {
         toast.error('Username already exists');
         return;
       }
-
+  
       const newUser: User = {
         id: uuidv4(),
         username: formData.username,
@@ -45,22 +46,24 @@ export function Register() {
         walletAddress: '',
         roles: ['user'],
         createdAt: new Date().toISOString(),
-        canAddLinks: true // Enable link adding by default
+        canAddLinks: true
       };
-
-      const success = await writeJsonFile('users.json', {
-        users: [...users, newUser]
-      });
-
-      if (success) {
-        toast.success('Registration successful!');
-        navigate('/login');
+  
+      const { error } = await supabase.from('users').insert(newUser);
+  
+      if (error) {
+        console.error('Supabase insert error:', error.message);
+        toast.error('Registration failed');
+        return;
       }
+  
+      toast.success('Registration successful!');
+      navigate('/login');
     } catch (error) {
       console.error('Registration error:', error);
       toast.error('Registration failed');
     }
-  };
+  };  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">

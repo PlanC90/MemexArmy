@@ -3,8 +3,10 @@ import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card'
 import { Button } from '../components/ui/button';
 import { Shield, Users, Coins, Flag, X, Trash2, Search } from 'lucide-react';
 import type { Admin as AdminType, Link as LinkType, User as UserType } from '../types';
-import { readJsonFile, writeJsonFile } from '../services/dataService';
+import { fetchFromSupabase } from '../services/dataService';
 import toast from 'react-hot-toast';
+import { supabase } from '../supabaseClient';
+
 
 export function Admin() {
   const [admins, setAdmins] = useState<AdminType[]>([]);
@@ -18,35 +20,30 @@ export function Admin() {
   const [allUsers, setAllUsers] = useState<UserType[]>([]);
 
   useEffect(() => {
-    const loadAdminData = async () => {
-      const data = await readJsonFile<{
-        admins: AdminType[];
-        settings: { taskReward: number; supportReward: number };
-      }>('admin.json');
-      
-      setAdmins(data?.admins || []);
-      setTaskReward(data?.settings?.taskReward || 0);
-      setSupportReward(data?.settings?.supportReward || 0);
-    };
-
-    const loadLinks = async () => {
-      const linksData = await readJsonFile<{ links: LinkType[] }>('links.json');
-      if (linksData?.links) {
-        setAllLinks(linksData.links);
-        const reported = linksData.links.filter(link => link.reports.length > 0);
+    const loadData = async () => {
+      const adminsData = await fetchFromSupabase<AdminType>('admin');
+      const settingsData = await fetchFromSupabase<any>('settings');
+  
+      setAdmins(adminsData || []);
+      if (settingsData && settingsData[0]) {
+        setTaskReward(settingsData[0].taskReward);
+        setSupportReward(settingsData[0].supportReward);
+      }
+  
+      const linksData = await fetchFromSupabase<LinkType>('links');
+      if (linksData) {
+        setAllLinks(linksData);
+        const reported = linksData.filter(link => link.reports.length > 0);
         setReportedLinks(reported);
       }
+  
+      const usersData = await fetchFromSupabase<UserType>('users');
+      setAllUsers(usersData || []);
     };
-
-    const loadUsers = async () => {
-      const usersData = await readJsonFile<{ users: UserType[] }>('users.json');
-      setAllUsers(usersData?.users || []);
-    };
-
-    loadAdminData();
-    loadLinks();
-    loadUsers();
+  
+    loadData();
   }, []);
+  
 
   useEffect(() => {
     if (searchUser) {
@@ -59,127 +56,141 @@ export function Admin() {
 
   const handleAddAdmin = async () => {
     if (newAdmin) {
-      const updatedAdmins = [...admins, { username: newAdmin }];
-      const success = await writeJsonFile('admin.json', {
-        admins: updatedAdmins,
-        settings: { taskReward, supportReward }
-      });
-
-      if (success) {
-        setAdmins(updatedAdmins);
-        setNewAdmin('');
+      const { error } = await supabase.from('admin').insert([{ username: newAdmin }]);
+      if (error) {
+        toast.error('Failed to add admin.');
+        return;
       }
+  
+      setAdmins(prev => [...prev, { username: newAdmin }]);
+      setNewAdmin('');
+      toast.success('Admin added!');
     }
   };
+  
 
   const handleRemoveAdmin = async (username: string) => {
-    const updatedAdmins = admins.filter(admin => admin.username !== username);
-    const success = await writeJsonFile('admin.json', {
-      admins: updatedAdmins,
-      settings: { taskReward, supportReward }
-    });
-
-    if (success) {
-      setAdmins(updatedAdmins);
+    const { error } = await supabase.from('admin').delete().eq('username', username);
+    if (error) {
+      toast.error('Failed to remove admin.');
+      return;
     }
+  
+    setAdmins(prev => prev.filter(admin => admin.username !== username));
+    toast.success('Admin removed!');
   };
+  
 
   const handleSaveSettings = async () => {
-    const success = await writeJsonFile('admin.json', {
-      admins: admins,
-      settings: { taskReward, supportReward }
-    });
-
-    if (success) {
-      toast.success('Settings saved successfully!');
-    } else {
+    const { error } = await supabase
+      .from('settings')
+      .update({ taskReward, supportReward })
+      .eq('id', 1); // ID sabitse bu şekilde, değilse farklı yöntemle alınmalı
+  
+    if (error) {
       toast.error('Failed to save settings.');
+    } else {
+      toast.success('Settings saved successfully!');
     }
-  };
+  };  
+  
+
 
   const handleRemoveReport = async (linkUrl: string) => {
-    const updatedLinks = allLinks.map(link => {
-      if (link.url === linkUrl) {
-        return { ...link, reports: [] };
-      }
-      return link;
-    });
-
-    const success = await writeJsonFile('links.json', { links: updatedLinks });
-    if (success) {
-      setAllLinks(updatedLinks);
-      setReportedLinks(updatedLinks.filter(link => link.reports.length > 0));
-      toast.success('Report removed successfully!');
-    } else {
+    const { error } = await supabase
+      .from('links')
+      .update({ reports: [] })
+      .eq('url', linkUrl);
+  
+    if (error) {
       toast.error('Failed to remove report.');
+      return;
     }
+  
+    const updated = allLinks.map(link =>
+      link.url === linkUrl ? { ...link, reports: [] } : link
+    );
+    setAllLinks(updated);
+    setReportedLinks(updated.filter(link => link.reports.length > 0));
+    toast.success('Report removed successfully!');
   };
+  
+
 
   const handleAdminDelete = async (linkUrl: string) => {
-    const updatedLinks = allLinks.filter(link => link.url !== linkUrl);
-    const success = await writeJsonFile('links.json', { links: updatedLinks });
-    if (success) {
-      setAllLinks(updatedLinks);
-      setReportedLinks(updatedLinks.filter(link => link.reports.length > 0));
-      toast.success('Link deleted successfully!');
-    } else {
+    const { error } = await supabase.from('links').delete().eq('url', linkUrl);
+    if (error) {
       toast.error('Failed to delete link.');
+      return;
     }
+  
+    const updated = allLinks.filter(link => link.url !== linkUrl);
+    setAllLinks(updated);
+    setReportedLinks(updated.filter(link => link.reports.length > 0));
+    toast.success('Link deleted successfully!');
   };
+  
 
   const handleChangePassword = async (newPassword: string) => {
     if (!selectedUser) return;
-
-    const updatedUsers = allUsers.map(user => {
-      if (user.id === selectedUser.id) {
-        return { ...user, password: newPassword };
-      }
-      return user;
-    });
-
-    const success = await writeJsonFile('users.json', { users: updatedUsers });
-    if (success) {
-      setAllUsers(updatedUsers);
-      setSelectedUser(prev => prev ? ({ ...prev, password: newPassword }) : null);
-      toast.success('Password changed successfully!');
-    } else {
+  
+    const { error } = await supabase
+      .from('users')
+      .update({ password: newPassword })
+      .eq('id', selectedUser.id);
+  
+    if (error) {
       toast.error('Failed to change password.');
+      return;
     }
+  
+    const updatedUsers = allUsers.map(user =>
+      user.id === selectedUser.id ? { ...user, password: newPassword } : user
+    );
+    setAllUsers(updatedUsers);
+    setSelectedUser(prev => (prev ? { ...prev, password: newPassword } : null));
+    toast.success('Password changed successfully!');
   };
+  
 
   const handleDeleteUser = async () => {
     if (!selectedUser) return;
-
-    const updatedUsers = allUsers.filter(user => user.id !== selectedUser.id);
-    const success = await writeJsonFile('users.json', { users: updatedUsers });
-    if (success) {
-      setAllUsers(updatedUsers);
-      setSelectedUser(null);
-      toast.success('User deleted successfully!');
-    } else {
+  
+    const { error } = await supabase.from('users').delete().eq('id', selectedUser.id);
+    if (error) {
       toast.error('Failed to delete user.');
+      return;
     }
+  
+    setAllUsers(prev => prev.filter(user => user.id !== selectedUser.id));
+    setSelectedUser(null);
+    toast.success('User deleted successfully!');
   };
+  
 
   const handleToggleLinkRestriction = async () => {
     if (!selectedUser) return;
-
-    const updatedUsers = allUsers.map(user => {
-      if (user.id === selectedUser.id) {
-        return { ...user, canAddLinks: !user.canAddLinks };
-      }
-      return user;
-    });
-
-    const success = await writeJsonFile('users.json', { users: updatedUsers });
-    if (success) {
-      setAllUsers(updatedUsers);
-      setSelectedUser(prev => prev ? ({ ...prev, canAddLinks: !prev.canAddLinks }) : null);
-      toast.success(`Link adding ${selectedUser.canAddLinks ? 'enabled' : 'disabled'} for user.`);
-    } else {
+  
+    const newStatus = !selectedUser.canAddLinks;
+  
+    const { error } = await supabase
+      .from('users')
+      .update({ canAddLinks: newStatus })
+      .eq('id', selectedUser.id);
+  
+    if (error) {
       toast.error('Failed to toggle link restriction.');
+      return;
     }
+  
+    const updatedUsers = allUsers.map(user =>
+      user.id === selectedUser.id ? { ...user, canAddLinks: newStatus } : user
+    );
+    setAllUsers(updatedUsers);
+    setSelectedUser(prev => (prev ? { ...prev, canAddLinks: newStatus } : null));
+    toast.success(`Link adding ${newStatus ? 'enabled' : 'disabled'} for user.`);
   };
+  
 
   return (
     <div className="space-y-6">

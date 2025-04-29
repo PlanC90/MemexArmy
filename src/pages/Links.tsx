@@ -3,7 +3,8 @@ import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card'
 import { Button } from '../components/ui/button';
 import { Link2, Flag, ThumbsUp, Plus, Clock, Trash2, Search } from 'lucide-react';
 import type { Link as LinkType, Admin as AdminType, User as UserType } from '../types';
-import { readJsonFile, writeJsonFile } from '../services/dataService';
+import { fetchFromSupabase } from '../services/dataService';
+import { supabase } from '../supabaseClient';
 import toast from 'react-hot-toast';
 
 function getTimeRemaining(expiryDate: Date): string {
@@ -84,7 +85,14 @@ export function Links() {
             }
             return link;
         });
-        await writeJsonFile('links.json', { links: updatedLinks });
+        for (const link of updatedLinks) {
+          await supabase.from('links').update({
+            url: link.url,
+            groupInfo: link.groupInfo,
+            platform: link.platform
+          }).eq('id', link.id); 
+        }
+        
         return updatedLinks;
     };
 
@@ -95,22 +103,23 @@ export function Links() {
         setCurrentUser(JSON.parse(userStr));
       }
 
-      const linksData = await readJsonFile<{ links: LinkType[] }>('links.json');
+      const linksData = await fetchFromSupabase<LinkType>('links');
       if (linksData) {
-          const updated = await updateExpiryDates(linksData.links);
+        const updated = await updateExpiryDates(linksData);
           const validLinks = await deleteExpiredLinks(updated);
           setLinks(validLinks);
       }
 
-       const adminData = await readJsonFile<{ 
-        admins: AdminType[]; 
-        settings: { taskReward: number; supportReward: number } 
-      }>('admin.json');
-        if (adminData) {
-            setAdmins(adminData.admins);
-            setTaskReward(adminData.settings.taskReward);
-            setSupportReward(adminData.settings.supportReward);
-        }
+      const adminData = await fetchFromSupabase<AdminType>('admin');
+      const settingsData = await fetchFromSupabase<any>('settings'); 
+      
+      
+      setAdmins(adminData || []);
+      if (settingsData && settingsData[0]) {
+        setTaskReward(settingsData[0].taskReward);
+        setSupportReward(settingsData[0].supportReward);
+      }
+      
 
         const storedLinksAdded = localStorage.getItem(`linksAddedToday_${currentUser?.username || 'default'}`);
         const storedLastResetTime = localStorage.getItem(`lastResetTime_${currentUser?.username || 'default'}`);
@@ -229,162 +238,183 @@ export function Links() {
         }
     };
 
-  const handleAddLink = async () => {
-    if (newLink.url && currentUser) {
+    const handleAddLink = async () => {
+      if (newLink.url && currentUser) {
         if (!isValidUrl(newLink.url)) {
-            toast.error('Please enter a valid URL.');
-            return;
+          toast.error('Please enter a valid URL.');
+          return;
         }
-
+    
         const now = new Date();
         const lastLinkAddedKey = `lastLinkAdded_${currentUser.username}`;
         const storedLastLinkAdded = localStorage.getItem(lastLinkAddedKey);
-
+    
         if (storedLastLinkAdded) {
-            const lastLinkAddedDate = new Date(storedLastLinkAdded);
-            const timeDiff = now.getTime() - lastLinkAddedDate.getTime();
-
-            if (timeDiff < 24 * 60 * 60 * 1000) {
-                const timeLeft = 24 * 60 * 60 * 1000 - timeDiff;
-                const hours = Math.floor(timeLeft / (60 * 60 * 1000));
-                const minutes = Math.floor((timeLeft % (60 * 60 * 1000)) / (60 * 1000));
-                const seconds = Math.floor((timeLeft % (60 * 1000)) / 1000);
-                toast.error(`You can add another link in ${hours}h ${minutes}m ${seconds}s.`);
-                return;
-            }
-        }
-
-        const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days from now
-
-        const link: LinkType = {
-            username: currentUser.username, // Use the current user's username
-            platform: newLink.platform,
-            timestamp: now.toISOString(),
-            url: newLink.url,
-            groupInfo: {
-                name: 'MemeX Community',
-                id: '123456789'
-            },
-            rewards: {
-                add: taskReward, // Use the dynamic taskReward value
-                support: supportReward // Use the dynamic supportReward value
-            },
-            reports: [],
-            expiryDate: expiryDate.toISOString(),
-            supports: 0, // Initialize supports count
-            supportedBy: [] // Initialize supportedBy array
-        };
-
-        const updatedLinks = [link, ...links];
-        const validLinks = await deleteExpiredLinks(updatedLinks);
-
-        const success = await writeJsonFile('links.json', { links: validLinks });
-
-        if (success) {
-            setLinks(validLinks);
-            setNewLink({ url: '', platform: 'Twitter' });
-            setShowAddForm(false);
-
-            localStorage.setItem(lastLinkAddedKey, now.toISOString());
-            setLastLinkAdded(now);
-            setLinksAddedToday(1);
-            localStorage.setItem(`linksAddedToday_${currentUser?.username || 'default'}`, '1');
-        }
-    }
-  };
-
-  const handleReport = async (linkUrl: string) => {
-    if (!currentUser) return;
-
-    const updatedLinks = links.map(link => {
-      if (link.url === linkUrl) {
-        const alreadyReported = link.reports.includes(currentUser.username);
-        const updatedReports = alreadyReported
-          ? link.reports.filter(name => name !== currentUser.username) // Remove report
-          : [...link.reports, currentUser.username]; // Add report
-
-        return {
-          ...link,
-          reports: updatedReports
-        };
-      }
-      return link;
-    });
-
-    const validLinks = await deleteExpiredLinks(updatedLinks);
-    const success = await writeJsonFile('links.json', { links: validLinks });
-    if (success) {
-      setLinks(validLinks);
-    }
-  };
-
-  const handleSupport = async (linkUrl: string) => {
-    if (!currentUser) return;
-
-    try {
-      const usersData = await readJsonFile<{ users: UserType[] }>('users.json');
-      const currentUserData = usersData?.users.find(u => u.username === currentUser.username);
-
-      if (!currentUserData) {
-        toast.error('User not found.');
-        return;
-      }
-
-      const adminData = await readJsonFile<{ settings: { supportReward: number } }>('admin.json');
-      const supportReward = adminData?.settings?.supportReward || 0;
-
-      const updatedBalance = currentUserData.balance + supportReward;
-
-      const updatedUsers = usersData?.users.map(u =>
-        u.username === currentUser.username ? { ...u, balance: updatedBalance } : u
-      ) || [];
-
-      const updatedLinks = links.map(link => {
-        if (link.url === linkUrl) {
-          const alreadySupported = link.supportedBy?.includes(currentUser.username);
-          if (alreadySupported) {
-            return link;
+          const lastLinkAddedDate = new Date(storedLastLinkAdded);
+          const timeDiff = now.getTime() - lastLinkAddedDate.getTime();
+    
+          if (timeDiff < 24 * 60 * 60 * 1000) {
+            const timeLeft = 24 * 60 * 60 * 1000 - timeDiff;
+            const hours = Math.floor(timeLeft / (60 * 60 * 1000));
+            const minutes = Math.floor((timeLeft % (60 * 60 * 1000)) / (60 * 1000));
+            const seconds = Math.floor((timeLeft % (60 * 1000)) / 1000);
+            toast.error(`You can add another link in ${hours}h ${minutes}m ${seconds}s.`);
+            return;
           }
-          return { ...link, supports: (link.supports || 0) + 1, supportedBy: [...(link.supportedBy || []), currentUser.username] };
         }
-        return link;
-      });
+    
+        const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 gün
+    
+        const newLinkData = {
+          id: crypto.randomUUID(), // uuidv4() da olabilir
+          username: currentUser.username,
+          url: newLink.url,
+          platform: newLink.platform,
+          timestamp: now.toISOString(),
+          expiryDate: expiryDate.toISOString(),
+          groupInfo: {
+            name: 'MemeX Community',
+            id: '123456789'
+          },
+          rewards: {
+            add: taskReward,
+            support: supportReward
+          },
+          supports: 0,
+          supportedBy: [],
+          reports: []
+        };
+    
+        const { error } = await supabase.from('links').insert([newLinkData]);
+    
+        if (error) {
+          console.error("Supabase insert error:", error.message); // hata detayını logla
+          toast.error('Failed to add link.');
+          return;
+        }
+    
+        setLinks([newLinkData, ...links]);
+        setNewLink({ url: '', platform: 'Twitter' });
+        setShowAddForm(false);
+    
+        localStorage.setItem(lastLinkAddedKey, now.toISOString());
+        setLastLinkAdded(now);
+        setLinksAddedToday(1);
+        localStorage.setItem(`linksAddedToday_${currentUser.username}`, '1');
+      }
+    };
+    
+    
+    
+    
 
-      const validLinks = await deleteExpiredLinks(updatedLinks);
-      const linksSuccess = await writeJsonFile('links.json', { links: validLinks });
-
-      if (!linksSuccess) {
-        toast.error('Failed to update link supports.');
+    const handleReport = async (linkUrl: string) => {
+      if (!currentUser) return;
+    
+      const targetLink = links.find(link => link.url === linkUrl);
+      if (!targetLink) return;
+    
+      const alreadyReported = targetLink.reports.includes(currentUser.username);
+      const updatedReports = alreadyReported
+        ? targetLink.reports.filter(name => name !== currentUser.username)
+        : [...targetLink.reports, currentUser.username];
+    
+      const { error } = await supabase
+        .from('links')
+        .update({ reports: updatedReports })
+        .eq('url', linkUrl);
+    
+      if (error) {
+        toast.error('Failed to update report status.');
         return;
       }
+    
+      const updatedLinks = links.map(link =>
+        link.url === linkUrl ? { ...link, reports: updatedReports } : link
+      );
+    
+      setLinks(updatedLinks);
+    };
+    
 
-      const success = await writeJsonFile('users.json', { users: updatedUsers });
-
-      if (success) {
+    const handleSupport = async (linkUrl: string) => {
+      if (!currentUser) return;
+    
+      try {
+        // Kullanıcıyı Supabase'ten çek
+        const usersData = await fetchFromSupabase<UserType>('users');
+        const currentUserData = usersData?.find(u => u.username === currentUser.username);
+    
+        if (!currentUserData) {
+          toast.error('User not found.');
+          return;
+        }
+    
+        // Ödül miktarını Supabase settings tablosundan çek
+        const settingsData = await fetchFromSupabase<any>('settings');
+        const supportReward = settingsData?.[0]?.supportReward || 0;
+    
+        // Güncel bakiye hesapla
+        const updatedBalance = currentUserData.balance + supportReward;
+    
+        // Linki bul
+        const targetLink = links.find(link => link.url === linkUrl);
+        if (!targetLink) {
+          toast.error('Link not found.');
+          return;
+        }
+    
+        // Zaten desteklendiyse işlem yapma
+        const alreadySupported = targetLink.supportedBy?.includes(currentUser.username);
+        if (alreadySupported) {
+          toast.error('You already supported this link.');
+          return;
+        }
+    
+        // Supabase'te kullanıcı güncelle
+        await supabase.from('users').update({ balance: updatedBalance }).eq('username', currentUser.username);
+    
+        // Supabase'te link güncelle
+        await supabase
+          .from('links')
+          .update({
+            supports: (targetLink.supports || 0) + 1,
+            supportedBy: [...(targetLink.supportedBy || []), currentUser.username]
+          })
+          .eq('url', linkUrl);
+    
+        // Frontend'de state güncelle
         setSupportedLinks(prev => [...prev, linkUrl]);
-        setLinks(validLinks); // Update the links state with the new supports count
+        const updatedLinks = links.map(link =>
+          link.url === linkUrl
+            ? {
+                ...link,
+                supports: (link.supports || 0) + 1,
+                supportedBy: [...(link.supportedBy || []), currentUser.username]
+              }
+            : link
+        );
+        setLinks(updatedLinks);
         toast.success('Link supported successfully!');
-        setSupportedLinks(prev => [...prev, linkUrl]);
-      } else {
-        toast.error('Failed to update balance.');
+      } catch (error) {
+        console.error('Error supporting link:', error);
+        toast.error('Failed to support link.');
       }
-    } catch (error) {
-      console.error('Error updating balance:', error);
-      toast.error('Failed to support link.');
-    }
-  };
+    };    
 
   const handleAdminDelete = async (linkUrl: string) => {
-    const updatedLinks = links.filter(link => link.url !== linkUrl);
-    const validLinks = await deleteExpiredLinks(updatedLinks);
-    const success = await writeJsonFile('links.json', { links: validLinks });
-    if (success) {
-      setLinks(validLinks);
-      toast.success('Link deleted successfully!');
-    } else {
+    const { error } = await supabase.from('links').delete().eq('url', linkUrl);
+  
+    if (error) {
       toast.error('Failed to delete link.');
+      return;
     }
+  
+    const updatedLinks = links.filter(link => link.url !== linkUrl);
+    setLinks(updatedLinks);
+    toast.success('Link deleted successfully!');
   };
+  
 
   const isLinkSupported = (linkUrl: string) => {
     return supportedLinks.includes(linkUrl);

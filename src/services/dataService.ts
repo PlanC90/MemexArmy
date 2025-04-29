@@ -1,42 +1,41 @@
+import { supabase } from "../supabaseClient";
 import toast from 'react-hot-toast';
 
-export async function readJsonFile<T>(filename: string): Promise<T | null> {
-  try {
-    const response = await fetch(`/data/${filename}`);
-    if (!response.ok) {
-      throw new Error(`Failed to read ${filename}`);
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(`Error reading ${filename}:`, error);
+
+export async function fetchFromSupabase<T>(table: string): Promise<T[] | null> {
+  const { data, error } = await supabase.from(table).select('*');
+  if (error) {
+    console.error(`Error fetching from ${table}:`, error.message);
+    toast.error(`Failed to fetch from ${table}`);
     return null;
   }
+  return data as T[];
 }
 
-export async function writeJsonFile<T>(filename: string, data: T): Promise<boolean> {
-  try {
-    const response = await fetch(`/data/${filename}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data, null, 2),
-    });
 
-    if (!response.ok) {
-      throw new Error(`Failed to write ${filename}`);
-    }
-
-    const result = await response.json();
-    if (result.success) {
-      toast.success('Data saved successfully!');
-      return true;
-    } else {
-      throw new Error(result.error || 'Failed to save data');
-    }
-  } catch (error) {
-    console.error(`Error writing ${filename}:`, error);
-    toast.error(`Failed to save data to ${filename}`);
+export async function insertToSupabase<T>(table: string, record: T): Promise<boolean> {
+  const { error } = await supabase.from(table).insert(record);
+  if (error) {
+    console.error(`Error inserting into ${table}:`, error.message);
+    toast.error(`Failed to insert into ${table}`);
     return false;
   }
+  toast.success('Data inserted successfully!');
+  return true;
+}
+
+export async function updateSupabaseRecord<T>(
+  table: string,
+  matchKey: string,
+  matchValue: any,
+  newData: Partial<T>
+): Promise<boolean> {
+  const { error } = await supabase.from(table).update(newData).eq(matchKey, matchValue);
+  if (error) {
+    console.error(`Error updating ${table}:`, error.message);
+    toast.error(`Failed to update ${table}`);
+    return false;
+  }
+  toast.success('Data updated successfully!');
+  return true;
 }

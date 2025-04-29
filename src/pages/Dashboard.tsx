@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Users, Link2, Award, Wallet } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Label } from 'recharts';
-import { readJsonFile } from '../services/dataService';
+import { fetchFromSupabase } from '../services/dataService';
 import type { User, Link } from '../types';
 
 function formatNumber(num: number): string {
@@ -31,46 +31,47 @@ export function Dashboard() {
 
   useEffect(() => {
     const loadDashboardData = async () => {
-      const usersData = await readJsonFile<{ users: User[] }>('users.json');
-      const linksData = await readJsonFile<{ links: Link[] }>('links.json');
-      const withdrawalsData = await readJsonFile<{ withdrawals: any[] }>('cekim.json');
-
-      if (usersData?.users && linksData?.links && withdrawalsData?.withdrawals) {
-        // Calculate stats
+      const usersData = await fetchFromSupabase<User>('users');
+      const linksData = await fetchFromSupabase<Link>('links');
+      const withdrawalsData = await fetchFromSupabase<any>('withdrawals'); // eski adı cekim.json
+  
+      if (usersData && linksData && withdrawalsData) {
+        // İstatistikleri hesapla
         setStats({
-          totalUsers: usersData.users.length,
-          activeLinks: linksData.links.length,
-          totalRewards: usersData.users.reduce((sum, user) => sum + user.balance, 0),
-          totalWithdrawals: withdrawalsData.withdrawals.reduce((sum, w) => sum + w.amount, 0)
+          totalUsers: usersData.length,
+          activeLinks: linksData.length,
+          totalRewards: usersData.reduce((sum, user) => sum + user.balance, 0),
+          totalWithdrawals: withdrawalsData.reduce((sum, w) => sum + w.amount, 0)
         });
-
-        // Calculate top users by links
-        const userLinkCounts = linksData.links.reduce((acc, link) => {
+  
+        // En çok link paylaşan kullanıcılar
+        const userLinkCounts = linksData.reduce((acc, link) => {
           acc[link.username] = (acc[link.username] || 0) + 1;
           return acc;
         }, {} as Record<string, number>);
-
+  
         const sortedUsers = Object.entries(userLinkCounts)
           .map(([name, links]) => ({ name, links }))
           .sort((a, b) => b.links - a.links)
           .slice(0, 5);
-
+  
         setTopUsers(sortedUsers);
-
-        // Calculate platform distribution
-        const platformCounts = linksData.links.reduce((acc, link) => {
+  
+        // Platform dağılımı
+        const platformCounts = linksData.reduce((acc, link) => {
           acc[link.platform] = (acc[link.platform] || 0) + 1;
           return acc;
         }, {} as Record<string, number>);
-
+  
         setPlatformStats(
           Object.entries(platformCounts).map(([name, value]) => ({ name, value }))
         );
       }
     };
-
+  
     loadDashboardData();
   }, []);
+  
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8', '#82CA9D'];
 

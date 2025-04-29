@@ -3,7 +3,8 @@ import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card'
 import { Button } from '../components/ui/button';
 import { User, Wallet, Award, Link as LinkIcon, ArrowDownToLine } from 'lucide-react';
 import type { User as UserType, Link as LinkType } from '../types';
-import { readJsonFile, writeJsonFile } from '../services/dataService';
+import { fetchFromSupabase } from '../services/dataService';
+import { supabase } from '../supabaseClient';
 import toast from 'react-hot-toast';
 
 function formatNumber(num: number): string {
@@ -34,32 +35,26 @@ export function Profile() {
           setLoading(false);
           return;
         }
-
+  
         const currentUser = JSON.parse(userStr);
-        const usersData = await readJsonFile<{ users: UserType[] }>('users.json');
-        const user = usersData?.users.find(u => u.username === currentUser.username);
-        
-        if (!user) {
+        const users = await fetchFromSupabase<UserType>('users');
+        const matchedUser = users?.find(u => u.username === currentUser.username);
+  
+        if (!matchedUser) {
           setLoading(false);
           return;
         }
-
-        const linksData = await readJsonFile<{ links: LinkType[] }>('links.json');
-        const userLinks = linksData?.links.filter(link => link.username === user.username) || [];
+  
+        const links = await fetchFromSupabase<LinkType>('links');
+        const userLinks = links?.filter(link => link.username === matchedUser.username) || [];
         setTasksAdded(userLinks.length);
-
-        // Count links the user has supported
-        let supportedCount = 0;
-        if (linksData?.links) {
-          linksData.links.forEach(link => {
-            if (link.supportedBy && link.supportedBy.includes(currentUser.username)) {
-              supportedCount++;
-            }
-          });
-        }
+  
+        const supportedCount = links?.filter(link =>
+          link.supportedBy?.includes(currentUser.username)
+        ).length || 0;
+  
         setTasksSupported(supportedCount);
-
-        setUser(user);
+        setUser(matchedUser);
         setLoading(false);
       } catch (error) {
         console.error('Error loading data:', error);
@@ -67,12 +62,14 @@ export function Profile() {
         setLoading(false);
       }
     };
+  
     loadData();
   }, []);
+  
 
   const handleWithdraw = async () => {
     if (!user) return;
-
+  
     const amount = Number(withdrawAmount);
     if (amount >= minimumWithdrawalAmount && amount <= user.balance && amount <= maximumWithdrawalAmount) {
       const withdrawal = {
@@ -81,47 +78,58 @@ export function Profile() {
         walletAddress: user.walletAddress,
         timestamp: new Date().toISOString()
       };
-
-      const cekimData = await readJsonFile<{ withdrawals: any[] }>('cekim.json');
-      const success = await writeJsonFile('cekim.json', {
-        withdrawals: [...(cekimData?.withdrawals || []), withdrawal]
-      });
-
-      if (success) {
-        const newBalance = user.balance - amount;
-        const userData = await readJsonFile<{ users: UserType[] }>('users.json');
-        const updatedUsers = userData?.users.map(u => 
-          u.username === user.username ? { ...u, balance: newBalance } : u
-        ) || [];
-
-        await writeJsonFile('users.json', { users: updatedUsers });
-        setUser(prev => prev ? ({ ...prev, balance: newBalance }) : null);
-        setWithdrawAmount('');
-        toast.success('Withdrawal successful!');
-      } else {
+  
+      // 1. Supabase'e yeni çekim kaydı ekle
+      const { error: withdrawError } = await supabase
+        .from('withdrawals')
+        .insert(withdrawal);
+  
+      if (withdrawError) {
+        console.error('Withdraw insert error:', withdrawError);
         toast.error('Withdrawal failed.');
+        return;
       }
+  
+      // 2. Kullanıcının bakiyesini güncelle
+      const newBalance = user.balance - amount;
+  
+      const { error: updateError } = await supabase
+        .from('users')
+        .update({ balance: newBalance })
+        .eq('username', user.username);
+  
+      if (updateError) {
+        console.error('Balance update error:', updateError);
+        toast.error('Balance update failed.');
+        return;
+      }
+  
+      setUser(prev => prev ? ({ ...prev, balance: newBalance }) : null);
+      setWithdrawAmount('');
+      toast.success('Withdrawal successful!');
     } else {
       toast.error(`Invalid withdrawal amount. Minimum withdrawal amount is ${minimumWithdrawalAmount} MemeX and maximum withdrawal amount is ${maximumWithdrawalAmount} MemeX.`);
     }
   };
+  
 
   const handleSaveWallet = async () => {
     if (!user) return;
-
-    const userData = await readJsonFile<{ users: UserType[] }>('users.json');
-    const updatedUsers = userData?.users.map(u => 
-      u.username === user.username ? { ...u, walletAddress: user.walletAddress } : u
-    ) || [];
-
-    const success = await writeJsonFile('users.json', { users: updatedUsers });
-    if (success) {
-      toast.success('Wallet address saved!');
-      localStorage.setItem('currentUser', JSON.stringify({...user, walletAddress: user.walletAddress}));
-    } else {
+  
+    const { error } = await supabase
+      .from('users')
+      .update({ walletAddress: user.walletAddress })
+      .eq('username', user.username);
+  
+    if (error) {
+      console.error('Wallet update error:', error.message);
       toast.error('Failed to save wallet address.');
+    } else {
+      toast.success('Wallet address saved!');
+      localStorage.setItem('currentUser', JSON.stringify({ ...user }));
     }
   };
+  
 
   if (loading) {
     return (

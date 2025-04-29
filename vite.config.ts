@@ -14,7 +14,7 @@ export default defineConfig({
           if (req.method === 'PUT' && req.url?.startsWith('/data/')) {
             const filename = req.url.replace('/data/', '');
             const filePath = path.join('data', filename);
-            
+
             // Read the request body
             let body = '';
             for await (const chunk of req) {
@@ -44,6 +44,6 @@ export default defineConfig({
     chunkSizeWarningLimit: 1600 // Increase chunk size limit to 1600 KB
   },
   server: {
-    allowedHosts: ["test3-of9y.onrender.com"]
+    allowedHosts: ["test3-of9y.onrender.com", "superbot.memextoken.org"] // Added superbot.memextoken.org
   }
 });

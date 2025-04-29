@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { LogIn, Eye, EyeOff } from 'lucide-react';
-import { readJsonFile } from '../services/dataService';
+import { fetchFromSupabase } from '../services/dataService';
 import toast from 'react-hot-toast';
 import type { User } from '../types';
 
@@ -26,19 +26,21 @@ export function Login() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+  
     try {
-      const data = await readJsonFile<{ users: User[] }>('users.json');
-      const user = data?.users.find(u => 
+      const users = await fetchFromSupabase<User>('users');
+  
+      const user = users?.find(u =>
         u.username === formData.username && u.password === formData.password
       );
-
+  
       if (user) {
         if (rememberMe) {
           localStorage.setItem('rememberedUsername', formData.username);
         } else {
           localStorage.removeItem('rememberedUsername');
         }
+  
         localStorage.setItem('currentUser', JSON.stringify(user));
         toast.success('Login successful!');
         navigate('/');
@@ -49,7 +51,7 @@ export function Login() {
       console.error('Login error:', error);
       toast.error('Login failed');
     }
-  };
+  };  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
