@@ -6,6 +6,7 @@ import type { Link as LinkType, Admin as AdminType, User as UserType } from '../
 import { fetchFromSupabase } from '../services/dataService';
 import { supabase } from '../supabaseClient';
 import toast from 'react-hot-toast';
+import { sendNewLinkMessage } from '../services/telegramBotService'; // Import the updated service
 
 function getTimeRemaining(expiryDate: Date): string {
   const now = new Date().getTime();
@@ -90,9 +91,9 @@ export function Links() {
             url: link.url,
             groupInfo: link.groupInfo,
             platform: link.platform
-          }).eq('id', link.id); 
+          }).eq('id', link.id);
         }
-        
+
         return updatedLinks;
     };
 
@@ -111,15 +112,15 @@ export function Links() {
       }
 
       const adminData = await fetchFromSupabase<AdminType>('admin');
-      const settingsData = await fetchFromSupabase<any>('settings'); 
-      
-      
+      const settingsData = await fetchFromSupabase<any>('settings');
+
+
       setAdmins(adminData || []);
       if (settingsData && settingsData[0]) {
         setTaskReward(settingsData[0].taskReward);
         setSupportReward(settingsData[0].supportReward);
       }
-      
+
 
         const storedLinksAdded = localStorage.getItem(`linksAddedToday_${currentUser?.username || 'default'}`);
         const storedLastResetTime = localStorage.getItem(`lastResetTime_${currentUser?.username || 'default'}`);
@@ -244,15 +245,15 @@ export function Links() {
           toast.error('Please enter a valid URL.');
           return;
         }
-    
+
         const now = new Date();
         const lastLinkAddedKey = `lastLinkAdded_${currentUser.username}`;
         const storedLastLinkAdded = localStorage.getItem(lastLinkAddedKey);
-    
+
         if (storedLastLinkAdded) {
           const lastLinkAddedDate = new Date(storedLastLinkAdded);
           const timeDiff = now.getTime() - lastLinkAddedDate.getTime();
-    
+
           if (timeDiff < 24 * 60 * 60 * 1000) {
             const timeLeft = 24 * 60 * 60 * 1000 - timeDiff;
             const hours = Math.floor(timeLeft / (60 * 60 * 1000));
@@ -262,9 +263,9 @@ export function Links() {
             return;
           }
         }
-    
+
         const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 gün
-    
+
         const newLinkData = {
           id: crypto.randomUUID(), // uuidv4() da olabilir
           username: currentUser.username,
@@ -284,96 +285,98 @@ export function Links() {
           supportedBy: [],
           reports: []
         };
-    
+
         const { error } = await supabase.from('links').insert([newLinkData]);
-    
+
         if (error) {
           console.error("Supabase insert error:", error.message); // hata detayını logla
           toast.error('Failed to add link.');
           return;
         }
-    
+
         setLinks([newLinkData, ...links]);
         setNewLink({ url: '', platform: 'Twitter' });
         setShowAddForm(false);
-    
+
         localStorage.setItem(lastLinkAddedKey, now.toISOString());
         setLastLinkAdded(now);
         setLinksAddedToday(1);
         localStorage.setItem(`linksAddedToday_${currentUser.username}`, '1');
+
+        // Send Telegram message after successful link addition via server API
+        await sendNewLinkMessage(newLinkData);
+
       }
     };
-    
-    
-    
-    
+
+
 
     const handleReport = async (linkUrl: string) => {
       if (!currentUser) return;
-    
+
       const targetLink = links.find(link => link.url === linkUrl);
       if (!targetLink) return;
-    
+
       const alreadyReported = targetLink.reports.includes(currentUser.username);
       const updatedReports = alreadyReported
         ? targetLink.reports.filter(name => name !== currentUser.username)
         : [...targetLink.reports, currentUser.username];
-    
+
       const { error } = await supabase
         .from('links')
         .update({ reports: updatedReports })
         .eq('url', linkUrl);
-    
+
       if (error) {
         toast.error('Failed to update report status.');
         return;
       }
-    
+
       const updatedLinks = links.map(link =>
         link.url === linkUrl ? { ...link, reports: updatedReports } : link
       );
-    
+
       setLinks(updatedLinks);
     };
-    
+
 
     const handleSupport = async (linkUrl: string) => {
       if (!currentUser) return;
-    
+
       try {
         // Kullanıcıyı Supabase'ten çek
         const usersData = await fetchFromSupabase<UserType>('users');
         const currentUserData = usersData?.find(u => u.username === currentUser.username);
-    
+
         if (!currentUserData) {
           toast.error('User not found.');
           return;
         }
-    
+
         // Ödül miktarını Supabase settings tablosundan çek
         const settingsData = await fetchFromSupabase<any>('settings');
         const supportReward = settingsData?.[0]?.supportReward || 0;
-    
+
         // Güncel bakiye hesapla
         const updatedBalance = currentUserData.balance + supportReward;
-    
+
         // Linki bul
         const targetLink = links.find(link => link.url === linkUrl);
         if (!targetLink) {
           toast.error('Link not found.');
           return;
         }
-    
+
         // Zaten desteklendiyse işlem yapma
         const alreadySupported = targetLink.supportedBy?.includes(currentUser.username);
         if (alreadySupported) {
           toast.error('You already supported this link.');
           return;
         }
-    
+
         // Supabase'te kullanıcı güncelle
         await supabase.from('users').update({ balance: updatedBalance }).eq('username', currentUser.username);
-    
+
         // Supabase'te link güncelle
         await supabase
           .from('links')
@@ -382,7 +385,7 @@ export function Links() {
             supportedBy: [...(targetLink.supportedBy || []), currentUser.username]
           })
           .eq('url', linkUrl);
-    
+
         // Frontend'de state güncelle
         setSupportedLinks(prev => [...prev, linkUrl]);
         const updatedLinks = links.map(link =>
@@ -400,21 +403,21 @@ export function Links() {
         console.error('Error supporting link:', error);
         toast.error('Failed to support link.');
       }
-    };    
+    };
 
   const handleAdminDelete = async (linkUrl: string) => {
     const { error } = await supabase.from('links').delete().eq('url', linkUrl);
-  
+
     if (error) {
       toast.error('Failed to delete link.');
       return;
     }
-  
+
     const updatedLinks = links.filter(link => link.url !== linkUrl);
     setLinks(updatedLinks);
     toast.success('Link deleted successfully!');
   };
-  
+
 
   const isLinkSupported = (linkUrl: string) => {
     return supportedLinks.includes(linkUrl);
@@ -602,9 +605,9 @@ export function Links() {
                   <span className="text-blue-600">{link.platform}</span> Link
                 </CardTitle>
                 <div className="flex flex-col items-center gap-2">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
+                  <Button
+                    variant="outline"
+                    size="sm"
                     className={`flex items-center gap-1 ${isSupported ? 'bg-green-500 text-white hover:bg-green-600' : ''}`}
                     onClick={() => handleSupport(link.url)}
                     disabled={isSupported}
@@ -613,9 +616,9 @@ export function Links() {
                     {isSupported ? 'Supported' : 'Support'}
                   </Button>
                   <span className="text-xs">{link.supports || 0} Supports</span> {/* Display the supports count */}
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
+                  <Button
+                    variant="ghost"
+                    size="sm"
                     className={`flex items-center gap-1 ${isReported ? 'text-yellow-600' : 'text-red-600'}`}
                     onClick={() => handleReport(link.url)}
                   >

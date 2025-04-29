@@ -1,57 +1,115 @@
-import { serve } from "https://deno.land/std@0.223.0/http/server.ts";
-import { serveDir } from "https://deno.land/std@0.223.0/http/file_server.ts";
-import { contentType } from "https://deno.land/std@0.223.0/media_types/mod.ts";
+import express from 'express';
+import path from 'path';
+import fs from 'fs/promises';
+import TelegramBot from 'node-telegram-bot-api'; // Import TelegramBot here
 
-const dataDir = "./data";
-const distDir = "./dist";
-const port = Deno.env.get("PORT") || "8000";
+const app = express();
+const port = process.env.PORT || 3000;
 
-async function handleRequest(request: Request): Promise<Response> {
-  const url = new URL(request.url);
+// Middleware to parse JSON bodies
+app.use(express.json());
 
-  // API İsteklerini İşle
-  if (url.pathname.startsWith("/data/")) {
-    const filename = url.pathname.substring("/data/".length);
+// Serve static files from the 'dist' directory (where Vite builds the frontend)
+app.use(express.static(path.join(__dirname, '../dist')));
 
-    if (request.method === "GET") {
-      try {
-        const data = await Deno.readFile(`${dataDir}/${filename}`);
-        const decoded = new TextDecoder().decode(data);
-        const type = contentType(filename);
-        return new Response(decoded, {
-          headers: {
-            "content-type": type || "application/json",
-          },
-        });
-      } catch (e) {
-        console.error(e);
-        return new Response("Not found", { status: 404 });
-      }
-    } else if (request.method === "PUT") {
-      try {
-        const body = await request.text();
-        await Deno.writeFile(`${dataDir}/${filename}`, new TextEncoder().encode(body));
-        return new Response("OK");
-      } catch (e) {
-        console.error(e);
-        return new Response("Error writing file", { status: 500 });
-      }
-    } else {
-      return new Response("Method not allowed", { status: 405 });
-    }
-  }
+// --- Telegram Bot Logic (Server-side) ---
+// Replace with your actual Telegram Bot Token from environment variables
+const token = process.env.VITE_TELEGRAM_BOT_TOKEN; // Access token from server env
 
-  // Statik Dosyaları Sun
-  try {
-    return await serveDir(request, {
-      fsRoot: distDir,
-      urlRoot: "/",
-    });
-  } catch (e) {
-    console.error(e);
-    return new Response("404 - Sayfa Bulunamadı", { status: 404 });
-  }
+// Replace with the actual chat ID (group ID or bot username/ID)
+const targetChatId = '-100123456789'; // <<< REPLACE WITH YOUR ACTUAL CHAT ID
+
+const bot = token ? new TelegramBot(token, { polling: false }) : null;
+
+if (!bot) {
+  console.error("Telegram Bot Token not found on server. Telegram messages will not be sent.");
 }
 
-console.log(`Sunucu ${port} portunda çalışıyor`);
-serve(handleRequest, { port: parseInt(port) });
+// New API endpoint to send Telegram messages
+app.post('/api/send-telegram-message', async (req, res) => {
+  if (!bot) {
+    console.error("Telegram bot is not initialized on server. Cannot send message.");
+    return res.status(500).json({ success: false, error: 'Telegram bot not initialized' });
+  }
+
+  const link = req.body; // Link data from the frontend
+
+  if (!link || !link.username || !link.platform || !link.url || !link.rewards) {
+      console.error("Invalid link data received:", link);
+      return res.status(400).json({ success: false, error: 'Invalid link data' });
+  }
+
+  const messageText = `
+📣 *New Link Shared!*
+
+👤 *Added By:* ${link.username}
+🔗 *Platform:* ${link.platform}
+👥 *Group:* MemeX ARMY
+🏆 *Rewards:* Link Addition ${link.rewards.add} MemeX
+🏅 *Rewards:* Support ${link.rewards.support} MemeX
+  `;
+
+  const options = {
+    parse_mode: 'Markdown' as const,
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: '📝 Register & Earn', url: 'YOUR_REGISTER_URL_HERE' }, // <<< REPLACE WITH ACTUAL REGISTER URL
+          { text: '✅ Visit Link', url: link.url }
+        ]
+      ]
+    }
+  };
+
+  try {
+    await bot.sendMessage(targetChatId, messageText, options);
+    console.log(`New link message sent to chat ID ${targetChatId} from server`);
+    res.json({ success: true });
+  } catch (error) {
+    console.error('Failed to send Telegram message from server:', error);
+    res.status(500).json({ success: false, error: 'Failed to send Telegram message' });
+  }
+});
+// --- End Telegram Bot Logic ---
+
+
+// API endpoint to read JSON files
+app.get('/data/:filename', async (req, res) => {
+  const filename = req.params.filename;
+  const filePath = path.join(__dirname, '../data', filename);
+
+  try {
+    const data = await fs.readFile(filePath, 'utf8');
+    res.json(JSON.parse(data));
+  } catch (error) {
+    console.error(`Error reading ${filename}:`, error);
+    res.status(500).json({ error: 'Failed to read file' });
+  }
+});
+
+// API endpoint to write JSON files (used by Vite plugin, keeping for reference if needed)
+// Note: The Vite plugin handles PUT requests to /data/ in dev mode.
+// This server endpoint would be used in a production build or if not using the Vite plugin.
+app.put('/data/:filename', async (req, res) => {
+  const filename = req.params.filename;
+  const filePath = path.join(__dirname, '../data', filename);
+  const data = req.body;
+
+  try {
+    await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8');
+    res.json({ success: true });
+  } catch (error) {
+    console.error(`Error writing to ${filename}:`, error);
+    res.status(500).json({ error: 'Failed to write file' });
+  }
+});
+
+
+// Serve the index.html for all other routes (for client-side routing)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+});
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
