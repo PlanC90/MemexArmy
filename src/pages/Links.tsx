@@ -6,7 +6,7 @@ import type { Link as LinkType, Admin as AdminType, User as UserType } from '../
 import { fetchFromSupabase } from '../services/dataService';
 import { supabase } from '../supabaseClient';
 import toast from 'react-hot-toast';
-// import { sendNewLinkMessage } from '../services/telegramBotService'; // No longer needed here
+import { sendNewLinkMessage } from '../services/telegramBotService'; // Import the updated service
 
 function getTimeRemaining(expiryDate: Date): string {
   const now = new Date().getTime();
@@ -111,8 +111,14 @@ export function Links() {
       if (linksData) {
         const updated = await updateExpiryDates(linksData);
           const validLinks = await deleteExpiredLinks(updated);
-          // Sort links by timestamp descending (newest first)
-          const sortedLinks = validLinks.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+
+          // Sort links by timestamp in descending order (newest first)
+          const sortedLinks = validLinks.sort((a, b) => {
+              const dateA = new Date(a.timestamp).getTime();
+              const dateB = new Date(b.timestamp).getTime();
+              return dateB - dateA; // Descending order
+          });
+
           setLinks(sortedLinks);
       }
 
@@ -304,8 +310,8 @@ export function Links() {
           return;
         }
 
-        // Add the new link to the beginning of the list
-        setLinks([newLinkData, ...links]); // Prepend the new link
+        // Add the new link to the beginning of the list (since we sort newest first)
+        setLinks([newLinkData, ...links]);
         setNewLink({ url: '', platform: 'Twitter' });
         setShowAddForm(false);
 
@@ -314,36 +320,10 @@ export function Links() {
         setLinksAddedToday(1); // Assuming only 1 link can be added per day
         localStorage.setItem(`linksAddedToday_${currentUser.username}`, '1');
 
-        // --- Call the backend API to send the Telegram message ---
-        try {
-            // Assuming your backend is running on the same host but potentially a different port
-            // or accessible via a relative path if deployed together.
-            // You might need to adjust the URL depending on your deployment setup.
-            const backendUrl = window.location.origin.includes('localhost')
-                ? 'http://localhost:3000' // Adjust if your backend runs on a different local port
-                : window.location.origin; // Assumes backend is served from the same origin
-
-            const telegramSendResponse = await fetch(`${backendUrl}/api/telegram/send-link`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(newLinkData),
-            });
-
-            const result = await telegramSendResponse.json();
-
-            if (result.success) {
-                toast.success('Link added and Telegram message sent!');
-            } else {
-                console.error('Failed to send Telegram message via backend:', result.message);
-                toast.error('Link added, but failed to send Telegram message.');
-            }
-        } catch (telegramError) {
-            console.error('Error calling Telegram send API:', telegramError);
-            toast.error('Link added, but failed to call Telegram send API.');
-        }
-        // --- End of backend API call ---
+        // Send Telegram message after successful link addition via server API
+        // Ensure sendNewLinkMessage handles the LinkType correctly
+        await sendNewLinkMessage(newLinkData);
+        toast.success('Link added successfully!');
 
       }
     };
