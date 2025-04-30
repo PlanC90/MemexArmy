@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Shield, Users, Coins, Flag, X, Trash2, Search } from 'lucide-react';
+import { Shield, Users, Coins, Flag, X, Trash2, Search, Send } from 'lucide-react'; // Import Send icon
 import type { Admin as AdminType, Link as LinkType, User as UserType } from '../types';
 import { fetchFromSupabase } from '../services/dataService';
 import toast from 'react-hot-toast';
@@ -13,7 +13,7 @@ export function Admin() {
   const [newAdmin, setNewAdmin] = useState('');
   const [taskReward, setTaskReward] = useState(0);
   const [supportReward, setSupportReward] = useState(0);
-    const [settingsId, setSettingsId] = useState('');
+  const [settingsId, setSettingsId] = useState('');
   const [reportedLinks, setReportedLinks] = useState<LinkType[]>([]);
   const [allLinks, setAllLinks] = useState<LinkType[]>([]);
   const [searchUser, setSearchUser] = useState('');
@@ -29,7 +29,7 @@ export function Admin() {
     if (settingsData && settingsData[0]) {
       setTaskReward(settingsData[0].taskReward);
       setSupportReward(settingsData[0].supportReward);
-      setSettingsId(settingsData[0].id); 
+      setSettingsId(settingsData[0].id);
     }
 
     const linksData = await fetchFromSupabase<LinkType>('links');
@@ -45,7 +45,7 @@ export function Admin() {
 
   loadData();
 }, []);
-  
+
 
   useEffect(() => {
     if (searchUser) {
@@ -63,13 +63,13 @@ export function Admin() {
         toast.error('Failed to add admin.');
         return;
       }
-  
+
       setAdmins(prev => [...prev, { username: newAdmin }]);
       setNewAdmin('');
       toast.success('Admin added!');
     }
   };
-  
+
 
   const handleRemoveAdmin = async (username: string) => {
     const { error } = await supabase.from('admin').delete().eq('username', username);
@@ -77,17 +77,17 @@ export function Admin() {
       toast.error('Failed to remove admin.');
       return;
     }
-  
+
     setAdmins(prev => prev.filter(admin => admin.username !== username));
     toast.success('Admin removed!');
   };
-  
+
 
  const handleSaveSettings = async () => {
   const { error } = await supabase
     .from('settings')
     .update({ taskReward, supportReward })
-    .eq('id', settingsId); 
+    .eq('id', settingsId);
 
   if (error) {
     toast.error('Failed to save settings.');
@@ -95,7 +95,6 @@ export function Admin() {
     toast.success('Settings saved successfully!');
   }
 };
-  
 
 
   const handleRemoveReport = async (linkUrl: string) => {
@@ -103,12 +102,12 @@ export function Admin() {
       .from('links')
       .update({ reports: [] })
       .eq('url', linkUrl);
-  
+
     if (error) {
       toast.error('Failed to remove report.');
       return;
     }
-  
+
     const updated = allLinks.map(link =>
       link.url === linkUrl ? { ...link, reports: [] } : link
     );
@@ -116,7 +115,6 @@ export function Admin() {
     setReportedLinks(updated.filter(link => link.reports.length > 0));
     toast.success('Report removed successfully!');
   };
-  
 
 
   const handleAdminDelete = async (linkUrl: string) => {
@@ -125,27 +123,27 @@ export function Admin() {
       toast.error('Failed to delete link.');
       return;
     }
-  
+
     const updated = allLinks.filter(link => link.url !== linkUrl);
     setAllLinks(updated);
     setReportedLinks(updated.filter(link => link.reports.length > 0));
     toast.success('Link deleted successfully!');
   };
-  
+
 
   const handleChangePassword = async (newPassword: string) => {
     if (!selectedUser) return;
-  
+
     const { error } = await supabase
       .from('users')
       .update({ password: newPassword })
       .eq('id', selectedUser.id);
-  
+
     if (error) {
       toast.error('Failed to change password.');
       return;
     }
-  
+
     const updatedUsers = allUsers.map(user =>
       user.id === selectedUser.id ? { ...user, password: newPassword } : user
     );
@@ -153,38 +151,38 @@ export function Admin() {
     setSelectedUser(prev => (prev ? { ...prev, password: newPassword } : null));
     toast.success('Password changed successfully!');
   };
-  
+
 
   const handleDeleteUser = async () => {
     if (!selectedUser) return;
-  
+
     const { error } = await supabase.from('users').delete().eq('id', selectedUser.id);
     if (error) {
       toast.error('Failed to delete user.');
       return;
     }
-  
+
     setAllUsers(prev => prev.filter(user => user.id !== selectedUser.id));
     setSelectedUser(null);
     toast.success('User deleted successfully!');
   };
-  
+
 
   const handleToggleLinkRestriction = async () => {
     if (!selectedUser) return;
-  
+
     const newStatus = !selectedUser.canAddLinks;
-  
+
     const { error } = await supabase
       .from('users')
       .update({ canAddLinks: newStatus })
       .eq('id', selectedUser.id);
-  
+
     if (error) {
       toast.error('Failed to toggle link restriction.');
       return;
     }
-  
+
     const updatedUsers = allUsers.map(user =>
       user.id === selectedUser.id ? { ...user, canAddLinks: newStatus } : user
     );
@@ -192,7 +190,29 @@ export function Admin() {
     setSelectedUser(prev => (prev ? { ...prev, canAddLinks: newStatus } : null));
     toast.success(`Link adding ${newStatus ? 'enabled' : 'disabled'} for user.`);
   };
-  
+
+  const handleResendLastLink = async () => {
+    try {
+      const response = await fetch('/api/telegram/resend-last', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success(data.message);
+      } else {
+        toast.error(data.message || 'Failed to resend last link.');
+      }
+    } catch (error) {
+      console.error('Error resending last link:', error);
+      toast.error('An error occurred while trying to resend the link.');
+    }
+  };
+
 
   return (
     <div className="space-y-6">
@@ -223,9 +243,9 @@ export function Admin() {
                   <Users className="h-4 w-4 text-gray-500" />
                   <span>{admin.username}</span>
                 </div>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   className="text-red-600"
                   onClick={() => handleRemoveAdmin(admin.username)}
                 >
@@ -268,6 +288,19 @@ export function Admin() {
           <Button onClick={handleSaveSettings}>Save Settings</Button>
         </CardContent>
       </Card>
+
+       <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Send className="h-5 w-5" /> {/* Use Send icon */}
+            Telegram Actions
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Button onClick={handleResendLastLink}>Resend Last Link to Telegram</Button>
+        </CardContent>
+      </Card>
+
 
       <Card>
         <CardHeader>
