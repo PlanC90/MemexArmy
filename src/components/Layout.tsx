@@ -28,7 +28,8 @@ export function Layout({ children }: LayoutProps) {
     navigate('/login');
   };
 
-  const isAdmin = currentUser?.roles.includes('admin');
+  // Fix: Ensure currentUser?.roles is an array before calling includes
+  const isAdmin = Array.isArray(currentUser?.roles) && currentUser.roles.includes('admin');
 
   const navigation = [
     { name: 'Dashboard', href: '/', icon: LayoutDashboard, show: true },
