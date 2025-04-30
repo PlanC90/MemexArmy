@@ -38,12 +38,18 @@ async function sendPhotoToTelegram(chatId, caption, photoUrl, registerUrl, visit
                 ]
             }
         };
-        console.log(`Attempting to send photo to chat ID: ${chatId}`);
+        console.log(`[sendPhotoToTelegram] Attempting to send photo to chat ID: ${chatId}`);
+        console.log(`[sendPhotoToTelegram] Photo URL: ${photoUrl}`);
+        console.log(`[sendPhotoToTelegram] Caption: ${caption}`);
+        console.log(`[sendPhotoToTelegram] Register URL: ${registerUrl}`);
+        console.log(`[sendPhotoToTelegram] Visit Link: ${visitLink}`);
+
         await bot.sendPhoto(chatId, photoUrl, options);
-        console.log(`✅ Telegram message sent to ${chatId}`);
+
+        console.log(`✅ [sendPhotoToTelegram] Telegram message sent to ${chatId}`);
         return true;
     } catch (error) {
-        console.error('❌ Telegram mesajı gönderilirken hata oluştu:', error.message);
+        console.error('❌ [sendPhotoToTelegram] Telegram mesajı gönderilirken hata oluştu:', error.message);
         // Re-throw with specific message including original error details
         throw new Error(`Failed to send Telegram message: ${error.message || error}`);
     }
@@ -62,7 +68,7 @@ router.post('/send-link', async (req, res) => {
          return res.status(500).json({ success: false, message: 'Telegram bot not configured.' });
     }
 
-    console.log('Attempting to send Telegram message for new link:', link.url);
+    console.log('[/send-link] Attempting to send Telegram message for new link:', link.url);
 
     const messageCaption = formatMessage(link);
     const visitLink = link.url;
@@ -74,7 +80,7 @@ router.post('/send-link', async (req, res) => {
         await sendPhotoToTelegram(targetGroup, messageCaption, imageUrl, registerUrl, visitLink);
         res.status(200).json({ success: true, message: 'Telegram message sent successfully.' });
     } catch (error) {
-         console.error('Error in /send-link endpoint:', error.message);
+         console.error('[/send-link] Error in /send-link endpoint:', error.message);
          // Return the specific error message from sendPhotoToTelegram or other errors
          res.status(500).json({ success: false, message: error.message || 'An unknown error occurred while sending the link.' });
     }
@@ -82,59 +88,62 @@ router.post('/send-link', async (req, res) => {
 
 // POST endpoint to resend the last link
 router.post('/resend-last', async (req, res) => {
-    console.log('Received request to resend last link.');
-    console.log(`TELEGRAM_BOT_TOKEN is set: ${!!telegramApiKey}`);
-    console.log(`SUPABASE_URL is set: ${!!supabaseUrl}`);
-    console.log(`SUPABASE_ANON_KEY is set: ${!!supabaseAnonKey}`);
-    console.log(`Telegram bot initialized: ${!!bot}`);
-    console.log(`Supabase client initialized: ${!!supabase}`);
+    console.log('[/resend-last] Received request to resend last link.');
+    console.log(`[/resend-last] TELEGRAM_BOT_TOKEN is set: ${!!telegramApiKey}`);
+    console.log(`[/resend-last] SUPABASE_URL is set: ${!!supabaseUrl}`);
+    console.log(`[/resend-last] SUPABASE_ANON_KEY is set: ${!!supabaseAnonKey}`);
+    console.log(`[/resend-last] Telegram bot initialized: ${!!bot}`);
+    console.log(`[/resend-last] Supabase client initialized: ${!!supabase}`);
 
 
     if (!supabase) {
-        console.error("Supabase client not configured in /resend-last.");
+        console.error("[/resend-last] Supabase client not configured.");
         return res.status(500).json({ success: false, message: 'Supabase client not configured. Check environment variables.' });
     }
      if (!bot) {
-         console.error("Telegram bot not configured in /resend-last.");
+         console.error("[/resend-last] Telegram bot not configured.");
          return res.status(500).json({ success: false, message: 'Telegram bot not configured. Check environment variables.' });
     }
 
     try {
-        console.log('Fetching last link from Supabase...');
+        console.log('[/resend-last] Fetching last link from Supabase...');
         const { data: links, error: fetchError } = await supabase
             .from('links')
             .select('*')
             .order('created_at', { ascending: false })
             .limit(1);
 
+        console.log('[/resend-last] Supabase fetch attempt complete.');
+
         if (fetchError) {
-            console.error('Error fetching last link from Supabase:', fetchError.message);
+            console.error('[/resend-last] Error fetching last link from Supabase:', fetchError.message);
             // Return specific Supabase error
             return res.status(500).json({ success: false, message: `Failed to fetch last link from database: ${fetchError.message}` });
         }
 
         if (!links || links.length === 0) {
-            console.log('No links found in Supabase.');
+            console.log('[/resend-last] No links found in Supabase.');
             return res.status(404).json({ success: false, message: 'No links found to resend.' });
         }
 
         const lastLink = links[0];
-        console.log('Last link fetched:', lastLink.url);
+        console.log('[/resend-last] Last link fetched:', lastLink); // Log the fetched link object
+        console.log('[/resend-last] Last link URL:', lastLink.url);
 
         const messageCaption = formatMessage(lastLink);
         const visitLink = lastLink.url;
         const imageUrl = 'https://memex.planc.space/images/gorselb.jpg'; // Image URL for messages
         const registerUrl = 'https://t.me/PlanC_Super_bot'; // Register button URL
 
-        console.log('Attempting to resend last link via Telegram...');
+        console.log('[/resend-last] Attempting to resend last link via Telegram...');
         // sendPhotoToTelegram will throw on failure, which is caught below
         await sendPhotoToTelegram(targetGroup, messageCaption, imageUrl, registerUrl, visitLink);
 
-        console.log('Last link resent successfully.');
+        console.log('[/resend-last] Last link resent successfully.');
         res.status(200).json({ success: true, message: 'Last link resent successfully.' });
 
     } catch (error) {
-        console.error('Error in /resend-last endpoint:', error.message || error);
+        console.error('[/resend-last] Error in /resend-last endpoint catch block:', error.message || error);
         // Ensure a string message is returned, including error details if available
         const errorMessage = typeof error.message === 'string' && error.message.length > 0
                              ? error.message
