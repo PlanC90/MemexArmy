@@ -111,7 +111,9 @@ export function Links() {
       if (linksData) {
         const updated = await updateExpiryDates(linksData);
           const validLinks = await deleteExpiredLinks(updated);
-          setLinks(validLinks);
+          // Sort links by timestamp descending (newest first)
+          const sortedLinks = validLinks.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+          setLinks(sortedLinks);
       }
 
       const adminData = await fetchFromSupabase<AdminType>('admin');
@@ -303,7 +305,7 @@ export function Links() {
         }
 
         // Add the new link to the beginning of the list
-        setLinks([newLinkData, ...links]);
+        setLinks([newLinkData, ...links]); // Prepend the new link
         setNewLink({ url: '', platform: 'Twitter' });
         setShowAddForm(false);
 
