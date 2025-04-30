@@ -6,7 +6,7 @@ import type { Link as LinkType, Admin as AdminType, User as UserType } from '../
 import { fetchFromSupabase } from '../services/dataService';
 import { supabase } from '../supabaseClient';
 import toast from 'react-hot-toast';
-import { sendNewLinkMessage } from '../services/telegramBotService'; // Import the updated service
+// import { sendNewLinkMessage } from '../services/telegramBotService'; // No longer needed here
 
 function getTimeRemaining(expiryDate: Date): string {
   const now = new Date().getTime();
@@ -47,7 +47,7 @@ export function Links() {
     url: '',
     platform: 'Twitter' as LinkType['platform']
   });
-  const [supportedLinks, setSupportedLinks] = useState<string[]>([]);
+  const [supportedLinks, setSupportedLinks] = useState<string[]>([]); // This state seems redundant now that we check link.supportedBy
   const [admins, setAdmins] = useState<AdminType[]>([]);
   const [currentUser, setCurrentUser] = React.useState<UserType | null>(null);
   const [taskReward, setTaskReward] = useState(0);
@@ -86,6 +86,9 @@ export function Links() {
             }
             return link;
         });
+        // Note: This loop updates Supabase for *all* links, even non-expired ones,
+        // if their URL/groupInfo/platform were already empty.
+        // Consider optimizing this to only update links that actually expired in this run.
         for (const link of updatedLinks) {
           await supabase.from('links').update({
             url: link.url,
@@ -199,22 +202,27 @@ export function Links() {
         }
     }, [currentUser]);
 
-  useEffect(() => {
-    if (currentUser) {
-      const storedSupportedLinks = localStorage.getItem(`supportedLinks_${currentUser.username}`);
-      if (storedSupportedLinks) {
-        setSupportedLinks(JSON.parse(storedSupportedLinks));
-      }
-    }
-  }, [currentUser]);
+  // This effect seems redundant now that we check link.supportedBy directly
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     const storedSupportedLinks = localStorage.getItem(`supportedLinks_${currentUser.username}`);
+  //     if (storedSupportedLinks) {
+  //       setSupportedLinks(JSON.parse(storedSupportedLinks));
+  //     }
+  //   }
+  // }, [currentUser]);
 
-  useEffect(() => {
-    localStorage.setItem(`supportedLinks_${currentUser?.username || 'default'}`, JSON.stringify(supportedLinks));
-  }, [supportedLinks, currentUser]);
+  // This effect seems redundant now that we check link.supportedBy directly
+  // useEffect(() => {
+  //   localStorage.setItem(`supportedLinks_${currentUser?.username || 'default'}`, JSON.stringify(supportedLinks));
+  // }, [supportedLinks, currentUser]);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setLinks(prevLinks => {
+        // This interval currently just triggers a re-render without changing state.
+        // It might be intended to update timeRemaining, but that's handled by a separate effect.
+        // Consider if this interval is still necessary.
         return prevLinks.map(link => link);
       });
     }, 1000);
@@ -266,7 +274,7 @@ export function Links() {
 
         const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 gün
 
-        const newLinkData = {
+        const newLinkData: LinkType = { // Explicitly type newLinkData
           id: crypto.randomUUID(), // uuidv4() da olabilir
           username: currentUser.username,
           url: newLink.url,
@@ -274,16 +282,16 @@ export function Links() {
           timestamp: now.toISOString(),
           expiryDate: expiryDate.toISOString(),
           groupInfo: {
-            name: 'MemeX Community',
-            id: '123456789'
+            name: 'MemeX Community', // Consider making this dynamic or configurable
+            id: '123456789' // Consider making this dynamic or configurable
           },
           rewards: {
             add: taskReward,
             support: supportReward
           },
           supports: 0,
-          supportedBy: [],
-          reports: []
+          supportedBy: [], // Initialize as empty array
+          reports: [] // Initialize as empty array
         };
 
         const { error } = await supabase.from('links').insert([newLinkData]);
@@ -294,27 +302,56 @@ export function Links() {
           return;
         }
 
+        // Add the new link to the beginning of the list
         setLinks([newLinkData, ...links]);
         setNewLink({ url: '', platform: 'Twitter' });
         setShowAddForm(false);
 
         localStorage.setItem(lastLinkAddedKey, now.toISOString());
         setLastLinkAdded(now);
-        setLinksAddedToday(1);
+        setLinksAddedToday(1); // Assuming only 1 link can be added per day
         localStorage.setItem(`linksAddedToday_${currentUser.username}`, '1');
 
-        // Send Telegram message after successful link addition via server API
-        await sendNewLinkMessage(newLinkData);
+        // --- Call the backend API to send the Telegram message ---
+        try {
+            // Assuming your backend is running on the same host but potentially a different port
+            // or accessible via a relative path if deployed together.
+            // You might need to adjust the URL depending on your deployment setup.
+            const backendUrl = window.location.origin.includes('localhost')
+                ? 'http://localhost:3000' // Adjust if your backend runs on a different local port
+                : window.location.origin; // Assumes backend is served from the same origin
+
+            const telegramSendResponse = await fetch(`${backendUrl}/api/telegram/send-link`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(newLinkData),
+            });
+
+            const result = await telegramSendResponse.json();
+
+            if (result.success) {
+                toast.success('Link added and Telegram message sent!');
+            } else {
+                console.error('Failed to send Telegram message via backend:', result.message);
+                toast.error('Link added, but failed to send Telegram message.');
+            }
+        } catch (telegramError) {
+            console.error('Error calling Telegram send API:', telegramError);
+            toast.error('Link added, but failed to call Telegram send API.');
+        }
+        // --- End of backend API call ---
 
       }
     };
 
 
 
-    const handleReport = async (linkUrl: string) => {
+    const handleReport = async (linkId: string) => { // Use link ID instead of URL for robustness
       if (!currentUser) return;
 
-      const targetLink = links.find(link => link.url === linkUrl);
+      const targetLink = links.find(link => link.id === linkId);
       if (!targetLink) return;
 
       const alreadyReported = targetLink.reports.includes(currentUser.username);
@@ -325,7 +362,7 @@ export function Links() {
       const { error } = await supabase
         .from('links')
         .update({ reports: updatedReports })
-        .eq('url', linkUrl);
+        .eq('id', linkId); // Use ID for update
 
       if (error) {
         toast.error('Failed to update report status.');
@@ -333,35 +370,20 @@ export function Links() {
       }
 
       const updatedLinks = links.map(link =>
-        link.url === linkUrl ? { ...link, reports: updatedReports } : link
+        link.id === linkId ? { ...link, reports: updatedReports } : link // Use ID for mapping
       );
 
       setLinks(updatedLinks);
+      toast.success(alreadyReported ? 'Report removed.' : 'Link reported.');
     };
 
 
-    const handleSupport = async (linkUrl: string) => {
+    const handleSupport = async (linkId: string) => { // Use link ID instead of URL
       if (!currentUser) return;
 
       try {
-        // Kullanıcıyı Supabase'ten çek
-        const usersData = await fetchFromSupabase<UserType>('users');
-        const currentUserData = usersData?.find(u => u.username === currentUser.username);
-
-        if (!currentUserData) {
-          toast.error('User not found.');
-          return;
-        }
-
-        // Ödül miktarını Supabase settings tablosundan çek
-        const settingsData = await fetchFromSupabase<any>('settings');
-        const supportReward = settingsData?.[0]?.supportReward || 0;
-
-        // Güncel bakiye hesapla
-        const updatedBalance = currentUserData.balance + supportReward;
-
         // Linki bul
-        const targetLink = links.find(link => link.url === linkUrl);
+        const targetLink = links.find(link => link.id === linkId);
         if (!targetLink) {
           toast.error('Link not found.');
           return;
@@ -371,33 +393,87 @@ export function Links() {
         const alreadySupported = targetLink.supportedBy?.includes(currentUser.username);
         if (alreadySupported) {
           toast.error('You already supported this link.');
+          return; // Exit if already supported
+        }
+
+        // Kullanıcıyı Supabase'ten çek
+        const { data: usersData, error: userError } = await supabase
+            .from('users')
+            .select('*')
+            .eq('username', currentUser.username)
+            .single(); // Use single() as we expect one user
+
+        if (userError || !usersData) {
+          console.error("Error fetching user:", userError?.message);
+          toast.error('User not found.');
           return;
         }
 
+        // Ödül miktarını Supabase settings tablosundan çek
+        const { data: settingsData, error: settingsError } = await supabase
+            .from('settings')
+            .select('supportReward')
+            .single(); // Assuming there's only one settings row
+
+        if (settingsError || !settingsData) {
+             console.error("Error fetching settings:", settingsError?.message);
+             toast.error('Failed to fetch support reward.');
+             // Continue without reward if settings fail, or return? Let's return for now.
+             return;
+        }
+
+        const supportReward = settingsData.supportReward || 0;
+
+        // Güncel bakiye hesapla
+        const updatedBalance = usersData.balance + supportReward;
+
         // Supabase'te kullanıcı güncelle
-        await supabase.from('users').update({ balance: updatedBalance }).eq('username', currentUser.username);
+        const { error: updateUserError } = await supabase
+            .from('users')
+            .update({ balance: updatedBalance })
+            .eq('username', currentUser.username);
+
+        if (updateUserError) {
+             console.error("Error updating user balance:", updateUserError.message);
+             toast.error('Failed to update user balance.');
+             // Decide if you want to roll back link support or just log error
+             return;
+        }
+
 
         // Supabase'te link güncelle
-        await supabase
+        const updatedSupportedBy = [...(targetLink.supportedBy || []), currentUser.username];
+        const { error: updateLinkError } = await supabase
           .from('links')
           .update({
             supports: (targetLink.supports || 0) + 1,
-            supportedBy: [...(targetLink.supportedBy || []), currentUser.username]
+            supportedBy: updatedSupportedBy // Use the new array
           })
-          .eq('url', linkUrl);
+          .eq('id', linkId); // Use ID for update
+
+        if (updateLinkError) {
+             console.error("Error updating link support:", updateLinkError.message);
+             toast.error('Failed to update link support.');
+             // Consider rolling back user balance update here if link update fails
+             return;
+        }
+
 
         // Frontend'de state güncelle
-        setSupportedLinks(prev => [...prev, linkUrl]);
-        const updatedLinks = links.map(link =>
-          link.url === linkUrl
-            ? {
-                ...link,
-                supports: (link.supports || 0) + 1,
-                supportedBy: [...(link.supportedBy || []), currentUser.username]
-              }
-            : link
+        // Update the specific link in the links array
+        setLinks(prevLinks =>
+          prevLinks.map(link =>
+            link.id === linkId
+              ? {
+                  ...link,
+                  supports: (link.supports || 0) + 1,
+                  supportedBy: updatedSupportedBy // Update supportedBy in state
+                }
+              : link
+          )
         );
-        setLinks(updatedLinks);
+        // The supportedLinks state is no longer needed if we check link.supportedBy directly
+        // setSupportedLinks(prev => [...prev, linkUrl]);
         toast.success('Link supported successfully!');
       } catch (error) {
         console.error('Error supporting link:', error);
@@ -405,23 +481,24 @@ export function Links() {
       }
     };
 
-  const handleAdminDelete = async (linkUrl: string) => {
-    const { error } = await supabase.from('links').delete().eq('url', linkUrl);
+  const handleAdminDelete = async (linkId: string) => { // Use link ID instead of URL
+    const { error } = await supabase.from('links').delete().eq('id', linkId); // Use ID for delete
 
     if (error) {
       toast.error('Failed to delete link.');
       return;
     }
 
-    const updatedLinks = links.filter(link => link.url !== linkUrl);
+    const updatedLinks = links.filter(link => link.id !== linkId); // Use ID for filter
     setLinks(updatedLinks);
     toast.success('Link deleted successfully!');
   };
 
 
-  const isLinkSupported = (linkUrl: string) => {
-    return supportedLinks.includes(linkUrl);
-  };
+  // This function is no longer needed if we check link.supportedBy directly
+  // const isLinkSupported = (linkUrl: string) => {
+  //   return supportedLinks.includes(linkUrl);
+  // };
 
   const isReportedByCurrentUser = (link: LinkType) => {
     return link.reports.includes(currentUser?.username || '');
@@ -432,10 +509,17 @@ export function Links() {
     };
 
     const filteredLinks = links.filter(link => {
+        // Filter out links with empty URLs (expired ones that haven't been cleaned up)
+        if (!link.url) return false;
+
         const platformMatch = platformFilter === 'All' || link.platform === platformFilter;
         const searchMatch = link.url.toLowerCase().includes(searchQuery.toLowerCase());
+        // User filter should probably check the link.username, not filter by searchUser state
         const userMatch = userFilter === 'All' || link.username.toLowerCase().includes(userFilter.toLowerCase());
-        const supportMatch = supportFilter === 'All' || (supportFilter === 'Supported' && link.supportedBy.includes(currentUser?.username || '')) || (supportFilter === 'Not Supported' && !link.supportedBy.includes(currentUser?.username || ''));
+        // Check if currentUser is defined before accessing username
+        const supportMatch = supportFilter === 'All' ||
+                             (supportFilter === 'Supported' && currentUser && link.supportedBy?.includes(currentUser.username)) ||
+                             (supportFilter === 'Not Supported' && currentUser && !link.supportedBy?.includes(currentUser.username));
         const reportMatch = reportFilter === 'All' || (reportFilter === 'Reported' && link.reports.length > 0) || (reportFilter === 'Not Reported' && link.reports.length === 0);
 
         return platformMatch && searchMatch && userMatch && supportMatch && reportMatch;
@@ -445,17 +529,20 @@ export function Links() {
         return isAdminCheck() || (currentUser && link.username === currentUser.username);
     };
 
-    const supportedCount = filteredLinks.filter(link => link.supportedBy.includes(currentUser?.username || '')).length;
-    const unsupportedCount = filteredLinks.filter(link => !link.supportedBy.includes(currentUser?.username || '')).length;
+    // Calculate supported/unsupported counts based on the *filtered* links and current user
+    const supportedCount = filteredLinks.filter(link => currentUser && link.supportedBy?.includes(currentUser.username)).length;
+    const unsupportedCount = filteredLinks.length - supportedCount; // Total filtered links minus supported
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold text-gray-900">
           Links
-          <span className="ml-4 text-sm text-gray-500">
-            Supported: {supportedCount} | Not Supported: {unsupportedCount}
-          </span>
+          {currentUser && ( // Only show counts if user is logged in
+            <span className="ml-4 text-sm text-gray-500">
+              Supported: {supportedCount} | Not Supported: {unsupportedCount}
+            </span>
+          )}
         </h1>
           <div className="flex items-center space-x-4">
               <div className="text-sm text-gray-600">
@@ -467,6 +554,7 @@ export function Links() {
               <Button
                   onClick={() => setShowAddForm(true)}
                   className="flex items-center gap-2"
+                  // Disable if not admin OR if user has already added a link today
                   disabled={!isAdminCheck() || linksAddedToday >= 1}
               >
                   <Plus className="h-4 w-4" />
@@ -508,17 +596,10 @@ export function Links() {
             </div>
             <div className="flex justify-end gap-2">
               <Button variant="outline" onClick={() => setShowAddForm(false)}>Cancel</Button>
-              <Button onClick={handleAddLink} disabled={(() => {
-                  if (!currentUser) return true;
-                  const lastLinkAddedKey = `lastLinkAdded_${currentUser.username}`;
-                  const storedLastLinkAdded = localStorage.getItem(lastLinkAddedKey);
-                  if (storedLastLinkAdded) {
-                      const lastLinkAddedDate = new Date(storedLastLinkAdded);
-                      const timeDiff = new Date().getTime() - lastLinkAddedDate.getTime();
-                      return timeDiff < 24 * 60 * 60 * 1000;
-                  }
-                  return false;
-              })()}>Add Link</Button>
+              <Button onClick={handleAddLink}
+                  // Disable if not admin OR if user has already added a link today OR URL is empty
+                  disabled={!isAdminCheck() || linksAddedToday >= 1 || !newLink.url}
+              >Add Link</Button>
             </div>
           </CardContent>
         </Card>
@@ -590,16 +671,17 @@ export function Links() {
       </div>
 
       <div className="space-y-4">
-        {filteredLinks.map((link, index) => {
+        {filteredLinks.map((link) => { // Use link.id as key
           const expiryDate = new Date(link.expiryDate);
           const timeRemaining = getTimeRemaining(expiryDate);
-          const isSupported = isLinkSupported(link.url);
+          // Check if the current user's username is in the link's supportedBy array
+          const isSupported = currentUser ? link.supportedBy?.includes(currentUser.username) : false;
           const isReported = isReportedByCurrentUser(link);
           const isAdmin = isAdminCheck();
           const canCurrentUserDelete = canDeleteLink(link);
 
           return (
-            <Card key={index}>
+            <Card key={link.id}> {/* Use link.id as key */}
               <CardHeader className="flex flex-row items-center justify-between space-y-0">
                 <CardTitle className="text-lg font-medium">
                   <span className="text-blue-600">{link.platform}</span> Link
@@ -608,9 +690,10 @@ export function Links() {
                   <Button
                     variant="outline"
                     size="sm"
+                    // Conditionally apply classes based on isSupported
                     className={`flex items-center gap-1 ${isSupported ? 'bg-green-500 text-white hover:bg-green-600' : ''}`}
-                    onClick={() => handleSupport(link.url)}
-                    disabled={isSupported}
+                    onClick={() => handleSupport(link.id)} // Pass link.id
+                    disabled={isSupported || !currentUser} // Disable if supported or no user
                   >
                     <ThumbsUp className="h-4 w-4" />
                     {isSupported ? 'Supported' : 'Support'}
@@ -620,7 +703,8 @@ export function Links() {
                     variant="ghost"
                     size="sm"
                     className={`flex items-center gap-1 ${isReported ? 'text-yellow-600' : 'text-red-600'}`}
-                    onClick={() => handleReport(link.url)}
+                    onClick={() => handleReport(link.id)} // Pass link.id
+                    disabled={!currentUser} // Disable if no user
                   >
                     <Flag className="h-4 w-4" />
                     {isReported ? 'Unreport' : 'Report'} {link.reports.length > 0 && `(${link.reports.length})`}
@@ -630,7 +714,7 @@ export function Links() {
                       variant="ghost"
                       size="sm"
                       className="flex items-center gap-1 text-red-600"
-                      onClick={() => handleAdminDelete(link.url)}
+                      onClick={() => handleAdminDelete(link.id)} // Pass link.id
                     >
                       <Trash2 className="h-4 w-4" />
                       Delete
